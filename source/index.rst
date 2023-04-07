@@ -21,9 +21,3 @@ Welcome to the Evreka360 API Reference section. This section includes general in
    :maxdepth: 2
 
    asset/index
-
-Indices and tables
-==================
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
