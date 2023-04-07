@@ -3,15 +3,16 @@ Authentication
 All REST API queries require a valid **Basic** auth.
 
 
-Example Request
+Example Code
 ================
 
 .. code-block:: python
 
    EVREKA360_API_USER = ""
    EVREKA360_API_PASS = ""
-   EVREKA360_BASE_URL = "https://api.360.evreka.co"
+   EVREKA360_BASE_URL = ""
 
+   import requests
    session = requests.session()
    session.auth = (EVREKA360_API_USER, EVREKA360_API_PASS)
 
