@@ -1,12 +1,15 @@
+.. raw:: pdf
+
+   PageBreak
+
 Entity API List
 ======================
 
-This part provides documentation for available API endpoints of Entity Model for Engagement Module.
+This section provides documentation for available API endpoints of the Entity Model for the Engagement Module.
 
 +-----------+-------------------------------------+-------------------------------------------+
 | Method    | Endpoint                            | Description                               |
-+===========+==============================-----==+===========================================+
-| GET       | /entity/{entity_id}                 | Retrieve a single entity by ID            |
-+-----------+-------------------------------------+-------------------------------------------+
-| GET       | /entity/                            | Retrieve list entity by parameters        |
++===========+=====================================+===========================================+
+| GET       | /entity/                            | Retrieve a list of entities with optional |
+|           |                                     | parameters                                |
 +-----------+-------------------------------------+-------------------------------------------+

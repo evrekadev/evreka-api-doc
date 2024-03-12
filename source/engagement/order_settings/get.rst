@@ -1,22 +1,23 @@
-
 Get Order Types and Items API
 ^^^^^^^^^^^^^^^^^
 
-Request:
+**Request:**
 
-- Method: GET
-- Headers: Authorization [Bearer Token][required]
-- Endpoint: /order_settings/
-- Parameters:
-    - Entity ID [UUID][optional]
-    - Service Point ID [UUID][optional]
+- *Method:* ``GET``
+- *Headers:* ``Authorization [Bearer Token]`` *(required)*
+- *Endpoint:* ``/order_settings/``
+- *Parameters:*
+    - ``Entity ID``: [UUID] *(optional)*
+    - ``Service Point ID``: [UUID] *(optional)*
 
-Response:
+**Response:**
 
-- Status Code: 200 Retrieved successfully
-- Content Type: application/json
-- Body: Details of the retrieved order in JSON format
-.. code-block:: python
+- *Status Code:* ``200`` - Retrieved successfully
+- *Content Type:* ``application/json``
+- *Body:* Details of the retrieved order in JSON format
+
+.. code-block:: json
+
     {
         "order_types": [
             {
@@ -25,11 +26,9 @@ Response:
                 "order_items": [
                     {
                         "id": "UUID",
-                        "name": "String",
+                        "name": "String"
                     }
                 ]
             }
-        ],
+        ]
     }
-
-

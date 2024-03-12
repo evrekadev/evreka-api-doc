@@ -1,12 +1,15 @@
+.. raw:: pdf
+
+   PageBreak
+
 Service Point API List
 ======================
 
-This part provides documentation for available API endpoints of Service Point Model for Engagement Module.
+This section provides documentation for available API endpoints of the Service Point Model for the Engagement Module.
 
-+-----------+-------------------------------------+-------------------------------------------+
-| Method    | Endpoint                            | Description                               |
-+===========+==============================-----==+===========================================+
-| GET       | /service_point/{service_point_id}   | Retrieve a single service point by ID     |
-+-----------+-------------------------------------+-------------------------------------------+
-| GET       | /service_point/                     | Retrieve list service point by parameters |
-+-----------+-------------------------------------+-------------------------------------------+
++-----------+----------------------+---------------------------------------------------+
+| Method    | Endpoint             | Description                                       |
++===========+======================+===================================================+
+| GET       | /service_point/      | Retrieve a list of service points with optional   |
+|           |                      | parameters                                        |
++-----------+----------------------+---------------------------------------------------+

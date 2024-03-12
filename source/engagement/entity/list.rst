@@ -1,34 +1,39 @@
-
-List Service Point API
+List Entity API
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Request:
+**Request:**
 
-- Method: GET
-- Headers: Authorization [Bearer Token][required]
-- Endpoint: /entity/
-- Parameters: 
-    - page: [int] [optional] [default: 1]
-    - limit: [int] [optional] [default: 100]
-    - {field_name}: [string] [optional] [default: '']
+- *Method:* ``GET``
+- *Headers:* ``Authorization [Bearer Token]`` *(required)*
+- *Endpoint:* ``/entity/``
+- *Parameters:* 
+    - ``page``: [int] *(optional, default: 1)*
+    - ``limit``: [int] *(optional, default: 100)*
+    - ``{params}``: [string] *(optional)*
 
-Response:
+**Response:**
 
-- Status Code: 200 Retrived successfully
-- Content Type: application/json
-- Body: Details of the retrieved service point in JSON format
-.. code-block:: python 
+- *Status Code:* ``200`` - Retrieved successfully
+- *Content Type:* ``application/json``
+- *Body:* Details of the retrieved service point in JSON format
+
+.. code-block:: json 
+
     {
         "items": [
             {
                 "id": "UUID",
                 "name": "Entity Name",
-                "type": "Entity Type UUID"
+                "type_id": "Entity Type UUID",
+                "type_name": "Entity Type Name",
+                "dynamic": "Dynamic Field JSON"
             },
             {
                 "id": "UUID",
                 "name": "Entity Name",
-                "type": "Entity Type UUID"
+                "type_id": "Entity Type UUID",
+                "type_name": "Entity Type Name",
+                "dynamic": "Dynamic Field JSON"
             }
         ]
     }
