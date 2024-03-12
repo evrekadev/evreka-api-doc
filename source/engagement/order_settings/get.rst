@@ -1,22 +1,52 @@
 Get Order Types and Items API
+-----------------------------
+
+.. table::
+
+   +-------------------+--------------------------------------------+
+   | GET               | ``/order_settings/``                               |
+   +-------------------+--------------------------------------------+
+
+Data Structure
 ^^^^^^^^^^^^^^^^^
 
-**Request:**
+.. table::
+   :width: 100%
 
-- *Method:* ``GET``
-- *Headers:* ``Authorization [Bearer Token]`` *(required)*
-- *Endpoint:* ``/order_settings/``
-- *Parameters:*
-    - ``Entity ID``: [UUID] *(optional)*
-    - ``Service Point ID``: [UUID] *(optional)*
+   +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
+   | Field Name              | Data Type                                                    | Description                                       | Value                                                 |
+   +=========================+==============================================================+===================================================+=======================================================+
+   | entity_id               | string *(optional)*                                          | Entity ID - UUID                                  | d666a904-5739-46c0-b70a-1cd57658a3f6                  |
+   +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
+   | service_point_id        | string *(optional)*                                          | Service Point ID - UUID                           | d666a904-5739-46c0-b70a-1cd57658a3f6                  |
+   +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
 
-**Response:**
 
-- *Status Code:* ``200`` - Retrieved successfully
-- *Content Type:* ``application/json``
-- *Body:* Details of the retrieved order in JSON format
+Example Code
+^^^^^^^^^^^^^^^^^
 
-.. code-block:: json
+.. code-block:: python
+
+   service_url = f"/engagement/order_settings/
+
+   # filter example #1
+   # service_url += "&entity_ide=d666a904-5739-46c0-b70a-1cd57658a3f6"
+
+   # filter example #2
+   # service_url += "&service_point_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
+
+
+   headers = {"Content-Type": "application/json; charset=utf-8"}
+
+   resp = session.get(EVREKA360_BASE_URL + service_url, headers=headers)
+
+Response
+^^^^^^^^^^^^^^^^^
+    *Status Code:* ``200`` - Retrieved successfully
+    *Content Type:* ``application/json``
+    *Body:*
+
+.. code-block:: json 
 
     {
         "order_types": [

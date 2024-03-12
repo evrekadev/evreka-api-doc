@@ -1,34 +1,74 @@
 Get Service Availability Point API
-^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------------
 
-**Request:**
+.. table::
 
-- *Method:* ``GET``
-- *Headers:* ``Authorization [Bearer Token]`` *(required)*
-- *Endpoint:* ``/service_availability/``
-- *Parameters:*
-    - ``Entity ID``: [UUID] *(optional)*
-    - ``Service ID``: [UUID] *(optional)*
-    - ``Order Type ID``: [UUID] *(optional)*
-    - ``Start Date``: [Date] *(optional)*
-    - ``End Date``: [Date] *(optional)*
+   +-------------------+--------------------------------------------+
+   | GET               | ``/service_availability/``                 |
+   +-------------------+--------------------------------------------+
 
-**Response:**
+Data Structure
+^^^^^^^^^^^^^^^^^
 
-- *Status Code:* ``200`` - Retrieved successfully
-- *Content Type:* ``application/json``
-- *Body:* Details of the retrieved service point in JSON format
+.. table::
+   :width: 100%
 
-.. code-block:: json
+   +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
+   | Field Name              | Data Type                                                    | Description                                       | Value                                                 |
+   +=========================+==============================================================+===================================================+=======================================================+
+   | start_date              | string *(required)*                                          | Start Date of date range                          | 2024-03-01                                            |
+   +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
+   | *end_date               | string *(optional)*                                          | End Date of date range                            | 2024-03-01                                            |
+   +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
+   | entity_id               | string *(optional)*                                          | Entity ID - UUID                                  | d666a904-5739-46c0-b70a-1cd57658a3f6                  |
+   +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
+   | service_point_id        | string *(optional)*                                          | Service Point ID - UUID                           | d666a904-5739-46c0-b70a-1cd57658a3f6                  |
+   +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
+   | order_type_id           | string *(optional)*                                          | Order Type ID - UUID                              | d666a904-5739-46c0-b70a-1cd57658a3f6                  |
+   +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
+"* If the end_date is not provided, the end_date will be set as end of the year""
+
+Example Code
+^^^^^^^^^^^^^^^^^
+
+.. code-block:: python
+
+   service_url = f"/engagement/service_availability/
+
+   # filter example #1
+   # service_url += "&start_date=2024-03-01"
+
+   # filter example #2
+   # service_url += "&end_date=2024-03-01"
+
+   # filter example #3
+   # service_url += "&entity_ide=d666a904-5739-46c0-b70a-1cd57658a3f6"
+
+   # filter example #4
+   # service_url += "&service_point_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
+   
+   # filter example #5
+   # service_url += "&order_type_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
+
+
+   headers = {"Content-Type": "application/json; charset=utf-8"}
+
+   resp = session.get(EVREKA360_BASE_URL + service_url, headers=headers)
+
+Response
+^^^^^^^^^^^^^^^^^
+    *Status Code:* ``200`` - Retrieved successfully
+    *Content Type:* ``application/json``
+    *Body:*
+
+.. code-block:: json 
 
     {
         "available_dates": [
             {
-                "dates": [],
-                "operation": {
-                    "id": "51",
-                    "name": "Çato Operation"
-                }
+                "dates": [
+                    "2024-03-01", "2024-03-02"
+                ],
             }
         ]
     }
