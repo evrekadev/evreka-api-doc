@@ -68,7 +68,8 @@ Response
         "items": [
             {
                 "order_item_id": "UUID",
-                "order_item_name": "Order Item Name",
+                "order_item_name": "String",
+                "order_item_rules": "Text",
                 "price": "Float",
                 "market_share": "Float",
                 "tax": "Float"
