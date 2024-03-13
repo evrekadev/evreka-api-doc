@@ -17,5 +17,7 @@ Engagement Documentation
    order_settings/get
    service_availability/index
    service_availability/get
+   financial_detail/index
+   financial_detail/list
    .. order/index
    .. order/get
