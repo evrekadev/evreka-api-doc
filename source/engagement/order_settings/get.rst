@@ -47,17 +47,18 @@ Response
 
 .. code-block:: json 
 
-    {
-        "order_types": [
-            {
-                "id": "UUID",
-                "name": "String",
-                "order_items": [
-                    {
-                        "id": "UUID",
-                        "name": "String"
-                    }
-                ]
-            }
-        ]
-    }
+  {
+    "order_types": [
+        {
+            "id": "UUID",
+            "name": "String",
+        }
+    ],
+    "order_items": [
+        {
+            "id": "UUID",
+            "name": "String",
+            "order_type_id": "UUID",
+        }
+    ]
+  }
