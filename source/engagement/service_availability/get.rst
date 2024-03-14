@@ -11,7 +11,6 @@ Data Structure
 ^^^^^^^^^^^^^^^^^
 
 .. table::
-   :width: 100%
 
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
    | Field Name              | Data Type                                                    | Description                                       | Value                                                 |
@@ -42,7 +41,7 @@ Example Code
    # service_url += "&end_date=2024-03-01"
 
    # filter example #3
-   # service_url += "&entity_ide=d666a904-5739-46c0-b70a-1cd57658a3f6"
+   # service_url += "&entity_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
 
    # filter example #4
    # service_url += "&service_point_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
@@ -57,9 +56,9 @@ Example Code
 
 Response
 ^^^^^^^^^^^^^^^^^
-    *Status Code:* ``200`` - Retrieved successfully
-    *Content Type:* ``application/json``
-    *Body:*
+*Status Code:* ``200`` - Retrieved successfully
+*Content Type:* ``application/json``
+*Body:*
 
 .. code-block:: json 
 

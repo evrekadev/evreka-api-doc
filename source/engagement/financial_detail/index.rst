@@ -12,6 +12,6 @@ This section provides documentation for available API endpoints of the Financial
    +-----------+-------------------------------------+-------------------------------------------+
    | Method    | Endpoint                            | Description                               |
    +===========+=====================================+===========================================+
-   | GET       | /service_point/                     | Retrieve list of financial details with   |
+   | GET       | /financial_details/                 | Retrieve list of financial details with   |
    |           |                                     | optional parameters                       |
    +-----------+-------------------------------------+-------------------------------------------+

@@ -19,5 +19,9 @@ Engagement Documentation
    service_availability/get
    financial_detail/index
    financial_detail/list
-   .. order/index
-   .. order/get
+   order/index
+   order/create
+   order/delete
+   order/update-status
+   order/status-list
+   order/dynamic-list

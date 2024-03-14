@@ -4,14 +4,13 @@ Get Order Types and Items API
 .. table::
 
    +-------------------+--------------------------------------------+
-   | GET               | ``/order_settings/``                               |
+   | GET               | ``/order_settings/``                       |
    +-------------------+--------------------------------------------+
 
 Data Structure
 ^^^^^^^^^^^^^^^^^
 
 .. table::
-   :width: 100%
 
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
    | Field Name              | Data Type                                                    | Description                                       | Value                                                 |
@@ -30,7 +29,7 @@ Example Code
    service_url = f"/engagement/order_settings/
 
    # filter example #1
-   # service_url += "&entity_ide=d666a904-5739-46c0-b70a-1cd57658a3f6"
+   # service_url += "&entity_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
 
    # filter example #2
    # service_url += "&service_point_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
@@ -42,9 +41,9 @@ Example Code
 
 Response
 ^^^^^^^^^^^^^^^^^
-    *Status Code:* ``200`` - Retrieved successfully
-    *Content Type:* ``application/json``
-    *Body:*
+*Status Code:* ``200`` - Retrieved successfully
+*Content Type:* ``application/json``
+*Body:*
 
 .. code-block:: json 
 

@@ -4,14 +4,13 @@ Entity List
 .. table::
 
    +-------------------+--------------------------------------------+
-   | GET               | ``/entity/``                               |
+   | GET               | ``/entities/``                             |
    +-------------------+--------------------------------------------+
 
 Data Structure
 ^^^^^^^^^^^^^^^^^
 
 .. table::
-   :width: 100%
 
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
    | Field Name              | Data Type                                                    | Description                                       | Value                                                 |
@@ -20,7 +19,7 @@ Data Structure
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
    | type_id                 | string *(optional)*                                          | Entity Type ID - UUID                             | d666a904-5739-46c0-b70a-1cd57658a3f6                  |
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
-   | *postcode               | string                                                       | Dynamic Field Key - Value                         | 1234AB                                                |
+   | *postcode               | string *(optional)*                                          | Dynamic Field Key - Value                         | 1234AB                                                |
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
 "*Dynamic Field is a custom field that can be added to Entity. "key" of the dynamic field can be used as a filter."
 
@@ -32,7 +31,7 @@ Example Code
 
    page = 1
    limit = 10
-   service_url = f"/engagement/entity/?page={page}&limit={limit}"
+   service_url = f"/engagement/entities/?page={page}&limit={limit}"
 
    # filter example #1
    # service_url += "&name=MyEntity"
@@ -49,9 +48,9 @@ Example Code
 
 Response
 ^^^^^^^^^^^^^^^^^
-    *Status Code:* ``200`` - Retrieved successfully
-    *Content Type:* ``application/json``
-    *Body:*
+*Status Code:* ``200`` - Retrieved successfully
+*Content Type:* ``application/json``
+*Body:*
 
 .. code-block:: json 
 
@@ -62,6 +61,7 @@ Response
                 "name": "Entity Name",
                 "type_id": "Entity Type UUID",
                 "type_name": "Entity Type Name",
+                "status_id": "Entity Status UUID",
                 "dynamic": "Dynamic Field JSON"
             }
         ]

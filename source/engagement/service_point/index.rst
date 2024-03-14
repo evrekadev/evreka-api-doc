@@ -12,6 +12,6 @@ This section provides documentation for available API endpoints of the Service P
    +-----------+-------------------------------------+-------------------------------------------+
    | Method    | Endpoint                            | Description                               |
    +===========+=====================================+===========================================+
-   | GET       | /service_point/                     | Retrieve list of service points with      |
+   | GET       | /service_points/                    | Retrieve list of service points with      |
    |           |                                     | optional parameters                       |
    +-----------+-------------------------------------+-------------------------------------------+

@@ -4,14 +4,13 @@ Entity List
 .. table::
 
    +-------------------+--------------------------------------------+
-   | GET               | ``/service_point/``                        |
+   | GET               | ``/service_points/``                       |
    +-------------------+--------------------------------------------+
 
 Data Structure
 ^^^^^^^^^^^^^^^^^
 
 .. table::
-   :width: 100%
 
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
    | Field Name              | Data Type                                                    | Description                                       | Value                                                 |
@@ -20,7 +19,7 @@ Data Structure
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
    | type_id                 | string *(optional)*                                          | Service Point Type ID - UUID                      | d666a904-5739-46c0-b70a-1cd57658a3f6                  |
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
-   | *postcode               | string                                                       | Dynamic Field Key - Value                         | 1234AB                                                |
+   | *postcode               | string *(optional)*                                          | Dynamic Field Key - Value                         | 1234AB                                                |
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
 "*Dynamic Field is a custom field that can be added to Service Point. "key" of the dynamic field can be used as a filter."
 
@@ -31,7 +30,7 @@ Example Code
 
    page = 1
    limit = 10
-   service_url = f"/engagement/service_point/?page={page}&limit={limit}"
+   service_url = f"/engagement/service_points/?page={page}&limit={limit}"
 
    # filter example #1
    # service_url += "&name=MyServicePoint"
@@ -48,9 +47,9 @@ Example Code
 
 Response
 ^^^^^^^^^^^^^^^^^
-    *Status Code:* ``200`` - Retrieved successfully
-    *Content Type:* ``application/json``
-    *Body:*
+*Status Code:* ``200`` - Retrieved successfully
+*Content Type:* ``application/json``
+*Body:*
 
 .. code-block:: json
 
@@ -64,6 +63,7 @@ Response
                 "longitude": "Service Point Longitude",
                 "type_id": "Service Point Type UUID",
                 "type_name": "Service Point Type Name",
+                "status_id": "Service Point Status UUID",
                 "dynamic": "Dynamic Field JSON"
             }
         ]

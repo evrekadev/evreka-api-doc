@@ -4,7 +4,7 @@ Financial Detail List
 .. table::
 
    +-------------------+--------------------------------------------+
-   | GET               | ``/financial_detail/``                     |
+   | GET               | ``/financial_details/``                    |
    +-------------------+--------------------------------------------+
 
 Data Structure
@@ -17,7 +17,6 @@ When both are provided, only 'order_item_id' is used for filtering. None of them
 The financial details of an item can be specified by entity or service point. When 'entity_id' or/and 'service_point_id' are provided, financial details are filtered by these parameters.
 
 .. table::
-   :width: 100%
 
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
    | Field Name              | Data Type                                                    | Description                                       | Value                                                 |
@@ -36,9 +35,7 @@ Example Code
 
 .. code-block:: python
 
-   page = 1
-   limit = 10
-   service_url = f"/engagement/financial_detail/?page={page}&limit={limit}"
+   service_url = f"/engagement/financial_details/"
 
    # filter example #1
    # service_url += "&order_item_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
@@ -58,9 +55,9 @@ Example Code
 
 Response
 ^^^^^^^^^^^^^^^^^
-    *Status Code:* ``200`` - Retrieved successfully
-    *Content Type:* ``application/json``
-    *Body:*
+*Status Code:* ``200`` - Retrieved successfully
+*Content Type:* ``application/json``
+*Body:*
 
 .. code-block:: json
 
