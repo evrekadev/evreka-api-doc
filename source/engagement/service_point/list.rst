@@ -49,7 +49,7 @@ Example Code
     #service_url += "?name=MyServicePointName"
 
     # filter example #3
-    #service_url += "?type=d666a904-5739-46c0-b70a-1cd57658a3f6"
+    #service_url += "?type_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
 
     # filter example #4 
     #service_url += "?postcode=1234AB"

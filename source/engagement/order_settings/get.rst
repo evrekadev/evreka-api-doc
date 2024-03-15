@@ -31,10 +31,12 @@ Example Code
    service_url = f"/engagement/order_settings"
 
    # filter example #1
-   # service_url += "&entity_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
+   # service_url += "?entity_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
 
    # filter example #2
-   # service_url += "&service_point_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
+   # service_url += "?service_point_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
+
+   
 
 
    headers = {"Content-Type": "application/json; charset=utf-8"}
