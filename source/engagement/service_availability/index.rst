@@ -12,7 +12,7 @@ This section provides documentation for available API endpoints of the Service A
    +-----------+-------------------------------------+-------------------------------------------+
    | Method    | Endpoint                            | Description                               |
    +===========+=====================================+===========================================+
-   | GET       | /service_availability               | Retrieve available dates with optional    |
+   | POST      | /service_availability               | Retrieve available dates with optional    |
    |           |                                     | parameters                                |
    +-----------+-------------------------------------+-------------------------------------------+
 

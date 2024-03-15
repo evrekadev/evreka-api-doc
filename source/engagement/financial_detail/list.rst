@@ -35,23 +35,39 @@ Example Code
 
 .. code-block:: python
 
-   service_url = f"/engagement/financial_details"
+   import requests
+    import json
 
-   # filter example #1
-   # service_url += "&order_item_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
-   
-   # filter example #1.2
-   # service_url += "&order_type_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
+    EVREKA360_BASE_URL = "https://360-int01.evreka.co/e360_api"
+    ACCESS_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJrZW1hbCIsImNsaWVudF9pZCI6MTMsImV4cCI6MTcxMDUwOTcxMX0.lhwcxYiKslMXRtCBexfCMmof9IDdD_q0OEc8ryYJ9uQ"
 
-   # filter example #2
-   # service_url += "&entity_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
+    session = requests.session()
 
-   # filter example #3 
-   # service_url += "&service_point_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
+    service_url = "/engagement/financial_details"
+    headers = {
+            "Content-Type": "application/json; charset=utf-8", 
+            "Authorization": "Bearer " + ACCESS_TOKEN
+        }
+    
+    # filter example #1
+    #service_url += "?order_item_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
+    
+    # filter example #2
+    #service_url += "?order_type_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
 
-   headers = {"Content-Type": "application/json; charset=utf-8"}
+    # filter example #2
+    #service_url += "?entity_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
 
-   resp = session.get(EVREKA360_BASE_URL + service_url, headers=headers)
+    # filter example #3 
+    #service_url += "?service_point_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
+
+    # filter example #5 #To use multiple filters, use the & character between the filters.
+    # service_url += "?order_item_id=d666a904-5739-46c0-b70a-1cd57658a3f6" 
+    # service_url += "&order_type_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
+    
+    response = session.get(EVREKA360_BASE_URL + service_url, headers=headers)
+    response_dict = json.loads(response._content.decode('utf-8'))
+    print(response_dict)  
 
 Response
 ^^^^^^^^^^^^^^^^^

@@ -28,22 +28,38 @@ Example Code
 
 .. code-block:: python
 
-   page = 1
-   limit = 10
-   service_url = f"/engagement/service_points ?page={page}&limit={limit}"
+    import requests
+    import json
 
-   # filter example #1
-   # service_url += "&name=MyServicePoint"
+    EVREKA360_BASE_URL = ""
+    ACCESS_TOKEN = ""
 
-   # filter example #2
-   # service_url += "&type=d666a904-5739-46c0-b70a-1cd57658a3f6"
+    session = requests.session()
 
-   # filter example #3 
-   # service_url += "&postcode=1234AB"
+    service_url = "/engagement/service_points"
+    headers = {
+        "Content-Type": "application/json; charset=utf-8", 
+        "Authorization": "Bearer " + ACCESS_TOKEN
+    }
 
-   headers = {"Content-Type": "application/json; charset=utf-8"}
+    # filter example #1
+    #service_url += "?page=0&limit=100"
 
-   resp = session.get(EVREKA360_BASE_URL + service_url, headers=headers)
+    # filter example #2
+    #service_url += "?name=MyServicePointName"
+
+    # filter example #3
+    #service_url += "?type=d666a904-5739-46c0-b70a-1cd57658a3f6"
+
+    # filter example #4 
+    #service_url += "?postcode=1234AB"
+
+    # filter example #5 #To use multiple filters, use the & character between the filters.
+    #service_url += "?name=MyServicePointName" + "&postcode=1234AB"
+
+    response = session.get(EVREKA360_BASE_URL + service_url, headers=headers)
+    response_dict = json.loads(response._content.decode('utf-8'))
+    print(response_dict)  
 
 Response
 ^^^^^^^^^^^^^^^^^

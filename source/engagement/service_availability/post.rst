@@ -4,7 +4,7 @@ Get Service Availability Point API
 .. table::
 
    +-------------------+--------------------------------------------+
-   | GET               | ``/service_availability``                  |
+   | POST              | ``/service_availability``                  |
    +-------------------+--------------------------------------------+
 
 Data Structure
@@ -31,28 +31,20 @@ Example Code
 ^^^^^^^^^^^^^^^^^
 
 .. code-block:: python
-
+    
    service_url = f"/engagement/service_availability
-
+    
    # filter example #1
    # service_url += "&start_date=2024-03-01"
 
-   # filter example #2
-   # service_url += "&end_date=2024-03-01"
-
-   # filter example #3
-   # service_url += "&entity_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
-
-   # filter example #4
-   # service_url += "&service_point_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
-   
-   # filter example #5
-   # service_url += "&order_type_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
-
-
    headers = {"Content-Type": "application/json; charset=utf-8"}
 
-   resp = session.get(EVREKA360_BASE_URL + service_url, headers=headers)
+   resp = session.post(EVREKA360_BASE_URL + service_url, headers=headers)
+
+    data = {
+        "start_date": "2024-03-01",
+        "end_date": "2024-03-02",
+    }
 
 Response
 ^^^^^^^^^^^^^^^^^
@@ -63,11 +55,5 @@ Response
 .. code-block:: json 
 
     {
-        "available_dates": [
-            {
-                "dates": [
-                    "2024-03-01", "2024-03-02"
-                ],
-            }
-        ]
+        "available_dates": ["2024-03-01", "2024-03-02"]
     }

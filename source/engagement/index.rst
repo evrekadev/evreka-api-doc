@@ -3,12 +3,13 @@
    PageBreak
 
 Engagement Documentation
-====================
+=========================
 
 .. toctree::
    :maxdepth: 2
 
    base_url
+   auth
    entity/index
    entity/list
    service_point/index
@@ -16,7 +17,7 @@ Engagement Documentation
    order_settings/index
    order_settings/get
    service_availability/index
-   service_availability/get
+   service_availability/post
    financial_detail/index
    financial_detail/list
    order/index
