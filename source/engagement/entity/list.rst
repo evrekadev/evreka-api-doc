@@ -4,7 +4,7 @@ Entity List
 .. table::
 
    +-------------------+--------------------------------------------+
-   | GET               | ``/entities/``                             |
+   | GET               | ``/entities``                              |
    +-------------------+--------------------------------------------+
 
 Data Structure
@@ -31,13 +31,13 @@ Example Code
 
    page = 1
    limit = 10
-   service_url = f"/engagement/entities/?page={page}&limit={limit}"
+   service_url = f"/engagement/entities?page={page}&limit={limit}"
 
    # filter example #1
    # service_url += "&name=MyEntity"
 
    # filter example #2
-   # service_url += "&type=d666a904-5739-46c0-b70a-1cd57658a3f6"
+   # service_url += "&type_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
 
    # filter example #3 
    # service_url += "&postcode=1234AB"

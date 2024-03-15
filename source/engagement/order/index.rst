@@ -14,7 +14,7 @@ This part provides documentation for available API endpoints of Order Model for 
    +-----------+-------------------------------------+-------------------------------------------+
    | Method    | Endpoint                            | Description                               |
    +===========+=====================================+===========================================+
-   | POST      | /orders/                            | Create an order with given parameters     |
+   | POST      | /orders                             | Create an order with given parameters     |
    +-----------+-------------------------------------+-------------------------------------------+
    | DELETE    | /orders/{order_id}                  | Delete the order with given order id      |
    +-----------+-------------------------------------+-------------------------------------------+

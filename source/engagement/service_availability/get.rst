@@ -4,7 +4,7 @@ Get Service Availability Point API
 .. table::
 
    +-------------------+--------------------------------------------+
-   | GET               | ``/service_availability/``                 |
+   | GET               | ``/service_availability``                  |
    +-------------------+--------------------------------------------+
 
 Data Structure
@@ -32,7 +32,7 @@ Example Code
 
 .. code-block:: python
 
-   service_url = f"/engagement/service_availability/
+   service_url = f"/engagement/service_availability
 
    # filter example #1
    # service_url += "&start_date=2024-03-01"

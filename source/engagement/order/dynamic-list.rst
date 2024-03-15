@@ -4,8 +4,9 @@ Order Dynamic Field List
 .. table::
 
    +-------------------+--------------------------------------------+
-   | GET               | ``/orders/dynamic_fields`                  |
+   | GET               | ``/orders/dynamic_fields``                 |
    +-------------------+--------------------------------------------+
+
 
 Data Structure
 ^^^^^^^^^^^^^^^^^
@@ -43,16 +44,16 @@ Response
     {
         "items": [
             {
-                "key": "test-dyn",
-                "label": "Address",
-                "default_value": null,
-                "field_type": "TEXT",
-                "order": 1,
-                "options": null,
-                "required": false,
-                "editable": true,
-                "displayable": false,
-                "cp_user_allowed": true,
+                "key": "Dynamic Field Key",
+                "label": "Dynamic Field Label",
+                "default_value": "Default Value",
+                "field_type": "Dynamic Field Type - TEXT, NUMBER, DROPDOWN"
+                "order": "Sort Order - Integer",
+                "options": "Options - JSON", // If field_type is DROPDOWN
+                "required": "Is Required - Boolean",
+                "editable": "Is Editable - Boolean",
+                "displayable": "Is Displayable - Boolean",
+                "cp_user_allowed": "Is CP User Allowed - Boolean",
                 "type_id": "ORDER TYPE ID - UUID", // If order_type_id is provided
                 "template_id": "ORDER TEMPLATE ID - UUID",
             }
