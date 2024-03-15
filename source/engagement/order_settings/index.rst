@@ -3,7 +3,7 @@
    PageBreak
 
 Order Settings API List
-======================
+========================
 
 This section provides documentation for available API endpoints of the Order Settings Model for the Engagement Module.
 
@@ -13,6 +13,6 @@ This section provides documentation for available API endpoints of the Order Set
    +-----------+-------------------------------------+-------------------------------------------+
    | Method    | Endpoint                            | Description                               |
    +===========+=====================================+===========================================+
-   | GET       | /order_settings/                    | Retrieve order types and items            |
+   | GET       | /order_settings                     | Retrieve order types and items            |
    +-----------+-------------------------------------+-------------------------------------------+
 

@@ -4,11 +4,13 @@ Get Order Types and Items API
 .. table::
 
    +-------------------+--------------------------------------------+
-   | GET               | ``/order_settings/``                       |
+   | GET               | ``/order_settings``                        |
    +-------------------+--------------------------------------------+
 
 Data Structure
 ^^^^^^^^^^^^^^^^^
+One of the following filters must be provided in the request: ``entity_id``, ``service_point_id``. 
+If none of the filters are provided, the API will return an empty list. If both filters are provided, the API will return intersection result.
 
 .. table::
 
@@ -26,7 +28,7 @@ Example Code
 
 .. code-block:: python
 
-   service_url = f"/engagement/order_settings/
+   service_url = f"/engagement/order_settings"
 
    # filter example #1
    # service_url += "&entity_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
@@ -50,14 +52,15 @@ Response
     {
         "order_types": [
             {
-                "id": "UUID",
-                "name": "String",
-                "order_items": [
-                    {
-                        "id": "UUID",
-                        "name": "String"
-                    }
-                ]
+                "id": "Order Type ID -UUID",
+                "name": "Order type name - String",
+            }
+        ],
+        "order_items": [
+            {
+                "id": "Order Item ID - UUID",
+                "name": "Order Item name - String",
+                "order_type_id": "Order Type ID -UUID"
             }
         ]
     }

@@ -4,7 +4,7 @@ Entity List
 .. table::
 
    +-------------------+--------------------------------------------+
-   | GET               | ``/service_points/``                       |
+   | GET               | ``/service_points``                        |
    +-------------------+--------------------------------------------+
 
 Data Structure
@@ -30,7 +30,7 @@ Example Code
 
    page = 1
    limit = 10
-   service_url = f"/engagement/service_points/?page={page}&limit={limit}"
+   service_url = f"/engagement/service_points ?page={page}&limit={limit}"
 
    # filter example #1
    # service_url += "&name=MyServicePoint"

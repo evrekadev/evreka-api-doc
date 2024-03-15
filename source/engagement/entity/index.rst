@@ -12,6 +12,6 @@ This section provides documentation for available API endpoints of the Entity Mo
    +-----------+-------------------------------------+-------------------------------------------+
    | Method    | Endpoint                            | Description                               |
    +===========+=====================================+===========================================+
-   | GET       | /entities/                          | Retrieve list of entities with optional   |
+   | GET       | /entities                           | Retrieve list of entities with optional   |
    |           |                                     | parameters                                |
    +-----------+-------------------------------------+-------------------------------------------+

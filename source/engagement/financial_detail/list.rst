@@ -4,7 +4,7 @@ Financial Detail List
 .. table::
 
    +-------------------+--------------------------------------------+
-   | GET               | ``/financial_details/``                    |
+   | GET               | ``/financial_details``                     |
    +-------------------+--------------------------------------------+
 
 Data Structure
@@ -35,7 +35,7 @@ Example Code
 
 .. code-block:: python
 
-   service_url = f"/engagement/financial_details/"
+   service_url = f"/engagement/financial_details"
 
    # filter example #1
    # service_url += "&order_item_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
@@ -64,8 +64,8 @@ Response
     {
         "items": [
             {
-                "order_item_id": "UUID",
-                "order_item_name": "String",
+                "order_item_id": "Order Item ID - UUID",
+                "order_item_name": "Order Item name - String",
                 "order_item_rules": "Text",
                 "price": "Float",
                 "market_share": "Float",
