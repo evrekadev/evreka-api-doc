@@ -27,4 +27,4 @@ You need to include the access token in the Authorization header of your request
     auth_response_dict = json.loads(auth_response._content.decode('utf-8'))  
 
     access_token = auth_response_dict['access_token'] 
-    print("access_token", access_token)
+    print(access_token)

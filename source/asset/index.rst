@@ -376,7 +376,7 @@ Example Code
    EVREKA360_BASE_URL = ""
 
    import requests
-   ession = requests.session()
+   session = requests.session()
    session.auth = (EVREKA360_API_USER, EVREKA360_API_PASS)
 
    service_url = "/asset/statuses"

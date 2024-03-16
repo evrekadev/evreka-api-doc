@@ -28,20 +28,34 @@ Example Code
 
 .. code-block:: python
 
-   service_url = f"/engagement/order_settings"
+    import requests
+    import json
 
-   # filter example #1
-   # service_url += "?entity_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
+    EVREKA360_BASE_URL = ""
+    ACCESS_TOKEN = ""
 
-   # filter example #2
-   # service_url += "?service_point_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
+    session = requests.session()
 
-   
+    service_url = "/engagement/order_settings"
+    headers = {
+        "Content-Type": "application/json; charset=utf-8", 
+        "Authorization": "Bearer " + ACCESS_TOKEN
+    }
+    
+    # filter example #1
+    #service_url += "?entity_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
 
+    # filter example #2
+    #service_url += "?service_point_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
 
-   headers = {"Content-Type": "application/json; charset=utf-8"}
+    # filter example #3 #To use multiple filters, use the & character between the filters.
+    #service_url += "?entity_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
+    #service_url += "&service_point_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
 
-   resp = session.get(EVREKA360_BASE_URL + service_url, headers=headers)
+    response = session.get(EVREKA360_BASE_URL + service_url, headers=headers)
+    response_dict = json.loads(response._content.decode('utf-8'))
+    print(response_dict) 
+
 
 Response
 ^^^^^^^^^^^^^^^^^

@@ -35,19 +35,19 @@ Example Code
 
 .. code-block:: python
 
-   import requests
+    import requests
     import json
 
-    EVREKA360_BASE_URL = "https://360-int01.evreka.co/e360_api"
-    ACCESS_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJrZW1hbCIsImNsaWVudF9pZCI6MTMsImV4cCI6MTcxMDUwOTcxMX0.lhwcxYiKslMXRtCBexfCMmof9IDdD_q0OEc8ryYJ9uQ"
+    EVREKA360_BASE_URL = ""
+    ACCESS_TOKEN = ""
 
     session = requests.session()
 
     service_url = "/engagement/financial_details"
     headers = {
-            "Content-Type": "application/json; charset=utf-8", 
-            "Authorization": "Bearer " + ACCESS_TOKEN
-        }
+        "Content-Type": "application/json; charset=utf-8", 
+        "Authorization": "Bearer " + ACCESS_TOKEN
+    }
     
     # filter example #1
     #service_url += "?order_item_id=d666a904-5739-46c0-b70a-1cd57658a3f6"

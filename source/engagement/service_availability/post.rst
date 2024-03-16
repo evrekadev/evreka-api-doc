@@ -32,19 +32,37 @@ Example Code
 
 .. code-block:: python
     
-   service_url = f"/engagement/service_availability
-    
-   # filter example #1
-   # service_url += "&start_date=2024-03-01"
+    import requests
+    import json
 
-   headers = {"Content-Type": "application/json; charset=utf-8"}
+    EVREKA360_BASE_URL = ""
+    ACCESS_TOKEN = ""
 
-   resp = session.post(EVREKA360_BASE_URL + service_url, headers=headers)
+    session = requests.session()
 
-    data = {
-        "start_date": "2024-03-01",
-        "end_date": "2024-03-02",
+    service_url = "/engagement/service_availability"
+    headers = {
+        "Content-Type": "application/json; charset=utf-8", 
+        "Authorization": "Bearer " + ACCESS_TOKEN
     }
+    # Data Example #1
+    data = {
+        "start_date": "2024-02-03",
+        "end_date": "2024-03-30"
+    }
+
+    # Data Example #2
+    data = {
+        "start_date": "",
+        "end_date": "",
+        "entity_id": "", 
+        "service_point_id": "",
+        "order_type_id": ""   
+    }
+
+    response = session.post(EVREKA360_BASE_URL + service_url, headers=headers, json=data)
+    response_dict = json.loads(response._content.decode('utf-8'))
+    print(response_dict)
 
 Response
 ^^^^^^^^^^^^^^^^^

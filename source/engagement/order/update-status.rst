@@ -1,3 +1,7 @@
+.. raw:: pdf
+
+   PageBreak
+
 Update Order Status API
 -----------------------------------
 
@@ -26,14 +30,29 @@ Example Code
 
 .. code-block:: python
 
-    service_url = f"/engagement/orders/{order_id}/status"
-    headers = {"Content-Type": "application/json; charset=utf-8"}
-    resp = session.put(EVREKA360_BASE_URL + service_url,  data=data, headers=headers)
+    import requests
+    import json
 
-   # post example #1
-    {
-        "status_id": "d7b140e0-4ef5-42dd-a1c3-4009b190a0f4",
+    EVREKA360_BASE_URL = ""
+    ACCESS_TOKEN = ""
+
+    session = requests.session()
+
+    order_id = ""
+
+    service_url = "/engagement/orders/" + order_id + "/status"
+    headers = {
+        "Content-Type": "application/json; charset=utf-8", 
+        "Authorization": "Bearer " + ACCESS_TOKEN
     }
+
+    data = {
+        "status_id": ""
+    }
+
+    response = session.put(EVREKA360_BASE_URL + service_url, json=data, headers=headers)
+    response_dict = json.loads(response._content.decode('utf-8'))
+    print(response_dict) 
 
 Response
 ^^^^^^^^^^^^^^^^^
@@ -55,6 +74,6 @@ Response
 .. code-block:: json 
 
     {
-        "detail": "Order (d7b140e0-4ef5-42dd-a1c3-4009b190a0f4) not found"
+        "detail": "Order ({order_id}) not found"
     }
 

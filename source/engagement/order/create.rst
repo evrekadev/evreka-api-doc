@@ -45,31 +45,50 @@ Example Code
 
 .. code-block:: python
 
-    service_url = f"/engagement/orders"
-    headers = {"Content-Type": "application/json; charset=utf-8"}
-    resp = session.post(EVREKA360_BASE_URL + service_url,  data=data, headers=headers)
+    import requests
+    import json
 
-   # post example #1
-   {
-        "name": "my order",
-        "type_id": "d7b140e0-4ef5-42dd-a1c3-4009b190a0f4",
-        "service_point_id": "1426958d-893c-4af4-9c43-7e4ac763f60f",
-        "entity_id": "3c89fcd5-073f-4c9c-ba52-c0bc01ccc55f",
-        "fulfillment_date": "14.03.2024",
+    EVREKA360_BASE_URL = ""
+    ACCESS_TOKEN = ""
+
+    session = requests.session()
+
+    service_url = "/engagement/orders"
+    headers = {
+        "Content-Type": "application/json; charset=utf-8", 
+        "Authorization": "Bearer " + ACCESS_TOKEN
+    }
+
+    # Data Example #1
+    data = {
+        "name": "",
+        "type_id": "",
+        "service_point_id": "",
+        "entity_id": "",
+        "fulfillment_date": "",
+    }
+
+    # Data Example #1
+    data = {
+        "name": "",
+        "type_id": "",
+        "service_point_id": "",
+        "entity_id": "",
+        "fulfillment_date": "",
         "order_item_list": [
             {
-                "id": "bfdb675d-65b7-4e25-bfa9-b498faa545fc",
-                "planned_quantity": 2
+                "id": "",
+                "planned_quantity": 0
             }
         ],
         "dynamic_field_list": [
             {
                 "key": "dropdownField",
-                "value": 1
+                "value": 0
             },
             {
-                "key": "textfield",
-                "value": " Text"
+                "key": "textField",
+                "value": "text"
             },
             {
                 "key": "numberField",
@@ -77,15 +96,10 @@ Example Code
             }
         ]
     }
-    # post example #2
-   {
-        "name": "my order",
-        "type_id": "d7b140e0-4ef5-42dd-a1c3-4009b190a0f4",
-        "latitude": 30.12345,
-        "longitude": -12.1234,
-        "entity_id": "3c89fcd5-073f-4c9c-ba52-c0bc01ccc55f",
-        "fulfillment_date": "14.03.2024",
-    }
+
+    response = session.post(EVREKA360_BASE_URL + service_url, headers=headers, json=data)
+    response_dict = json.loads(response._content.decode('utf-8'))
+    print(response_dict)
 
 Response
 ^^^^^^^^^^^^^^^^^

@@ -1,3 +1,7 @@
+.. raw:: pdf
+
+   PageBreak
+
 Delete Order API
 -----------------------------------
 
@@ -10,18 +14,31 @@ Delete Order API
 Data Structure
 ^^^^^^^^^^^^^^^^^
 Order ID is required UUID for the order to be deleted.
-One of the following fields must be provided: service_point_id, latitude and longitude. If both are provided, service_point_id will be used.
-If any required dynamic field exists for the order type, it must be provided in the request.
-
 
 Example Code
 ^^^^^^^^^^^^^^^^^
 
 .. code-block:: python
 
-    service_url = f"/engagement/orders/{order_id}
-    headers = {"Content-Type": "application/json; charset=utf-8"}
-    resp = session.delete(EVREKA360_BASE_URL + service_url, headers=headers)
+
+    import requests
+    import json
+
+    EVREKA360_BASE_URL = ""
+    ACCESS_TOKEN = ""
+
+    session = requests.session()
+
+    order_id = ""
+    service_url = "/engagement/orders/" + order_id
+    headers = {
+        "Content-Type": "application/json; charset=utf-8", 
+        "Authorization": "Bearer " + ACCESS_TOKEN
+    }
+    
+    response = session.delete(EVREKA360_BASE_URL + service_url, headers=headers)
+    response_dict = json.loads(response._content.decode('utf-8'))
+    print(response_dict) 
 
 
 Response
@@ -44,6 +61,6 @@ Response
 .. code-block:: json 
 
     {
-        "detail": "Order (33fcec27-3933-418e-b2b5-4d3ee1cff4e6) not found"
+        "detail": "Order ({order_id}) not found"
     }
 

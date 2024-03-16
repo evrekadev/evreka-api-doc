@@ -1,3 +1,7 @@
+.. raw:: pdf
+
+   PageBreak
+
 Order Status List
 ---------------------
 
@@ -16,9 +20,23 @@ Example Code
 
 .. code-block:: python
 
-   service_url = f"/engagement/orders/status"
-   headers = {"Content-Type": "application/json; charset=utf-8"}
-   resp = session.get(EVREKA360_BASE_URL + service_url, headers=headers)
+    import requests
+    import json
+
+    EVREKA360_BASE_URL = ""
+    ACCESS_TOKEN = ""
+
+    session = requests.session()
+
+    service_url = "/engagement/orders/status"
+    headers = {
+        "Content-Type": "application/json; charset=utf-8", 
+        "Authorization": "Bearer " + ACCESS_TOKEN
+    }
+
+    response = session.get(EVREKA360_BASE_URL + service_url, headers=headers)
+    response_dict = json.loads(response._content.decode('utf-8'))
+    print(response_dict) 
 
 Response
 ^^^^^^^^^^^^^^^^^
