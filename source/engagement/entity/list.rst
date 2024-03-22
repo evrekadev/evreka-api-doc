@@ -19,10 +19,11 @@ Data Structure
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
    | type_id                 | string *(optional)*                                          | Entity Type ID - UUID                             | d666a904-5739-46c0-b70a-1cd57658a3f6                  |
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
-   | *postcode               | string *(optional)*                                          | Dynamic Field Key - Value                         | 1234AB                                                |
+   | postcode                | string *(optional)*                                          | Dynamic Field Key - Value                         | 1234AB                                                |
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
-"*Dynamic Field is a custom field that can be added to Entity. "key" of the dynamic field can be used as a filter."
 
+.. note::
+    Dynamic Field is a custom field that can be added to Entity. ``key`` of the dynamic field can be used as a filter.
 
 Example Code
 ^^^^^^^^^^^^^^^^^
