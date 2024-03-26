@@ -1,5 +1,5 @@
-Entity List
-----------------
+Service Point List
+-----------------------
 
 .. table::
 

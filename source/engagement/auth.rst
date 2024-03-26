@@ -15,15 +15,19 @@ You need to include the access token in the Authorization header of your request
     EVREKA360_BASE_URL = ""
     EVREKA360_API_USER= ""
     EVREKA360_API_PASS = ""
+    EVREKA360_AUTH_CLIENT_ID = ""
+    EVREKA360_AUTH_CLIENT_SECRET = ""
 
     session = requests.session()
-    session.auth = (EVREKA360_API_USER, EVREKA360_API_PASS)
+    session.auth = (EVREKA360_AUTH_CLIENT_ID, EVREKA360_AUTH_CLIENT_SECRET)
 
     auth_data = {
         'username': EVREKA360_API_USER,
-        'password': EVREKA360_API_PASS
+        'password': EVREKA360_API_PASS,
+        'grant_type': 'password',
+        'scope': 'profile'
     }
-    auth_response = session.post(EVREKA360_BASE_URL + "/token", data=auth_data)
+    auth_response = session.post(EVREKA360_BASE_URL + "/auth/oauth/token", data=auth_data)
     auth_response_dict = json.loads(auth_response._content.decode('utf-8'))  
 
     access_token = auth_response_dict['access_token'] 
