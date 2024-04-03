@@ -12,8 +12,10 @@ Engagement Documentation
    auth
    entity/index
    entity/list
+   entity/details
    service_point/index
    service_point/list
+   service_point/details
    order_settings/index
    order_settings/get
    service_availability/index
