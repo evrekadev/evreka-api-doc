@@ -13,9 +13,13 @@ Engagement Documentation
    entity/index
    entity/list
    entity/details
+   entity/status-list
+   entity/dynamic-list
    service_point/index
    service_point/list
    service_point/details
+   service_point/status-list
+   service_point/dynamic-list
    order_settings/index
    order_settings/get
    service_availability/index
