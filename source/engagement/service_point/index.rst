@@ -18,3 +18,9 @@ This section provides documentation for available API endpoints of the Service P
    | GET       | /service_points/{service_point_id}  | Retrieve details of the service point     |
    |           |                                     | with linked entitites                     |
    +-----------+-------------------------------------+-------------------------------------------+
+   | GET       | /service_points/status              | Retrieve status list of the service       |
+   |           |                                     | points                                    |
+   +-----------+-------------------------------------+-------------------------------------------+
+   | GET       | /service_points/dynamic_fields      | Retrieve dynamic fields of the service    |
+   |           |                                     | points                                    |
+   +-----------+-------------------------------------+-------------------------------------------+

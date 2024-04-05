@@ -18,3 +18,9 @@ This section provides documentation for available API endpoints of the Entity Mo
    | GET       | /entities/{entity_id}               | Retrieve details of the entity with       |
    |           |                                     | linked service points                     |
    +-----------+-------------------------------------+-------------------------------------------+
+   | GET       | /entities/status                    | Retrieve status list of the entities      |
+   |           |                                     |                                           |
+   +-----------+-------------------------------------+-------------------------------------------+
+   | GET       | /entities/dynamic_fields            | Retrieve dynamic fields of the entities   |
+   |           |                                     |                                           |
+   +-----------+-------------------------------------+-------------------------------------------+
