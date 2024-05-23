@@ -31,7 +31,6 @@ Example Code
 .. code-block:: python
 
     import requests
-    import json
 
     EVREKA360_BASE_URL = ""
     ACCESS_TOKEN = ""
@@ -50,9 +49,8 @@ Example Code
         "status_id": ""
     }
 
-    response = session.put(EVREKA360_BASE_URL + service_url, json=data, headers=headers)
-    response_dict = json.loads(response._content.decode('utf-8'))
-    print(response_dict) 
+    resp = session.put(EVREKA360_BASE_URL + service_url, json=data, headers=headers)
+    print(resp.status_code, resp.json())
 
 Response
 ^^^^^^^^^^^^^^^^^

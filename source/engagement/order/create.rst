@@ -46,12 +46,9 @@ Example Code
 .. code-block:: python
 
     import requests
-    import json
 
     EVREKA360_BASE_URL = ""
     ACCESS_TOKEN = ""
-
-    session = requests.session()
 
     service_url = "/engagement/orders"
     headers = {
@@ -97,9 +94,8 @@ Example Code
         ]
     }
 
-    response = session.post(EVREKA360_BASE_URL + service_url, headers=headers, json=data)
-    response_dict = json.loads(response._content.decode('utf-8'))
-    print(response_dict)
+    resp = requests.post(EVREKA360_BASE_URL + service_url, headers=headers, json=data)
+    print(resp.status_code, resp.json())
 
 Response
 ^^^^^^^^^^^^^^^^^

@@ -29,12 +29,9 @@ Example Code
 .. code-block:: python
 
     import requests
-    import json
 
     EVREKA360_BASE_URL = ""
     ACCESS_TOKEN = ""
-
-    session = requests.session()
 
     service_url = "/engagement/service_points"
     headers = {
@@ -57,9 +54,8 @@ Example Code
     # filter example #5 #To use multiple filters, use the & character between the filters.
     #service_url += "?name=MyServicePointName" + "&postcode=1234AB"
 
-    response = session.get(EVREKA360_BASE_URL + service_url, headers=headers)
-    response_dict = json.loads(response._content.decode('utf-8'))
-    print(response_dict)  
+    resp = requests.get(EVREKA360_BASE_URL + service_url, headers=headers)
+    print(resp.status_code, resp.json())
 
 Response
 ^^^^^^^^^^^^^^^^^

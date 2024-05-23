@@ -7,9 +7,9 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Evreka360 API'
-copyright = '2023, Evreka'
+copyright = '2024, Evreka'
 author = 'Evreka'
-version = '1.1.0'
+version = '1.2.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -39,4 +39,4 @@ html_static_path = ['_static']
 highlight_language = 'python'
 
 extensions = ['rst2pdf.pdfbuilder']
-pdf_documents = [('index', u'Evreka360-API', u'Evreka360 API Doc', u'Evreka'), ]
+pdf_documents = [('index', u'Evreka360 API Doc', u'Evreka'), ]

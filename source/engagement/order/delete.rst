@@ -20,14 +20,10 @@ Example Code
 
 .. code-block:: python
 
-
     import requests
-    import json
 
     EVREKA360_BASE_URL = ""
     ACCESS_TOKEN = ""
-
-    session = requests.session()
 
     order_id = ""
     service_url = "/engagement/orders/" + order_id
@@ -36,9 +32,8 @@ Example Code
         "Authorization": "Bearer " + ACCESS_TOKEN
     }
     
-    response = session.delete(EVREKA360_BASE_URL + service_url, headers=headers)
-    response_dict = json.loads(response._content.decode('utf-8'))
-    print(response_dict) 
+    resp = requests.delete(EVREKA360_BASE_URL + service_url, headers=headers)
+    print(resp.status_code, resp.json())
 
 
 Response

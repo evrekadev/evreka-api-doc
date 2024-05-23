@@ -9,7 +9,6 @@ Engagement Documentation
    :maxdepth: 2
 
    base_url
-   auth
    entity/index
    entity/list
    service_point/index

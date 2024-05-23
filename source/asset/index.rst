@@ -39,13 +39,10 @@ Example Code
 
 .. code-block:: python
 
-   EVREKA360_API_USER = ""
-   EVREKA360_API_PASS = ""
-   EVREKA360_BASE_URL = ""
-
    import requests
-   session = requests.session()
-   session.auth = (EVREKA360_API_USER, EVREKA360_API_PASS)
+
+   EVREKA360_BASE_URL = ""
+   ACCESS_TOKEN = ""
 
    page = 1
    limit = 10
@@ -69,9 +66,12 @@ Example Code
    # sort example
    # service_url += "&sort=last_data_time-desc"
 
-   headers = {"Content-Type": "application/json; charset=utf-8"}
+   headers = {
+        "Content-Type": "application/json; charset=utf-8",
+        "Authorization": "Bearer " + ACCESS_TOKEN
+   }
 
-   resp = session.get(EVREKA360_BASE_URL + service_url, headers=headers)
+   resp = requests.get(EVREKA360_BASE_URL + service_url, headers=headers)
    print(resp.status_code, resp.json())
 
 
@@ -135,19 +135,19 @@ Example Code
 
 .. code-block:: python
 
-   EVREKA360_API_USER = ""
-   EVREKA360_API_PASS = ""
-   EVREKA360_BASE_URL = ""
-
    import requests
-   session = requests.session()
-   session.auth = (EVREKA360_API_USER, EVREKA360_API_PASS)
 
-   asset_id = "2023"
+   EVREKA360_BASE_URL = ""
+   ACCESS_TOKEN = ""
+
+   asset_id = "2024"
    service_url = f"/asset/detail/{asset_id}"
-   headers = {"Content-Type": "application/json; charset=utf-8"}
+   headers = {
+        "Content-Type": "application/json; charset=utf-8",
+        "Authorization": "Bearer " + ACCESS_TOKEN
+   }
 
-   resp = session.get(EVREKA360_BASE_URL + service_url, headers=headers)
+   resp = requests.get(EVREKA360_BASE_URL + service_url, headers=headers)
    print(resp.status_code, resp.json())
 
 
@@ -193,18 +193,18 @@ Example Code
 
 .. code-block:: python
 
-   EVREKA360_API_USER = ""
-   EVREKA360_API_PASS = ""
-   EVREKA360_BASE_URL = ""
-
    import requests
-   session = requests.session()
-   session.auth = (EVREKA360_API_USER, EVREKA360_API_PASS)
+
+   EVREKA360_BASE_URL = ""
+   ACCESS_TOKEN = ""
 
    service_url = "/asset/activities/list"
-   headers = {"Content-Type": "application/json; charset=utf-8"}
+   headers = {
+        "Content-Type": "application/json; charset=utf-8",
+        "Authorization": "Bearer " + ACCESS_TOKEN
+   }
 
-   resp = session.get(EVREKA360_BASE_URL + service_url, headers=headers)
+   resp = requests.get(EVREKA360_BASE_URL + service_url, headers=headers)
    print(resp.status_code, resp.json())
 
 
@@ -236,18 +236,18 @@ Example Code
 
 .. code-block:: python
 
-   EVREKA360_API_USER = ""
-   EVREKA360_API_PASS = ""
-   EVREKA360_BASE_URL = ""
-
    import requests
-   session = requests.session()
-   session.auth = (EVREKA360_API_USER, EVREKA360_API_PASS)
+
+   EVREKA360_BASE_URL = ""
+   ACCESS_TOKEN = ""
 
    service_url = "/asset/types"
-   headers = {"Content-Type": "application/json; charset=utf-8"}
+   headers = {
+        "Content-Type": "application/json; charset=utf-8",
+        "Authorization": "Bearer " + ACCESS_TOKEN
+   }
 
-   resp = session.get(EVREKA360_BASE_URL + service_url, headers=headers)
+   resp = requests.get(EVREKA360_BASE_URL + service_url, headers=headers)
    print(resp.status_code, resp.json())
 
 
@@ -279,18 +279,18 @@ Example Code
 
 .. code-block:: python
 
-   EVREKA360_API_USER = ""
-   EVREKA360_API_PASS = ""
-   EVREKA360_BASE_URL = ""
-
    import requests
-   session = requests.session()
-   session.auth = (EVREKA360_API_USER, EVREKA360_API_PASS)
+
+   EVREKA360_BASE_URL = ""
+   ACCESS_TOKEN = ""
 
    service_url = "/asset/installation-types"
-   headers = {"Content-Type": "application/json; charset=utf-8"}
+   headers = {
+        "Content-Type": "application/json; charset=utf-8",
+        "Authorization": "Bearer " + ACCESS_TOKEN
+   }
 
-   resp = session.get(EVREKA360_BASE_URL + service_url, headers=headers)
+   resp = requests.get(EVREKA360_BASE_URL + service_url, headers=headers)
    print(resp.status_code, resp.json())
 
 
@@ -324,18 +324,18 @@ Example Code
 
 .. code-block:: python
 
-   EVREKA360_API_USER = ""
-   EVREKA360_API_PASS = ""
-   EVREKA360_BASE_URL = ""
-
    import requests
-   session = requests.session()
-   session.auth = (EVREKA360_API_USER, EVREKA360_API_PASS)
+
+   EVREKA360_BASE_URL = ""
+   ACCESS_TOKEN = ""
 
    service_url = "/asset/waste-types"
-   headers = {"Content-Type": "application/json; charset=utf-8"}
+   headers = {
+        "Content-Type": "application/json; charset=utf-8",
+        "Authorization": "Bearer " + ACCESS_TOKEN
+   }
 
-   resp = session.get(EVREKA360_BASE_URL + service_url, headers=headers)
+   resp = requests.get(EVREKA360_BASE_URL + service_url, headers=headers)
    print(resp.status_code, resp.json())
 
 
@@ -371,18 +371,18 @@ Example Code
 
 .. code-block:: python
 
-   EVREKA360_API_USER = ""
-   EVREKA360_API_PASS = ""
-   EVREKA360_BASE_URL = ""
-
    import requests
-   session = requests.session()
-   session.auth = (EVREKA360_API_USER, EVREKA360_API_PASS)
+
+   EVREKA360_BASE_URL = ""
+   ACCESS_TOKEN = ""
 
    service_url = "/asset/statuses"
-   headers = {"Content-Type": "application/json; charset=utf-8"}
+   headers = {
+        "Content-Type": "application/json; charset=utf-8",
+        "Authorization": "Bearer " + ACCESS_TOKEN
+   }
 
-   resp = session.get(EVREKA360_BASE_URL + service_url, headers=headers)
+   resp = requests.get(EVREKA360_BASE_URL + service_url, headers=headers)
    print(resp.status_code, resp.json())
 
 
@@ -440,18 +440,18 @@ Example Code
 
 .. code-block:: python
 
-   EVREKA360_API_USER = ""
-   EVREKA360_API_PASS = ""
-   EVREKA360_BASE_URL = ""
-
    import requests
-   session = requests.session()
-   session.auth = (EVREKA360_API_USER, EVREKA360_API_PASS)
+
+   EVREKA360_BASE_URL = ""
+   ACCESS_TOKEN = ""
 
    service_url = "/asset/activities/categories"
-   headers = {"Content-Type": "application/json; charset=utf-8"}
+   headers = {
+        "Content-Type": "application/json; charset=utf-8",
+        "Authorization": "Bearer " + ACCESS_TOKEN
+   }
 
-   resp = session.get(EVREKA360_BASE_URL + service_url, headers=headers)
+   resp = requests.get(EVREKA360_BASE_URL + service_url, headers=headers)
    print(resp.status_code, resp.json())
 
 
@@ -487,16 +487,16 @@ Example Code
 
 .. code-block:: python
 
-   EVREKA360_API_USER = ""
-   EVREKA360_API_PASS = ""
-   EVREKA360_BASE_URL = ""
-
    import requests
-   session = requests.session()
-   session.auth = (EVREKA360_API_USER, EVREKA360_API_PASS)
+
+   EVREKA360_BASE_URL = ""
+   ACCESS_TOKEN = ""
 
    service_url = "/asset/activities/types"
-   headers = {"Content-Type": "application/json; charset=utf-8"}
+   headers = {
+        "Content-Type": "application/json; charset=utf-8",
+        "Authorization": "Bearer " + ACCESS_TOKEN
+   }
 
-   resp = session.get(EVREKA360_BASE_URL + service_url, headers=headers)
+   resp = requests.get(EVREKA360_BASE_URL + service_url, headers=headers)
    print(resp.status_code, resp.json())

@@ -4,7 +4,7 @@ Evreka360 API Doc
 Welcome to the Evreka360 API Reference section. This section includes general information about our APIs' design and implementation details, references and usage details of API endpoints.
 
 .. note::
-   If you need a support you can contact with us software@evreka.co.
+   If you need a support you can contact with us support@evreka.co.
 
 
 .. toctree::
