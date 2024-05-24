@@ -1,4 +1,4 @@
-Asset Management
+Asset Module
 =================
 
 Asset List
@@ -41,7 +41,7 @@ Example Code
 
    import requests
 
-   EVREKA360_BASE_URL = ""
+   EVREKA360_API_BASE_URL = ""
    ACCESS_TOKEN = ""
 
    page = 1
@@ -71,7 +71,7 @@ Example Code
         "Authorization": "Bearer " + ACCESS_TOKEN
    }
 
-   resp = requests.get(EVREKA360_BASE_URL + service_url, headers=headers)
+   resp = requests.get(EVREKA360_API_BASE_URL + service_url, headers=headers)
    print(resp.status_code, resp.json())
 
 
@@ -137,7 +137,7 @@ Example Code
 
    import requests
 
-   EVREKA360_BASE_URL = ""
+   EVREKA360_API_BASE_URL = ""
    ACCESS_TOKEN = ""
 
    asset_id = "2024"
@@ -147,7 +147,7 @@ Example Code
         "Authorization": "Bearer " + ACCESS_TOKEN
    }
 
-   resp = requests.get(EVREKA360_BASE_URL + service_url, headers=headers)
+   resp = requests.get(EVREKA360_API_BASE_URL + service_url, headers=headers)
    print(resp.status_code, resp.json())
 
 
@@ -195,7 +195,7 @@ Example Code
 
    import requests
 
-   EVREKA360_BASE_URL = ""
+   EVREKA360_API_BASE_URL = ""
    ACCESS_TOKEN = ""
 
    service_url = "/asset/activities/list"
@@ -204,7 +204,7 @@ Example Code
         "Authorization": "Bearer " + ACCESS_TOKEN
    }
 
-   resp = requests.get(EVREKA360_BASE_URL + service_url, headers=headers)
+   resp = requests.get(EVREKA360_API_BASE_URL + service_url, headers=headers)
    print(resp.status_code, resp.json())
 
 
@@ -238,7 +238,7 @@ Example Code
 
    import requests
 
-   EVREKA360_BASE_URL = ""
+   EVREKA360_API_BASE_URL = ""
    ACCESS_TOKEN = ""
 
    service_url = "/asset/types"
@@ -247,7 +247,7 @@ Example Code
         "Authorization": "Bearer " + ACCESS_TOKEN
    }
 
-   resp = requests.get(EVREKA360_BASE_URL + service_url, headers=headers)
+   resp = requests.get(EVREKA360_API_BASE_URL + service_url, headers=headers)
    print(resp.status_code, resp.json())
 
 
@@ -281,7 +281,7 @@ Example Code
 
    import requests
 
-   EVREKA360_BASE_URL = ""
+   EVREKA360_API_BASE_URL = ""
    ACCESS_TOKEN = ""
 
    service_url = "/asset/installation-types"
@@ -290,7 +290,7 @@ Example Code
         "Authorization": "Bearer " + ACCESS_TOKEN
    }
 
-   resp = requests.get(EVREKA360_BASE_URL + service_url, headers=headers)
+   resp = requests.get(EVREKA360_API_BASE_URL + service_url, headers=headers)
    print(resp.status_code, resp.json())
 
 
@@ -326,7 +326,7 @@ Example Code
 
    import requests
 
-   EVREKA360_BASE_URL = ""
+   EVREKA360_API_BASE_URL = ""
    ACCESS_TOKEN = ""
 
    service_url = "/asset/waste-types"
@@ -335,7 +335,7 @@ Example Code
         "Authorization": "Bearer " + ACCESS_TOKEN
    }
 
-   resp = requests.get(EVREKA360_BASE_URL + service_url, headers=headers)
+   resp = requests.get(EVREKA360_API_BASE_URL + service_url, headers=headers)
    print(resp.status_code, resp.json())
 
 
@@ -373,7 +373,7 @@ Example Code
 
    import requests
 
-   EVREKA360_BASE_URL = ""
+   EVREKA360_API_BASE_URL = ""
    ACCESS_TOKEN = ""
 
    service_url = "/asset/statuses"
@@ -382,7 +382,7 @@ Example Code
         "Authorization": "Bearer " + ACCESS_TOKEN
    }
 
-   resp = requests.get(EVREKA360_BASE_URL + service_url, headers=headers)
+   resp = requests.get(EVREKA360_API_BASE_URL + service_url, headers=headers)
    print(resp.status_code, resp.json())
 
 
@@ -442,7 +442,7 @@ Example Code
 
    import requests
 
-   EVREKA360_BASE_URL = ""
+   EVREKA360_API_BASE_URL = ""
    ACCESS_TOKEN = ""
 
    service_url = "/asset/activities/categories"
@@ -451,7 +451,7 @@ Example Code
         "Authorization": "Bearer " + ACCESS_TOKEN
    }
 
-   resp = requests.get(EVREKA360_BASE_URL + service_url, headers=headers)
+   resp = requests.get(EVREKA360_API_BASE_URL + service_url, headers=headers)
    print(resp.status_code, resp.json())
 
 
@@ -489,7 +489,7 @@ Example Code
 
    import requests
 
-   EVREKA360_BASE_URL = ""
+   EVREKA360_API_BASE_URL = ""
    ACCESS_TOKEN = ""
 
    service_url = "/asset/activities/types"
@@ -498,5 +498,5 @@ Example Code
         "Authorization": "Bearer " + ACCESS_TOKEN
    }
 
-   resp = requests.get(EVREKA360_BASE_URL + service_url, headers=headers)
+   resp = requests.get(EVREKA360_API_BASE_URL + service_url, headers=headers)
    print(resp.status_code, resp.json())

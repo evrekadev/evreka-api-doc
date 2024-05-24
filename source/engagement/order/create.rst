@@ -47,7 +47,7 @@ Example Code
 
     import requests
 
-    EVREKA360_BASE_URL = ""
+    EVREKA360_API_BASE_URL = ""
     ACCESS_TOKEN = ""
 
     service_url = "/engagement/orders"
@@ -94,7 +94,7 @@ Example Code
         ]
     }
 
-    resp = requests.post(EVREKA360_BASE_URL + service_url, headers=headers, json=data)
+    resp = requests.post(EVREKA360_API_BASE_URL + service_url, headers=headers, json=data)
     print(resp.status_code, resp.json())
 
 Response

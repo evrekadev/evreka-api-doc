@@ -32,7 +32,7 @@ Example Code
 
     import requests
 
-    EVREKA360_BASE_URL = ""
+    EVREKA360_API_BASE_URL = ""
     ACCESS_TOKEN = ""
 
     service_url = "/engagement/entities"
@@ -56,7 +56,7 @@ Example Code
     # filter example #5 #To use multiple filters, use the & character between the filters.
     #service_url += "?name=MyServicePointName" + "&postcode=1234AB"
 
-    resp = requests.get(EVREKA360_BASE_URL + service_url, headers=headers)
+    resp = requests.get(EVREKA360_API_BASE_URL + service_url, headers=headers)
     print(resp.status_code, resp.json())
 
 Response

@@ -32,7 +32,7 @@ Example Code
 
     import requests
 
-    EVREKA360_BASE_URL = ""
+    EVREKA360_API_BASE_URL = ""
     ACCESS_TOKEN = ""
 
     session = requests.session()
@@ -49,7 +49,7 @@ Example Code
         "status_id": ""
     }
 
-    resp = session.put(EVREKA360_BASE_URL + service_url, json=data, headers=headers)
+    resp = session.put(EVREKA360_API_BASE_URL + service_url, json=data, headers=headers)
     print(resp.status_code, resp.json())
 
 Response

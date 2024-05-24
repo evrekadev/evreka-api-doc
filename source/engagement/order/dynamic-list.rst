@@ -35,7 +35,7 @@ Example Code
 
     import requests
 
-    EVREKA360_BASE_URL = ""
+    EVREKA360_API_BASE_URL = ""
     ACCESS_TOKEN = ""
 
     service_url = "/engagement/orders/dynamic_fields"
@@ -44,7 +44,7 @@ Example Code
         "Authorization": "Bearer " + ACCESS_TOKEN
     }
 
-    resp = requests.get(EVREKA360_BASE_URL + service_url, headers=headers)
+    resp = requests.get(EVREKA360_API_BASE_URL + service_url, headers=headers)
     print(resp.status_code, resp.json())
 
 

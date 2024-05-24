@@ -3,8 +3,10 @@ Evreka360 API Doc
 
 Welcome to the Evreka360 API Reference section. This section includes general information about our APIs' design and implementation details, references and usage details of API endpoints.
 
+You can directly try with `Swagger UI <https://360.evreka.co/e360_api/docs>`_ or `ReDoc <https://360.evreka.co/e360_api/redoc>`_. Also we have a `Evreka 360 API AI Assistant <https://360.evreka.co/e360_api/support/ai>`_ for you. You can ask all your questions to the assistant before contacting us.
+
 .. note::
-   If you need a support you can contact with us support@evreka.co.
+   If you need additional support you can contact us at support@evreka.co.
 
 
 .. toctree::

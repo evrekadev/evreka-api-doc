@@ -30,7 +30,7 @@ Example Code
 
     import requests
 
-    EVREKA360_BASE_URL = ""
+    EVREKA360_API_BASE_URL = ""
     ACCESS_TOKEN = ""
 
     service_url = "/engagement/order_settings"
@@ -49,7 +49,7 @@ Example Code
     #service_url += "?entity_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
     #service_url += "&service_point_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
 
-    resp = requests.get(EVREKA360_BASE_URL + service_url, headers=headers)
+    resp = requests.get(EVREKA360_API_BASE_URL + service_url, headers=headers)
     print(resp.status_code, resp.json())
 
 

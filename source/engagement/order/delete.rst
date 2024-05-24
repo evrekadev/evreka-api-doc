@@ -22,7 +22,7 @@ Example Code
 
     import requests
 
-    EVREKA360_BASE_URL = ""
+    EVREKA360_API_BASE_URL = ""
     ACCESS_TOKEN = ""
 
     order_id = ""
@@ -32,7 +32,7 @@ Example Code
         "Authorization": "Bearer " + ACCESS_TOKEN
     }
     
-    resp = requests.delete(EVREKA360_BASE_URL + service_url, headers=headers)
+    resp = requests.delete(EVREKA360_API_BASE_URL + service_url, headers=headers)
     print(resp.status_code, resp.json())
 
 

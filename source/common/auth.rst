@@ -77,5 +77,6 @@ Refresh Access Token
 
     access_token = auth_response_dict['access_token']
     print("Access Token", access_token)
+
     refresh_token = auth_response_dict['refresh_token']
     print("Refresh Token", refresh_token)
