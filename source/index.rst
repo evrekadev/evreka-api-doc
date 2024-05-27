@@ -24,3 +24,4 @@ You can directly try with `Swagger UI <https://360.evreka.co/openapi/docs>`_ or 
 
    asset/index
    engagement/index
+   fleet/index
