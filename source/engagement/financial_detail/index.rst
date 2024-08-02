@@ -1,9 +1,11 @@
-.. raw:: pdf
-
-   PageBreak
-
 Financial Detail API List
 ==========================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Financial Detail
+
+   list
 
 This section provides documentation for available API endpoints of the Financial Detail Model for the Engagement Module.
 
