@@ -1,9 +1,11 @@
-.. raw:: pdf
-
-   PageBreak
-
 Entity API List
 ======================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Entity
+
+   list
 
 This section provides documentation for available API endpoints of the Entity Model for the Engagement Module.
 
