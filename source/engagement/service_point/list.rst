@@ -19,8 +19,11 @@ Data Structure
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
    | type_id                 | string *(optional)*                                          | Service Point Type ID - UUID                      | d666a904-5739-46c0-b70a-1cd57658a3f6                  |
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
+   | entity_id               | string *(optional)*                                          | Service Point Related Entity ID - UUID            | d666a904-5739-46c0-b70a-1cd57658a3f6                  |
+   +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
    | *postcode               | string *(optional)*                                          | Dynamic Field Key - Value                         | 1234AB                                                |
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
+
 "*Dynamic Field is a custom field that can be added to Service Point. "key" of the dynamic field can be used as a filter."
 
 Example Code
@@ -39,19 +42,22 @@ Example Code
         "Authorization": "Bearer " + ACCESS_TOKEN
     }
 
-    # filter example #1
+    # filter example: pagination
     #service_url += "?page=0&limit=100"
 
-    # filter example #2
+    # filter example: name
     #service_url += "?name=MyServicePointName"
 
-    # filter example #3
+    # filter example: type_id
     #service_url += "?type_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
 
-    # filter example #4 
+    # filter example: entity_id
+    #service_url += "?entity_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
+
+    # filter example: postcode (dynamic field)
     #service_url += "?postcode=1234AB"
 
-    # filter example #5 #To use multiple filters, use the & character between the filters.
+    # filter example: to use multiple filters, use the & character between the filters
     #service_url += "?name=MyServicePointName" + "&postcode=1234AB"
 
     resp = requests.get(EVREKA360_API_BASE_URL + service_url, headers=headers)
