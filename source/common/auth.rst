@@ -1,5 +1,5 @@
 Authentication
-=======
+===============
 
 First of all, you need to get an access token to authenticate for Evreka 360 API via Evreka 360 Auth server.
 You need to include the **Bearer Token** in the Authorization header of your requests to the Evreka 360 API.
