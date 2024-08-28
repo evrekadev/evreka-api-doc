@@ -7,4 +7,4 @@ Changelog
 
 1.4.0
 ----------------
-- Added new endpoint to retrieve vehicle location history :doc:`Fleet Service <fleet/index>`.
+- Added new endpoint to create gps data of device by location :doc:`Fleet Service <fleet/index>`.
