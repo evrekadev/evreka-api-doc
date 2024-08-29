@@ -1,10 +1,10 @@
-Entity List
+Contact List
 ----------------
 
 .. table::
 
    +-------------------+--------------------------------------------+
-   | GET               | ``/entities``                              |
+   | GET               | ``/contacts``                              |
    +-------------------+--------------------------------------------+
 
 Data Structure
@@ -15,14 +15,17 @@ Data Structure
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
    | Field Name              | Data Type                                                    | Description                                       | Value                                                 |
    +=========================+==============================================================+===================================================+=======================================================+
-   | name                    | string *(optional)*                                          | Entity Name                                       | MyEntity                                              |
+   | name                    | string *(optional)*                                          | Contact Name                                      | MyContact                                             |
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
-   | type_id                 | string *(optional)*                                          | Entity Type ID - UUID                             | d666a904-5739-46c0-b70a-1cd57658a3f6                  |
+   | entity_id               | string *(optional)*                                          | Contact Entity ID - UUID                          | d666a904-5739-46c0-b70a-1cd57658a3f6                  |
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
-   | order_types             | list[str] *(optional)*                                       | Order By Type IDs                                 | ``["d666a904-5739-46c0-b70a-1cd57658a3f6"]``          |
+   | surname                 | string *(optional)*                                          | Contact Surname                                   | MySurname                                             |
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
-   | order_items             | list[str] *(optional)*                                       | Order By Item IDs                                 | ``["d666a904-5739-46c0-b70a-1cd57658a3f6"]``          |
+   | email                   | string *(optional)*                                          | Contact Email                                     | my@email.com                                          |
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
+   | phone                   | string *(optional)*                                          | Contact Phone                                     | +1234567890                                           |
+   +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
+
 
 Example Code
 ^^^^^^^^^^^^^^^^^
@@ -34,7 +37,7 @@ Example Code
     EVREKA360_API_BASE_URL = ""
     ACCESS_TOKEN = ""
 
-    service_url = "/engagement/entities"
+    service_url = "/engagement/contacts"
     headers = {
         "Content-Type": "application/json; charset=utf-8", 
         "Authorization": "Bearer " + ACCESS_TOKEN
@@ -70,10 +73,13 @@ Response
         "items": [
             {
                 "id": "UUID",
-                "name": "Entity Name",
-                "type_id": "Entity Type UUID",
-                "type_name": "Entity Type Name",
-                "status_id": "Entity Status UUID",
+                "name": "Contact Name",
+                "surname": "Contact Surname",
+                "email": "Contact Email",
+                "phone": "Contact Phone",
+                "entity_id": "Entity UUID",
+                "has_customer_portal": "true/false",
+                "service_point_id_list": "Service Point UUID",
                 "dynamic": "Dynamic Field JSON"
             }
         ]

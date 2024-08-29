@@ -1,10 +1,10 @@
-Entity List
+Case Type List
 ----------------
 
 .. table::
 
    +-------------------+--------------------------------------------+
-   | GET               | ``/entities``                              |
+   | GET               | ``/cases/case_types``                      |
    +-------------------+--------------------------------------------+
 
 Data Structure
@@ -15,13 +15,6 @@ Data Structure
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
    | Field Name              | Data Type                                                    | Description                                       | Value                                                 |
    +=========================+==============================================================+===================================================+=======================================================+
-   | name                    | string *(optional)*                                          | Entity Name                                       | MyEntity                                              |
-   +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
-   | type_id                 | string *(optional)*                                          | Entity Type ID - UUID                             | d666a904-5739-46c0-b70a-1cd57658a3f6                  |
-   +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
-   | order_types             | list[str] *(optional)*                                       | Order By Type IDs                                 | ``["d666a904-5739-46c0-b70a-1cd57658a3f6"]``          |
-   +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
-   | order_items             | list[str] *(optional)*                                       | Order By Item IDs                                 | ``["d666a904-5739-46c0-b70a-1cd57658a3f6"]``          |
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
 
 Example Code
@@ -34,7 +27,7 @@ Example Code
     EVREKA360_API_BASE_URL = ""
     ACCESS_TOKEN = ""
 
-    service_url = "/engagement/entities"
+    service_url = "/engagement/cases"
     headers = {
         "Content-Type": "application/json; charset=utf-8", 
         "Authorization": "Bearer " + ACCESS_TOKEN
@@ -70,11 +63,12 @@ Response
         "items": [
             {
                 "id": "UUID",
-                "name": "Entity Name",
-                "type_id": "Entity Type UUID",
-                "type_name": "Entity Type Name",
-                "status_id": "Entity Status UUID",
-                "dynamic": "Dynamic Field JSON"
-            }
+                "name": "Case Name",
+                "location_type": "Case Location Type",
+                "sub_type_list": "Case Sub Type List",
+                "service_point_types": "Case Service Point Type List",
+                "must_have_sub_type": "true/false",
+                "is_entity_related": "true/false",
+                "is_citizen_related": "true/false",
         ]
     }
