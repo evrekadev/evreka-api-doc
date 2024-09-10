@@ -8,3 +8,7 @@ Changelog
 1.4.0
 ----------------
 - Added new endpoint to create gps data of device by location :doc:`Fleet Service <fleet/index>`.
+
+1.4.1
+----------------
+- Added new endpoint to create weight activity :doc:`Device Service <device/index>`.

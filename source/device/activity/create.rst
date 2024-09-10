@@ -4,7 +4,7 @@ Create Activity API
 .. table::
 
    +-------------------+--------------------------------------------+
-   | POST              | ``/activity``                              |
+   | POST              | ``/device/record/weighing``                |
    +-------------------+--------------------------------------------+
 
 Data Structure
@@ -50,7 +50,7 @@ Example Code
     EVREKA360_API_BASE_URL = ""
     ACCESS_TOKEN = ""
 
-    service_url = "/mrf/activity"
+    service_url = "/device/record/weighing"
     headers = {
         "Content-Type": "Content-Type: multipart/form-data", 
         "Authorization": "Bearer " + ACCESS_TOKEN

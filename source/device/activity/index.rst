@@ -7,7 +7,7 @@ Activity API List
 
    create
 
-This part provides documentation for available API endpoints of Activity Model for MRF Module.
+This part provides documentation for available API endpoints of Activity Model for Device Module.
 
 
 .. table::
@@ -16,5 +16,5 @@ This part provides documentation for available API endpoints of Activity Model f
    +-----------+-------------------------------------+-------------------------------------------+
    | Method    | Endpoint                            | Description                               |
    +===========+=====================================+===========================================+
-   | POST      | /mrf/activity                       | Create an activity with given parameters  |
+   | POST      | /device/record/weighing             | Create an activity with given parameters  |
    +-----------+-------------------------------------+-------------------------------------------+

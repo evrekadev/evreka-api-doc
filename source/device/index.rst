@@ -1,4 +1,4 @@
-MRF Module
+Device Module
 =========================
 
 .. toctree::
