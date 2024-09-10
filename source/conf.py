@@ -9,7 +9,7 @@
 project = 'Evreka360 API'
 copyright = '2024, Evreka'
 author = 'Evreka'
-version = '1.3.2'
+version = '1.4.1'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
