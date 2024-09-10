@@ -27,3 +27,4 @@ You can follow the release notes at :doc:`change logs <changelog>`. We also noti
    asset/index
    engagement/index
    fleet/index
+   device/index
