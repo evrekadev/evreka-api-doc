@@ -173,7 +173,7 @@ Example Code
             "device_identifier": "111111111"
         },
         {
-            "record_time": "2023-10-01T12:00:00Z",
+            "record_time": "2023-10-01T12:01:00Z",
             "location": {
                 "longitude": 40.7128,
                 "latitude": 74.0060
@@ -182,7 +182,7 @@ Example Code
             "speed": 40.0,
             "battery": 80,
             "bearing": 180.0,
-            "device_identifier": "0000000000"
+            "device_identifier": "111111111"
         }
     ]
 
