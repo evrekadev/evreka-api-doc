@@ -12,3 +12,7 @@ Changelog
 1.4.1
 ----------------
 - Added new endpoint to create weight activity :doc:`Device Service <device/index>`.
+
+1.4.2
+----------------
+- Added new waste_type_id field to weight activity :doc:`Device Service <device/index>`.

@@ -37,6 +37,8 @@ If transaction_id exists, it will be used to create the new activity from the la
     +---------------------+--------------------------+-------------------------------------------------+
     | tare_timestamp      | string *(optional)*      | Timestamp when the tare weight was recorded     |
     +---------------------+--------------------------+-------------------------------------------------+
+    | waste_type_id       | int *(optional)*         | Waste Type ID related with weighing             |
+    +---------------------+--------------------------+-------------------------------------------------+
     | media               | UploadFile *(optional)*  | Media file associated with the transaction      |
     +---------------------+--------------------------+-------------------------------------------------+
 
@@ -66,7 +68,8 @@ Example Code
         "net_weight": 699.95,
         "is_contaminated": False,
         "gross_timestamp": "2023-10-01T12:00:00Z",
-        "tare_timestamp": "2023-10-01T12:30:00Z"
+        "tare_timestamp": "2023-10-01T12:30:00Z",
+        "waste_type_id": 1,
     }
     files = {
         "media": open("path/to/file.jpg", "rb")
