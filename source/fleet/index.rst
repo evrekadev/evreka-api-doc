@@ -105,7 +105,7 @@ Status Code:* ``400`` - Bad request
 
 Location
 ----------------
-This endpoint is used to send the location data of fleet vehicle. This endpoint can only be used for one device_identifier.
+This endpoint is used to send the location data of fleet vehicle.
 
 .. table::
 
@@ -159,32 +159,18 @@ Example Code
         "Authorization": "Bearer " + ACCESS_TOKEN
     }
 
-    data = [
-        {
-            "record_time": "2023-10-01T12:00:00Z",
-            "location": {
-                "longitude": 10.7128,
-                "latitude": 20.0060
-            },
-            "accuracy": 5.0,
-            "speed": 50.0,
-            "battery": 95,
-            "bearing": 180.0,
-            "device_identifier": "111111111"
+    data = {
+        "record_time": "2023-10-01T12:00:00Z",
+        "location": {
+            "longitude": 10.7128,
+            "latitude": 20.0060
         },
-        {
-            "record_time": "2023-10-01T12:01:00Z",
-            "location": {
-                "longitude": 40.7128,
-                "latitude": 74.0060
-            },
-            "accuracy": 5.0,
-            "speed": 40.0,
-            "battery": 80,
-            "bearing": 180.0,
-            "device_identifier": "111111111"
-        }
-    ]
+        "accuracy": 5.0,
+        "speed": 50.0,
+        "battery": 95,
+        "bearing": 180.0,
+        "device_identifier": "111111111"
+    }
 
     resp = requests.post(EVREKA360_API_BASE_URL + service_url, headers=headers, json=data)
     print(resp.status_code, resp.json())
