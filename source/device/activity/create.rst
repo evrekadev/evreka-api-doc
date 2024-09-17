@@ -11,6 +11,8 @@ Data Structure
 ^^^^^^^^^^^^^^^^^
 If transaction_id exists, it will be used to create the new activity from the last activity which has same transaction_id and only given parameters will be updated.
 
+One of fields ``vehicle_identifier`` or ``asset_identifier`` must be provided.
+
 .. table::
     :width: 100%
 
@@ -79,7 +81,9 @@ Example Code
 Response
 ^^^^^^^^^^^^^^^^^
 *Status Code:* ``200`` - Retrieved successfully
+
 *Content Type:* ``application/json``
+
 *Body:*
 
 .. code-block:: json 
@@ -87,11 +91,11 @@ Response
     {
         "trace_id": "11111-111111-11111-11111"
     }
-    
-.. code-block:: tex
 
-Status Code:* ``400`` - Bad request
+*Status Code:* ``400`` - Bad request
+
 *Content Type:* ``application/json``
+
 *Body:*
 
 .. code-block:: json
