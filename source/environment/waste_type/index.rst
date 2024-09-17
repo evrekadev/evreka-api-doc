@@ -60,17 +60,3 @@ Response
             }
         ]
     }
-
-*Status Code:* ``404`` - Not found
-
-*Content Type:* ``application/json``
-
-*Body:*
-
-.. code-block:: json
-
-
-    {
-        "detail": "Waste type not found"
-    }
-
