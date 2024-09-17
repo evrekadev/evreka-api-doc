@@ -6,7 +6,7 @@ Case API List
    :caption: Case
 
    create
-   case_type-list
+   case-type-list
    
 
 This part provides documentation for available API endpoints of Case Model for Engagement Module.
