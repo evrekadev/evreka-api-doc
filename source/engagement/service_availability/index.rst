@@ -6,7 +6,6 @@ Service Availability API List
    :caption: Service Availability
 
    post
-   post_v2
 
 
 This section provides documentation for available API endpoints of the Service Availability Model for the Engagement Module.
@@ -18,9 +17,6 @@ This section provides documentation for available API endpoints of the Service A
    +===========+=====================================+===========================================+
    | POST      | /service_availability               | Retrieve available dates with optional    |
    |           |                                     | parameters                                |
-   +-----------+-------------------------------------+-------------------------------------------+
-   | POST      | /v2/engagement/service_availability | Retrieve available dates with optional    |
-   |           |                                     | parameters V2                             |
    +-----------+-------------------------------------+-------------------------------------------+
 
 
