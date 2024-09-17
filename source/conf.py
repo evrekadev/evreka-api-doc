@@ -39,4 +39,4 @@ html_static_path = ['_static']
 highlight_language = 'python'
 
 extensions = ['rst2pdf.pdfbuilder']
-pdf_documents = [('index', u'Evreka360 API Doc', u'Evreka'), ]
+pdf_documents = [('index', u'Evreka360Doc', u'Evreka360 API Doc', u'Evreka'), ]
