@@ -6,6 +6,7 @@ Financial Detail API List
    :caption: Financial Detail
 
    list
+   asset_list
 
 This section provides documentation for available API endpoints of the Financial Detail Model for the Engagement Module.
 
@@ -16,4 +17,7 @@ This section provides documentation for available API endpoints of the Financial
    +===========+=====================================+===========================================+
    | GET       | /financial_details                  | Retrieve list of financial details with   |
    |           |                                     | optional parameters                       |
+   +-----------+-------------------------------------+-------------------------------------------+
+   | GET       | /asset_financial_details            | Retrieve list of asset financial details  |
+   |           |                                     | with optional parameters                  |
    +-----------+-------------------------------------+-------------------------------------------+
