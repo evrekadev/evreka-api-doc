@@ -66,6 +66,7 @@ Response
             {
                 "id": "Order Type ID -UUID",
                 "name": "Order type name - String",
+                "template_id": "Order type's template ID - UUID"
             }
         ],
         "order_items": [

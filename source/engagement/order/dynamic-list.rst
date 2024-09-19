@@ -69,7 +69,7 @@ Response
                 "editable": "Is Editable - Boolean",
                 "displayable": "Is Displayable - Boolean",
                 "cp_user_allowed": "Is CP User Allowed - Boolean",
-                "type_id": "ORDER TYPE ID - UUID", // If order_type_id is provided
+                "type_ids": ["ORDER TYPE ID - UUID", "ORDER TYPE ID - UUID"],
                 "template_id": "ORDER TEMPLATE ID - UUID",
             }
         ]
