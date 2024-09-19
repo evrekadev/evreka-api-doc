@@ -12,6 +12,8 @@ Data Structure
 One of the following filters must be provided in the request: ``entity_id``, ``service_point_id``. 
 If none of the filters are provided, the API will return an empty list. If both filters are provided, the API will return intersection result.
 
+
+
 .. table::
 
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
@@ -22,6 +24,24 @@ If none of the filters are provided, the API will return an empty list. If both 
    | service_point_id        | string *(optional)*                                          | Service Point ID - UUID                           | d666a904-5739-46c0-b70a-1cd57658a3f6                  |
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
 
+Enum Definitions
+^^^^^^^^^^^^^^^^^
+
+.. table::
+
+   +-------------------+-------------------------------------------------------------------+-----------------------------------------------------+
+   | Name              | Values                                                            | Description                                         |
+   +===================+===================================================================+=====================================================+
+   | item_selection    | ``none`` ``optional`` ``required``                                | Defines requirement of order item selection |br|    |
+   |                   |                                                                   | when creating an order with an order type.          |
+   +-------------------+-------------------------------------------------------------------+-----------------------------------------------------+
+   | asset_selection   | ``no_asset_item`` ``pick`` ``drop`` ``collect`` ``pick_and_drop`` | Defines requirement of asset selection |br|         |
+   |                   |                                                                   | when creating an order with an order type.          |
+   +-------------------+-------------------------------------------------------------------+-----------------------------------------------------+
+
+.. |br| raw:: html
+
+      <br>
 
 Example Code
 ^^^^^^^^^^^^^^^^^
@@ -66,7 +86,9 @@ Response
             {
                 "id": "Order Type ID -UUID",
                 "name": "Order type name - String",
-                "template_id": "Order type's template ID - UUID"
+                "template_id": "Order type's template ID - UUID",
+                "item_selection": "Item selection - String",
+                "asset_selection": "Asset selection - String",
             }
         ],
         "order_items": [
