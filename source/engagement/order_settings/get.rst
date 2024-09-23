@@ -1,3 +1,5 @@
+.. _order_settings:
+
 Get Order Types and Items API
 -----------------------------
 
