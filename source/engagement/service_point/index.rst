@@ -6,6 +6,7 @@ Service Point API List
    :caption: Service Point
 
    list
+   asset_list
 
 
 This section provides documentation for available API endpoints of the Service Point Model for the Engagement Module.
