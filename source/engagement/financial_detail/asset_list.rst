@@ -11,6 +11,8 @@ Data Structure
 ^^^^^^^^^^^^^^^^^
 ``asset_type_id`` is an optional filter parameter that can be used to filter the asset type list. 
 
+``order_type_id`` is an optional filter parameter that can be used to filter the order type list. 
+
 ``entity_id`` and ``service_point_id`` are optional filter parameters that can be used to filter the asset financial detail list. 
 The financial details of an asset type can be specified by entity or service point. When 'entity_id' or/and 'service_point_id' are provided, asset financial details are filtered by these parameters.
 
@@ -20,6 +22,8 @@ The financial details of an asset type can be specified by entity or service poi
    | Field Name              | Data Type                                                    | Description                                       | Value                                                 |
    +=========================+==============================================================+===================================================+=======================================================+
    | asset_type_id           | int *(optional)*                                             | Asset Type ID - int                               | 1                                                     |
+   +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
+   | order_type_id           | string *(optional)*                                          | Order Type ID - UUID                              | d666a904-5739-46c0-b70a-1cd57658a3f6                  |
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
    | entity_id               | string *(optional)*                                          | Entity ID - UUID                                  | d666a904-5739-46c0-b70a-1cd57658a3f6                  |
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
