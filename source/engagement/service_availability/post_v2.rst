@@ -70,22 +70,18 @@ Response
 .. code-block:: json 
 
     {
-    "available_dates": {
         "dates": [
             {
                 "date": "2024-08-28T00:00:00",
                 "routes": [
                     {
-                        "value": 836,
-                        "label": "gzd",
+                        "value": 110,
+                        "label": "Route Order # 1",
                         "model": "RouteOrder",
-                        "op_id": 51
+                        "op_id": 1
                     }
                 ]
             }
-        ]},
-    "detail": {
-            "message": "Başarılı"
-        }
+        ]
     }
     
