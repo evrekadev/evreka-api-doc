@@ -17,3 +17,8 @@ Changelog
 ----------------
 - The optional type_id was changed to type_ids, and it will now return a UUID array. :doc:`Engagement Order Dynamic Fields <engagement/order/dynamic-list>`.
 - It now also returns the template ID of the order types. :doc:`Engagement Order Settings <engagement/order_settings/get>`.
+
+1.5.0
+----------------
+- Added new endpoint to get all waste types :doc:`Environment Service <environment/index>`.
+- Added new waste_type_id field to weight activity :doc:`Device Service <device/index>`.
