@@ -1,5 +1,5 @@
 Asset Financial Detail List
----------------------
+---------------------------
 
 .. table::
 
