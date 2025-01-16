@@ -22,3 +22,8 @@ Changelog
 ----------------
 - Added new endpoint to get all waste types :doc:`Environment Service <environment/index>`.
 - Added new waste_type_id field to weight activity :doc:`Device Service <device/index>`.
+
+1.10.0
+----------------
+- The default value of the **limit** parameter for pagination has been reduced from **100** to **10**.
+- Added new waste_type_id field to weight activity :doc:`Device Service <device/index>`.
