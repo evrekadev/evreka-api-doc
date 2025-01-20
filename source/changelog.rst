@@ -25,5 +25,4 @@ Changelog
 
 1.6.0
 ----------------
-- The default value of the **limit** parameter for pagination has been reduced from **100** to **10**.
-- Added new waste_type_id field to weight activity :doc:`Device Service <device/index>`.
+- The default value of the **limit** parameter for pagination has been reduced from **100** to **10**. The max value of the **limit** parameter for pagination has been reduced from **100** to **50**.
