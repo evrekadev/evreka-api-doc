@@ -4,7 +4,7 @@ Service Point Type List
 .. table::
 
    +-------------------+------------------------------------------------+
-   | GET               | ``/service_points/types``  |
+   | GET               | ``/service_points/types``                      |
    +-------------------+------------------------------------------------+
 
 Example Code
