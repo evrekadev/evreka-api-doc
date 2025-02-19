@@ -6,6 +6,7 @@ Service Point API List
    :caption: Service Point
 
    list
+   dynamic_field_list
    asset_types
    asset_list
 
