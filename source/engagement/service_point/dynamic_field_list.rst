@@ -4,7 +4,7 @@ Service Point Dynamic Field List
 .. table::
 
    +-------------------+--------------------------------------------+
-   | GET               | ``/service_points/dynamic_fields``                        |
+   | GET               | ``/service_points/dynamic_fields``         |
    +-------------------+--------------------------------------------+
 
 Data Structure
