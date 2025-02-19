@@ -5,6 +5,7 @@ Service Point API List
    :maxdepth: 2
    :caption: Service Point
 
+   create
    list
    asset_types
    asset_list
@@ -17,6 +18,8 @@ This section provides documentation for available API endpoints of the Service P
    +-----------+---------------------------------------------+-----------------------------------------------------------------------------+
    | Method    | Endpoint                                    | Description                                                                 |
    +===========+=============================================+=============================================================================+
+   | POST      | /service_points                             |  Create a service point with given parameters                               |
+   +-----------+---------------------------------------------+-----------------------------------------------------------------------------+
    | GET       | /service_points                             | Retrieve list of service points with                                        |
    |           |                                             | optional parameters                                                         |
    +-----------+---------------------------------------------+-----------------------------------------------------------------------------+
