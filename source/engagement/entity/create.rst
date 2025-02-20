@@ -44,7 +44,6 @@ Example Code
    ACCESS_TOKEN = ""
    service_url = "/engagement/entity"
    headers = {
-       "Content-Type": "multipart/form-data; boundary=<>",
        "Authorization": "Bearer " + ACCESS_TOKEN
    }
    # Data Example
@@ -60,8 +59,8 @@ Example Code
         "attachments": ("<file_name>", open("<file_name>", "rb"), "<file_type>")
     }
 
-   resp = requests.post(EVREKA360_API_BASE_URL + service_url, headers=headers, json=data)
-   print(resp.status_code, resp.json())
+    resp = requests.post(EVREKA360_API_BASE_URL + service_url, headers=headers, data=data, files=files)
+    print(resp.status_code, resp.json())
 
 Response
 ^^^^^^^^^^^^^^^^^
