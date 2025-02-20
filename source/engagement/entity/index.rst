@@ -6,6 +6,7 @@ Entity API List
    :caption: Entity
 
    list
+   dynamic_fields
 
 This section provides documentation for available API endpoints of the Entity Model for the Engagement Module.
 
@@ -16,4 +17,6 @@ This section provides documentation for available API endpoints of the Entity Mo
    +===========+=====================================+===========================================+
    | GET       | /entities                           | Retrieve list of entities with optional   |
    |           |                                     | parameters                                |
+   +-----------+-------------------------------------+-------------------------------------------+
+   | GET       | /entities/dynamic_fields            | Retrive dynamic fields of entity model    |
    +-----------+-------------------------------------+-------------------------------------------+
