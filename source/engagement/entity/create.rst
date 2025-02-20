@@ -27,7 +27,7 @@ Data Structure
     +-------------------------+--------------------------------------------------------------+---------------------------------------------------+------------------------------------------------------------------------------------+
     | dynamic_field_list      | list object *(optional)*                                     | Object contains dynamic field key and value       | ``[{"key":"numberField","value": 123"}]``                                          |
     +-------------------------+--------------------------------------------------------------+---------------------------------------------------+------------------------------------------------------------------------------------+
-    | attachments             | list of files *(optional)*                                   | A list of files uploaded via multipart/form-data  | ``["file1.jpg", "file2.pdf"]``                                                     |
+    | attachments             | file *(optional)*                                            | A list of files uploaded via multipart/form-data  | ``my_attachment.png``                                                              |
     +-------------------------+--------------------------------------------------------------+---------------------------------------------------+------------------------------------------------------------------------------------+
 
 .. |br| raw:: html
@@ -56,10 +56,9 @@ Example Code
         "order_settings": '[{"order_type":"type_1", "order_items":[]}]',
     }
 
-    files = [
-        ("attachments", ("file1.jpg", open("file1.jpg", "rb"), "image/jpg")),
-        ("attachments", ("file2.jpeg", open("file2.jpeg", "rb"), "image2/jpeg")),
-    ]
+    files = {
+        "attachments": ("<file_name>", open("<file_name>", "rb"), "<file_type>")
+    }
 
    resp = requests.post(EVREKA360_API_BASE_URL + service_url, headers=headers, json=data)
    print(resp.status_code, resp.json())
