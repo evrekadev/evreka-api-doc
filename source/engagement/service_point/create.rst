@@ -26,8 +26,6 @@ If ``ops_service_point_name`` is provided, ``ops_service_point_id`` must be prov
     +-------------------------+--------------------------------------------------------------+---------------------------------------------------+------------------------------------------------------------------------------------+
     | type                    | string *(required)*                                          | Type ID - UUID                                    | d666a904-5739-46c0-b70a-1cd57658a3f6                                               |
     +-------------------------+--------------------------------------------------------------+---------------------------------------------------+------------------------------------------------------------------------------------+
-    | location                | string *(optional)*                                          | Location ID - UUID                                | d666a904-5739-46c0-b70a-1cd57658a3f6                                               |
-    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+------------------------------------------------------------------------------------+
     | latitude                | float *(optional)*                                           | Latitude                                          | 30.12345                                                                           |
     +-------------------------+--------------------------------------------------------------+---------------------------------------------------+------------------------------------------------------------------------------------+
     | longitude               | float *(optional)*                                           | Longitude                                         | -12.1234                                                                           |
@@ -43,6 +41,8 @@ If ``ops_service_point_name`` is provided, ``ops_service_point_id`` must be prov
     +-------------------------+--------------------------------------------------------------+---------------------------------------------------+------------------------------------------------------------------------------------+
     | ops_service_point_name  | string *(optional)*                                          | Service Point Name in Ops Management              | my_ops_service_point                                                               |
     +-------------------------+--------------------------------------------------------------+---------------------------------------------------+------------------------------------------------------------------------------------+
+    | attachments             | File *(optional)*                                            | Service Point Attachments                         | my_attachment.png                                                                  |
+    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+------------------------------------------------------------------------------------+
 
 .. |br| raw:: html
 
@@ -54,13 +54,14 @@ Example Code
 .. code-block:: python
 
     import requests
+    import json
 
     EVREKA360_API_BASE_URL = ""
     ACCESS_TOKEN = ""
 
     service_url = "/engagement/service_points"
     headers = {
-        "Content-Type": "application/json; charset=utf-8", 
+        "Content-Type": "multipart/form-data; boundary=<>",
         "Authorization": "Bearer " + ACCESS_TOKEN
     }
 
@@ -68,47 +69,52 @@ Example Code
     data = {
         "name": "",
         "type": "",
-        "latitude": "",
-        "longitude": "",
-        "dynamic_field_list": [
+        "latitude": 0.0,
+        "longitude": 0.0,
+        "dynamic_field_list": json.dumps([
             {
                 "key": "",
-                "value": 0
+                "value": ""
             }
-        ],
-        "order_settings": [
+        ]),
+        "order_settings": json.dumps([
             {
                 "order_type": "",
                 "order_items": []
             }
-        ],
-        "entities": []
+        ]),
+        "entities": json.dumps([])
     }
 
     # Data Example #2
     data = {
         "name": "",
         "type": "",
-        "latitude": "",
-        "longitude": "",
-        "dynamic_field_list": [
+        "latitude": 0.0,
+        "longitude": 0.0,
+        "dynamic_field_list": json.dumps([
             {
                 "key": "",
                 "value": 0
             }
-        ],
-        "order_settings": [
+        ]),
+        "order_settings": json.dumps([
             {
                 "order_type": "",
                 "order_items": []
             }
-        ],
-        "entities": [],
+        ]),
+        "entities": json.dumps([]),
         "ops_service_id": "",
         "ops_service_name": ""
     }
 
-    resp = requests.post(EVREKA360_API_BASE_URL + service_url, headers=headers, json=data)
+    # File Data Example
+    files = {
+        "attachments": ("<file_name>", open("<file_name>", "rb"), "<file_type>")
+    }
+
+    resp = requests.post(EVREKA360_API_BASE_URL + service_url, headers=headers, data=data, files=files)
     print(resp.status_code, resp.json())
 
 Response
