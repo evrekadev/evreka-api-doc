@@ -7,6 +7,7 @@ Service Point API List
 
    create
    list
+   types
    asset_types
    asset_list
 
@@ -22,6 +23,8 @@ This section provides documentation for available API endpoints of the Service P
    +-----------+---------------------------------------------+-----------------------------------------------------------------------------+
    | GET       | /service_points                             | Retrieve list of service points with                                        |
    |           |                                             | optional parameters                                                         |
+   +-----------+---------------------------------------------+-----------------------------------------------------------------------------+
+   | GET       | /service_points/types                       | Retrieve list of service point types with                                   |
    +-----------+---------------------------------------------+-----------------------------------------------------------------------------+
    | GET       | /service_points/{service_point}/asset_types | Retrieve list of asset types of assets currently linked to a service point  |
    +-----------+---------------------------------------------+-----------------------------------------------------------------------------+
