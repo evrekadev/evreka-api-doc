@@ -4,7 +4,7 @@ Create Entity API
 .. table::
 
    +-------------------+--------------------------------------------+
-   | POST              | ``/entity``                                |
+   | POST              | ``/entities``                              |
    +-------------------+--------------------------------------------+
 
 Data Structure
@@ -42,7 +42,7 @@ Example Code
    import requests
    EVREKA360_API_BASE_URL = ""
    ACCESS_TOKEN = ""
-   service_url = "/engagement/entity"
+   service_url = "/engagement/entities"
    headers = {
        "Authorization": "Bearer " + ACCESS_TOKEN
    }
