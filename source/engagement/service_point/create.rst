@@ -61,7 +61,6 @@ Example Code
 
     service_url = "/engagement/service_points"
     headers = {
-        "Content-Type": "multipart/form-data; boundary=<>",
         "Authorization": "Bearer " + ACCESS_TOKEN
     }
 
@@ -105,7 +104,7 @@ Example Code
             }
         ]),
         "entities": json.dumps([]),
-        "ops_service_id": "",
+        "ops_service_id": 12345,
         "ops_service_name": ""
     }
 
