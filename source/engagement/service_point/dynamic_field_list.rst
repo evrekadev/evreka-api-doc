@@ -56,7 +56,7 @@ Response
                 "default_value": "Default Value",
                 "field_type": "Dynamic Field Type - TEXT, NUMBER, DROPDOWN",
                 "order": "Sort Order - Integer",
-                "options": ["LABEL - String", "VALUE - Integer"], // If field_type is DROPDOWN
+                "options": [{"LABEL - String", "VALUE - Integer"}], // If field_type is DROPDOWN
                 "required": "Is Required - Boolean",
                 "editable": "Is Editable - Boolean",
                 "displayable": "Is Displayable - Boolean",
