@@ -12,6 +12,8 @@ Data Structure
 
 ``name`` and ``type_id`` must be provided.
 
+Request content type should be multipart/form-data.
+
 .. table::
     :width: 100%
 
@@ -39,28 +41,46 @@ Example Code
 
 .. code-block:: python
 
-   import requests
-   EVREKA360_API_BASE_URL = ""
-   ACCESS_TOKEN = ""
-   service_url = "/engagement/entities"
-   headers = {
-       "Authorization": "Bearer " + ACCESS_TOKEN
-   }
-   # Data Example
+    import json
+    import requests
+
+    EVREKA360_API_BASE_URL = ""
+    ACCESS_TOKEN = ""
+    service_url = "/engagement/entities"
+    headers = {
+        "Authorization": "Bearer " + ACCESS_TOKEN
+    }
 
     data = {
         "name": "Sample Name",
-        "type": "123e4567-e89b-12d3-a456-426614174000",
-        "dynamic_field_list": [{"key":"some_key", "value": 10}],
-        "order_settings": [{"order_type":"type_1", "order_items":[]}],
+        "type": "UUID",
+        "dynamic_field_list": json.dumps([
+            {"key": "sample-df-1", "value": 1},
+            {"key": "sample-df-2", "value": "19.02.2025"},
+            {"key": "sample-df-3", "value": "test"}
+        ]),
+        "order_settings": json.dumps([
+            {"order_type": "UUID", "order_items": ["UUID"]},
+            {"order_type": "UUID",
+             "order_items": ["UUID"]}])
     }
 
-    files = {
-        "attachments": ("<file_name>", open("<file_name>", "rb"), "<file_type>")
-    }
+    files = [
+        ('attachments', ('sample.jpg', open('<path-to-sample.jpg>', 'rb'), 'image/jpeg')),
+        ('attachments', ('sample2.jpg', open('<path-to-sample2.jpg>', 'rb'), 'image/jpeg')),
+        ('attachments', ('sample3.jpg', open('<path-to-sample3.jpg>', 'rb'), 'image/jpeg'))
+    ]
 
-    resp = requests.post(EVREKA360_API_BASE_URL + service_url, headers=headers, data=data, files=files)
-    print(resp.status_code, resp.json())
+    resp = requests.post(
+        EVREKA360_API_BASE_URL + service_url,
+        headers=headers,
+        data=data,  # Sending as form-data
+        files=files  # Attachments
+    )
+
+    print("Status Code:", resp.status_code)
+    print("Response Text:", resp.text)
+
 
 Response
 ^^^^^^^^^^^^^^^^^
