@@ -1,5 +1,5 @@
-Service Points Locations List
------------------------------
+Service Points Locations API List
+---------------------------------
 
 .. table::
 
