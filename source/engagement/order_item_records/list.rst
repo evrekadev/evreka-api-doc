@@ -4,7 +4,7 @@ Order Item Records List
 .. table::
 
    +-------------------+--------------------------------------------+
-   | GET               | ``/order_item_records``                   |
+   | GET               | ``/order_item_records``                    |
    +-------------------+--------------------------------------------+
 
 Data Structure
@@ -51,6 +51,7 @@ Response
 *Body:*
 
 .. code-block:: json
+
     {
         "items": [
             {

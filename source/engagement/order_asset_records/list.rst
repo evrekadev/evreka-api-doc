@@ -1,5 +1,5 @@
 Order Asset Records List
------------------------
+------------------------
 
 .. table::
 
@@ -51,42 +51,42 @@ Response
 *Body:*
 
 .. code-block:: json
+
     {
         "items": [
-        {
-            "id": "Order Asset Record ID - UUID",
-            "order": "Order Name - String",
-            "asset_action": "Asset Action - String",
-            "order_assets": [
-                {
-                    "id": Order Asset ID - Integer,
-                    "name": "Order Asset Name - String"
-                }
-            ],
-            "order_asset_type": {
-                "id": Asset Type ID - Integer,
-                "name": "Asset Type Name - String"
-            },
-            "is_collected": "Is Collected - Boolean",
-            "unit_price": {
-                "value": "Unit Price - Float",
-                "currency": "Currency - String"
-            },
-            "market_share": "Market Share - Float",
-            "tax": {
-                "value": "Tax - Float",
-                "currency": "Currency - String"
-            },
-            "total_actual_price": {
-                "value": "Total Actual Price - Float",
-                "currency": "Currency - String"
-            },
-            "created_at": "Created At - ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>",
-            "updated_at": "Updated At - ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>"
-        },
+            {
+                "id": "Order Asset Record ID - UUID",
+                "order": "Order Name - String",
+                "asset_action": "Asset Action - String",
+                "order_assets": [
+                    {
+                        "id": "Order Asset ID - Integer",
+                        "name": "Order Asset Name - String"
+                    }
+                ],
+                "order_asset_type": {
+                    "id": "Asset Type ID - Integer",
+                    "name": "Asset Type Name - String"
+                },
+                "is_collected": "Is Collected - Boolean",
+                "unit_price": {
+                    "value": "Unit Price - Float",
+                    "currency": "Currency - String"
+                },
+                "market_share": "Market Share - Float",
+                "tax": {
+                    "value": "Tax - Float",
+                    "currency": "Currency - String"
+                },
+                "total_actual_price": {
+                    "value": "Total Actual Price - Float",
+                    "currency": "Currency - String"
+                },
+                "created_at": "Created At - ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>",
+                "updated_at": "Updated At - ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>"
+            }
         ]
     }
-
 
 *Status Code:* ``404`` - Not Found
 *Content Type:* ``application/json``
