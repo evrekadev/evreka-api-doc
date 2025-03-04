@@ -17,3 +17,5 @@ Engagement Module
    order/index
    contact/index
    case/index
+   order_item_records/index
+   order_asset_records/index

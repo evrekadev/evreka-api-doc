@@ -43,7 +43,7 @@ Under ``order_assets``, each action key like ``pick`` or ``drop`` is a list of a
     | order_assets            | dict object *(optional)*                                     | Object contains picked, dropped, collected  |br|  | ``{"pick":[{"asset_type":1,"assets":[1,2,3]},{"asset_type":2,"assets":[4,5,6]}],   |
     |                         |                                                              | assets, grouped by asset type                     | "drop":[{"asset_type":1,"assets":[7,8,9]},{"asset_type":2,"assets":[10,11,12]}]}`` | 
     +-------------------------+--------------------------------------------------------------+---------------------------------------------------+------------------------------------------------------------------------------------+
-    | dynamic_field_list      | list object *(optional)*                                     | Object contains dynamic field key and value       | ``[{"key":"numberField","value": 123"}]``                                          |
+    | dynamic_field_list      | list object *(optional)*                                     | Object contains dynamic field key and value       | ``[{"key":"numberField","value": 123}]``                                           |
     +-------------------------+--------------------------------------------------------------+---------------------------------------------------+------------------------------------------------------------------------------------+
 
 .. |br| raw:: html
