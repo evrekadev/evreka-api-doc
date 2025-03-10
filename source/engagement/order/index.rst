@@ -6,6 +6,7 @@ Order API List
    :caption: Order
 
    create
+   detail
    delete
    update-status
    status-list
@@ -21,6 +22,8 @@ This part provides documentation for available API endpoints of Order Model for 
    | Method    | Endpoint                            | Description                               |
    +===========+=====================================+===========================================+
    | POST      | /orders                             | Create an order with given parameters     |
+   +-----------+-------------------------------------+-------------------------------------------+
+   | GET       | /orders/{order_id}                  | Retrieve order detail with given order id |
    +-----------+-------------------------------------+-------------------------------------------+
    | DELETE    | /orders/{order_id}                  | Delete the order with given order id      |
    +-----------+-------------------------------------+-------------------------------------------+
