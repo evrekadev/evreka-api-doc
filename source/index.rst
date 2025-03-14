@@ -28,6 +28,8 @@ You can follow the release notes at :doc:`change logs <changelog>`. We also noti
    engagement/index
    fleet/index
    device/index
+   ops/index
+
 
 .. toctree::
    :caption: Environment:
@@ -35,8 +37,3 @@ You can follow the release notes at :doc:`change logs <changelog>`. We also noti
 
    environment/index
 
-.. toctree::
-   :maxdepth: 2
-   :caption: OPS
-
-   ops/index
