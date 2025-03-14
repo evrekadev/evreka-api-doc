@@ -34,3 +34,9 @@ You can follow the release notes at :doc:`change logs <changelog>`. We also noti
    :maxdepth: 2
 
    environment/index
+
+.. toctree::
+   :maxdepth: 2
+   :caption: OPS
+
+   ops/index
