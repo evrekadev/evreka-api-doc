@@ -26,3 +26,20 @@ Changelog
 1.6.0
 ----------------
 - The default value of the **limit** parameter for pagination has been reduced from **100** to **10**. The max value of the **limit** parameter for pagination has been reduced from **100** to **50**.
+
+1.7.0
+----------------
+- Entity Create API Created
+- Entity Type List API Created
+- E360_API now has the "engagement/entities/dynamic_fields" endpoint.
+- Added create endpoint, cypress test, and document of the engagement service point.
+- Added type list endpoint, cypress test, and document of engagement service point.
+- Added dynamic field list cypress test, and document of engagement service point.
+
+1.8.0
+----------------
+- A service is created to return Task Details.
+- Order Detail service has been developed for E360 API.
+- A service is created to return Task Transitions.
+- OpenAPI endpoint for announcements is created to list both announcements for the registered client, and the announcements with no client id.
+- A service is created to return Task Step Details.
