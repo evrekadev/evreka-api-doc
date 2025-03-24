@@ -9,7 +9,7 @@ Task List
 
 Data Structure
 ^^^^^^^^^^^^^^^^^
-``order_id`` should be provided as a query parameter.
+
 
 .. table::
     :width: 100%
