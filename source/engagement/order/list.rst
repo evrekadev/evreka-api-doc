@@ -105,14 +105,6 @@ Response
                     "type_id": "UUID"
                 },
                 "fulfillment_date": "date",
-                "price": {
-                    "value": "float",
-                    "currency": "string"
-                },
-                "planned_price": {
-                    "value": "float",
-                    "currency": "string"
-                },
                 "address": "string",
                 "latitude": "float",
                 "longitude": "float",
