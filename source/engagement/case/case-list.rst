@@ -1,4 +1,4 @@
-Case Type List
+Case List
 ----------------
 
 .. table::
