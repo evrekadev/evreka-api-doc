@@ -55,7 +55,7 @@ Response
 .. code-block:: json 
 
     {
-        "tile_provider": "Tile Provider - String",
+        "tile_provider": "Esri" | "Google" | "Open Street Map" ,
         "bounds" : {
             "north_east": {
                 "lat": "Latitude - Float",
