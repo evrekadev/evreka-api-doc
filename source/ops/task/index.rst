@@ -9,7 +9,7 @@ Task API List
    detail
    transitions
    step-detail
-   task List
+   list
 
 This part provides documentation for available API endpoints of Task Model for OPS Module.
 
