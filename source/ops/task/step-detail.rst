@@ -77,9 +77,32 @@ Response
             {
                 "label": "string",
                 "value": "string",
-                "type": "string",
-                "json_value": "form_value_json",
-                "options": "form_options"
+                "type": "text" | "email" | "phone" | "email" | "dropdown",
+            }
+            {
+                "label": "string",
+                "value": "float",
+                "type": "number",
+            }
+            {
+                "label": "string",
+                "value": ["string"],
+                "type": "multiple_dropdown" | "image"
+            }
+            {
+                "label": "string",
+                "value": "boolean",
+                "type": "checkbox",
+            }
+            {
+                "label": "string",
+                "value": "",
+                "type": "checkbox",
+            }
+            {
+                "label": "string",
+                "value": "UTC ISO Date",
+                "type": "date",
             }
         ]
     }
