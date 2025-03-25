@@ -115,16 +115,3 @@ Response
             }
         ]
     }
-
-
-*Status Code:* ``404`` - Not Found
-
-*Content Type:* ``application/json``
-
-*Body:*
-
-.. code-block:: json 
-
-    {
-        "detail": "Order not found"
-    } 
