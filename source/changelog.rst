@@ -43,3 +43,7 @@ Changelog
 - A service is created to return Task Transitions.
 - OpenAPI endpoint for announcements is created to list both announcements for the registered client, and the announcements with no client id.
 - A service is created to return Task Step Details.
+
+1.8.1
+----------------
+- A service is created to return Order List.

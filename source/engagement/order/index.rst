@@ -5,6 +5,7 @@ Order API List
    :maxdepth: 2
    :caption: Order
 
+   list
    create
    detail
    delete
@@ -21,6 +22,8 @@ This part provides documentation for available API endpoints of Order Model for 
    +-----------+-------------------------------------+-------------------------------------------+
    | Method    | Endpoint                            | Description                               |
    +===========+=====================================+===========================================+
+   | GET       | /orders                             | Retrieve order list                       |
+   +-----------+-------------------------------------+-------------------------------------------+
    | POST      | /orders                             | Create an order with given parameters     |
    +-----------+-------------------------------------+-------------------------------------------+
    | GET       | /orders/{order_id}                  | Retrieve order detail with given order id |
