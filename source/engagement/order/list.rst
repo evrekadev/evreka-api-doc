@@ -84,27 +84,13 @@ Response
             {
                 "id": "UUID",
                 "name": "string",
-                "created_at": "datetime - UTC",
-                "updated_at": "datetime - UTC",
-                "type": {
-                    "id": "UUID",
-                    "name": "string"
-                },
-                "status": {
-                    "id": "UUID",
-                    "name": "string"
-                },
-                "entity": {
-                    "id": "UUID",
-                    "name": "string",
-                    "type_id": "UUID"
-                },
-                "service_point": {
-                    "id": "UUID",
-                    "name": "string",
-                    "type_id": "UUID"
-                },
-                "fulfillment_date": "date",
+                "created_at": "datetime - ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>",
+                "updated_at": "datetime - ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>",
+                "type_id": "UUID",
+                "status_id": "UUID",
+                "entity_id": "UUID",
+                "service_point_id": "UUID",
+                "fulfillment_date": "date - YYYY-MM-DD",
                 "address": "string",
                 "latitude": "float",
                 "longitude": "float",
