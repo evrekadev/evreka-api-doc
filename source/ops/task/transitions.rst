@@ -56,7 +56,10 @@ Response
                 },
                 "start_time": "datetime",  
                 "end_time": "datetime",  
-                "user": "string or null",  
+                "user": {
+                    "id": "integer",  
+                    "name": "string"  
+                }, 
                 "next_transitions": ["integer"],  
                 "steps": ["integer"],  
                 "latitude": "float or null",  

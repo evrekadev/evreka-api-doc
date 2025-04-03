@@ -102,7 +102,10 @@ Response
                     "id": "Contact ID - UUID",
                     "name": "Contact Full Name - String"
                 },
-                "assignee":  "Assignee Full Name - String",
+                "assignee":  {
+                    "id": "Assignee ID - Int",
+                    "name": "Assignee Full Name - String"
+                },
                 "created_at": "Created At - UTC",
                 "updated_at": "Updated At - UTC",
                 "completed_time": "Completed Time - UTC",

@@ -55,9 +55,9 @@ Response
         "description": "string or null",
         "order": "integer",
         "service_type": "string",
-        "is_required": "boolean",
         "assets": [
             {
+                "id": "integer",
                 "name": "string",
                 "items": [
                     {
@@ -74,35 +74,70 @@ Response
             }
         ],
         "form": [
+            # Asset Forms
             {
+                "label": "Completed/Available Assets",
+                "assets": [{
+                    "id": "integer", 
+                    "name":"string"
+                }]
+            },
+            # Content Field Forms
+            {
+                "id": "integer",
                 "label": "string",
                 "value": "string",
-                "type": "text" | "email" | "phone" | "email" | "dropdown",
-            }
+                "type": "text" | "email" | "phone",
+            },
             {
+                "id": "integer",
                 "label": "string",
                 "value": "float",
                 "type": "number",
-            }
+            },
             {
-                "label": "string",
-                "value": ["string"],
-                "type": "multiple_dropdown" | "image"
-            }
-            {
+                "id": "integer",
                 "label": "string",
                 "value": "boolean",
                 "type": "checkbox",
-            }
+            },
             {
+                "id": "integer",
                 "label": "string",
                 "value": "",
                 "type": "checkbox",
-            }
+            },
             {
+                "id": "integer",
                 "label": "string",
                 "value": "UTC ISO Date",
                 "type": "date",
+            },
+            {
+                "id": "integer",
+                "label": "string",
+                "value": ["string"],
+                "type": "image"
+            },
+            {
+                "id": "integer",
+                "label": "string",
+                "value": {
+                    "label": "string",
+                    "value": "integer"
+                    },
+                "type": "dropdown"
+            },
+            {
+                "id": "integer",
+                "label": "string",
+                "value": [
+                    {
+                    "label": "string",
+                    "value": "integer"
+                    }
+                ],
+                "type": "multiple_dropdown"
             }
         ]
     }
