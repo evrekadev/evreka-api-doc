@@ -7,6 +7,7 @@ Case API List
 
    create
    case-type-list
+   case-list
    
 
 This part provides documentation for available API endpoints of Case Model for Engagement Module.
@@ -19,6 +20,8 @@ This part provides documentation for available API endpoints of Case Model for E
    | Method    | Endpoint                            | Description                               |
    +===========+=====================================+===========================================+
    | POST      | /cases                              | Create an case with given parameters      |
+   +-----------+-------------------------------------+-------------------------------------------+
+   | GET       | /cases                              | Retrive cases with optional filters       |
    +-----------+-------------------------------------+-------------------------------------------+
    | GET       | /cases/case_types                   | Retrive case type list of contact model   |
    +-----------+-------------------------------------+-------------------------------------------+
