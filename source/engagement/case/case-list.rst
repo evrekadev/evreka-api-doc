@@ -83,7 +83,8 @@ Response
                 },
                 "status": {
                     "id": "Status ID - UUID",
-                    "name": "Status Name - String"
+                    "name": "Status Name - String",
+                    "color": "Status Color - String"
                 },
                 "description": "Case Description - String",
                 "service_point": {

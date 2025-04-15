@@ -54,3 +54,7 @@ Changelog
 - API endpoint for displaying client bounds is configured. The response consists of the tile provider and a bound dictionary of north_east, south_west coordinate points. Each coordinate point consists of lat, lon. If the client does not have that module, bounds are provided as null.
 - The API endpoint for creating an order does not require a name, hence the field is made optional.
 - The API endpoint for listing cases is configured. The user can now optionally filter cases based on entity_id, service_point_id, contact_id, and case_type_id. Additionally, the results can be ordered by ascending or descending created_at dates.
+
+1.10.0
+----------------
+- Status color added to case list service response.
