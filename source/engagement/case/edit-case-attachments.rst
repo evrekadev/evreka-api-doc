@@ -63,10 +63,15 @@ Response
 *Content Type:* ``application/json``
 *Body:*
 
+
 .. code-block:: json 
 
     {
-        "detail": "Attachments updated successfully"
+        "success" : "Boolean",
+        "case_id" : ""Case ID - UUID",",
+        "created_attachment_ids" : [
+            "Attachment ID - UUID"
+        ]
     }
     
 
@@ -77,8 +82,9 @@ Response
 .. code-block:: json 
 
     {
-        "detail": "Failed to update attachments."
+        "detail": "Client does not have cases permission"
     }
+
 
 *Status Code:* ``404`` - Not Found
 *Content Type:* ``application/json``
