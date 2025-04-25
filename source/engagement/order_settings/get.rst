@@ -13,7 +13,7 @@ Data Structure
 ^^^^^^^^^^^^^^^^^
 One of the following filters must be provided in the request: ``entity_id``, ``service_point_id``. 
 If none of the filters are provided, the API will return an empty list. If both filters are provided, the API will return intersection result.
-
+Both ``entity_id`` and ``service_point_id`` can be single UUIDs or UUID lists.
 
 
 .. table::
@@ -21,9 +21,9 @@ If none of the filters are provided, the API will return an empty list. If both 
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
    | Field Name              | Data Type                                                    | Description                                       | Value                                                 |
    +=========================+==============================================================+===================================================+=======================================================+
-   | entity_id               | string *(optional)*                                          | Entity ID - UUID                                  | d666a904-5739-46c0-b70a-1cd57658a3f6                  |
+   | entity_id               | list[str] *(optional)*                                       | Entity ID List - UUID                                  | d666a904-5739-46c0-b70a-1cd57658a3f6                  |
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
-   | service_point_id        | string *(optional)*                                          | Service Point ID - UUID                           | d666a904-5739-46c0-b70a-1cd57658a3f6                  |
+   | service_point_id        | list[str] *(optional)*                                       | Service Point ID List- UUID                           | d666a904-5739-46c0-b70a-1cd57658a3f6                  |
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
 
 Enum Definitions
@@ -70,6 +70,12 @@ Example Code
     # filter example #3 #To use multiple filters, use the & character between the filters.
     #service_url += "?entity_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
     #service_url += "&service_point_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
+
+    # filter example #4 #To send multiple ids, use the , character between the ids.
+    #service_url += "?entity_id=d666a904-5739-46c0-b70a-1cd57658a3f6,d666a904-5739-46c0-b70a-1cd57658a3f6"
+
+    # filter example #5 #To send multiple ids, use the , character between the ids.
+    #service_url += "?service_point_id=d666a904-5739-46c0-b70a-1cd57658a3f6,d666a904-5739-46c0-b70a-1cd57658a3f6"
 
     resp = requests.get(EVREKA360_API_BASE_URL + service_url, headers=headers)
     print(resp.status_code, resp.json())
