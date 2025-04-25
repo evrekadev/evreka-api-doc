@@ -68,7 +68,7 @@ Response
 
     {
         "success" : "Boolean",
-        "case_id" : ""Case ID - UUID",",
+        "case_id" : "Case ID - UUID",
         "created_attachment_ids" : [
             "Attachment ID - UUID"
         ]
