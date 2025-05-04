@@ -12,6 +12,7 @@ Service Point API List
    asset_types
    asset_list
    locations_list
+   delete
 
 
 This section provides documentation for available API endpoints of the Service Point Model for the Engagement Module.
@@ -37,4 +38,6 @@ This section provides documentation for available API endpoints of the Service P
    +-----------+---------------------------------------------+-----------------------------------------------------------------------------+
    | GET       | /service_points_locations/                  | Retrieve list of locations of service points with optional parameters and   |
    |           |                                             | no pagination                                                               |
+   +-----------+---------------------------------------------+-----------------------------------------------------------------------------+
+   | DELETE    | /service_points/{service_point}             | Delete the given service point                                              |
    +-----------+---------------------------------------------+-----------------------------------------------------------------------------+
