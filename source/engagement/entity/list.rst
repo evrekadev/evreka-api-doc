@@ -55,6 +55,9 @@ Example Code
     # filter example #5 #To use multiple filters, use the & character between the filters.
     #service_url += "?name=MyServicePointName" + "&postcode=1234AB"
 
+    # filter example #6 #To use exact or contains filters, use the __exact or __contains modifier. If not specified, the default is contains.
+    #service_url += "?postcode__contains=1234AB"
+
     resp = requests.get(EVREKA360_API_BASE_URL + service_url, headers=headers)
     print(resp.status_code, resp.json())
 
