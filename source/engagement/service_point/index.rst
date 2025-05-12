@@ -26,7 +26,7 @@ This section provides documentation for available API endpoints of the Service P
    | GET       | /service_points                             | Retrieve list of service points with                                        |
    |           |                                             | optional parameters                                                         |
    +-----------+---------------------------------------------+-----------------------------------------------------------------------------+
-   | GET       | /service_points/types                       | Retrieve list of service point types with                                   |
+   | GET       | /service_points/types                       | Retrieve list of service point types with optional parameters               |
    +-----------+---------------------------------------------+-----------------------------------------------------------------------------+
    | GET       | /service_points/dynamic_fields              | Retrieve dynamic fields of service points with                              |
    |           |                                             | optional parameters                                                         |
