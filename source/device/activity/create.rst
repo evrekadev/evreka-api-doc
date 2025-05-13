@@ -1,3 +1,7 @@
+.. raw:: pdf
+
+   PageBreak
+
 Create Activity API
 -----------------------------------
 
@@ -12,6 +16,8 @@ Data Structure
 If transaction_id exists, it will be used to create the new activity from the last activity which has same transaction_id and only given parameters will be updated.
 
 One of fields ``vehicle_identifier`` or ``asset_identifier`` must be provided.
+
+In addition to the fields listed below, users can include custom fields. Each custom field should be given as a standard key-value pair alongside the predefined fields.
 
 .. table::
     :width: 100%
@@ -72,6 +78,7 @@ Example Code
         "gross_timestamp": "2023-10-01T12:00:00Z",
         "tare_timestamp": "2023-10-01T12:30:00Z",
         "waste_type_id": 1,
+        # "custom_temparature": 15.5
     }
     files = {
         "media": open("path/to/file.jpg", "rb")
