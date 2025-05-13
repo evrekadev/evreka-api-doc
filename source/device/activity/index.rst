@@ -6,6 +6,7 @@ Activity API List
    :caption: Activity
 
    create
+   dynamic_fields
 
 This part provides documentation for available API endpoints of Activity Model for Device Module.
 
@@ -13,8 +14,10 @@ This part provides documentation for available API endpoints of Activity Model f
 .. table::
    :width: 100%
 
-   +-----------+-------------------------------------+-------------------------------------------+
-   | Method    | Endpoint                            | Description                               |
-   +===========+=====================================+===========================================+
-   | POST      | /device/record/weighing             | Create an activity with given parameters  |
-   +-----------+-------------------------------------+-------------------------------------------+
+   +-----------+-------------------------------------------+-------------------------------------------+
+   | Method    | Endpoint                                  | Description                               |
+   +===========+===========================================+===========================================+
+   | POST      | /device/record/weighing                   | Create an activity with given parameters  |
+   +-----------+-------------------------------------------+-------------------------------------------+
+   | GET       | /device/recording/weighing/dynamic_fields | Retrive dynamic fields of activity model  |
+   +-----------+-------------------------------------------+-------------------------------------------+
