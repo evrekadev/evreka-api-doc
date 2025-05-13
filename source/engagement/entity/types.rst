@@ -7,6 +7,11 @@ Entity Type List
    | GET               | ``/entities/types``                            |
    +-------------------+------------------------------------------------+
 
+Data Structure
+^^^^^^^^^^^^^^^^^
+There is no required parameter for this request. Optionally, dynamic fields on ``extra`` can be used to filter the results.
+
+
 Example Code
 ^^^^^^^^^^^^
 
@@ -20,6 +25,10 @@ Example Code
        "Content-Type": "application/json; charset=utf-8",
        "Authorization": "Bearer " + ACCESS_TOKEN
    }
+
+    #Filters on the field "extra" with the given key and value
+    # service_url+="?address=ankara"
+
    resp = requests.get(EVREKA360_API_BASE_URL + service_url, headers=headers)
    print(resp.status_code, resp.json())
 
