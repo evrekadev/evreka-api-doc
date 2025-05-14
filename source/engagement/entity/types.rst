@@ -9,7 +9,7 @@ Entity Type List
 
 Data Structure
 ^^^^^^^^^^^^^^^^^
-There is no required parameter for this request. Optionally, dynamic fields on ``extra`` can be used to filter the results.
+There is no required parameter for this request. Optionally, custom fields on ``extra`` can be used to filter the results.
 
 
 Example Code
