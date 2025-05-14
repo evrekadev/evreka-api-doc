@@ -8,6 +8,8 @@ Contact API List
    create
    update
    list
+   validate_phone
+   validate_email
    
 
 This part provides documentation for available API endpoints of Contact Model for Engagement Module.
@@ -16,12 +18,16 @@ This part provides documentation for available API endpoints of Contact Model fo
 .. table::
    :width: 100%
 
-   +-----------+-------------------------------------+-------------------------------------------+
-   | Method    | Endpoint                            | Description                               |
-   +===========+=====================================+===========================================+
-   | POST      | /contacts                           | Create an contact with given parameters   |
-   +-----------+-------------------------------------+-------------------------------------------+
-   | PUT       | /contacts/{contact_id}              | Update the contact with given contact id  |
-   +-----------+-------------------------------------+-------------------------------------------+
-   | GET       | /contacts                           | Retrive contact list of contact model     |
-   +-----------+-------------------------------------+-------------------------------------------+
+   +-----------+-------------------------------------+------------------------------------------------------+
+   | Method    | Endpoint                            | Description                                          |
+   +===========+=====================================+======================================================+
+   | POST      | /contacts                           | Create an contact with given parameters              |
+   +-----------+-------------------------------------+------------------------------------------------------+
+   | PUT       | /contacts/{contact_id}              | Update the contact with given contact id             |
+   +-----------+-------------------------------------+------------------------------------------------------+
+   | GET       | /contacts                           | Retrive contact list of contact model                |
+   +-----------+-------------------------------------+------------------------------------------------------+
+   | POST      | /contacts/validate/phone            | Validate the phone number of contact for uniqueness  |
+   +-----------+-------------------------------------+------------------------------------------------------+
+   | POST      | /contacts/validate/email            | Validate the email of contact for uniqueness         |
+   +-----------+-------------------------------------+------------------------------------------------------+
