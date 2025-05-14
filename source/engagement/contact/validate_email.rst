@@ -2,12 +2,12 @@
 
    PageBreak
 
-Validate Email Address API
+Validate Contact Information API
 -----------------------------------
 .. table::
  
    +-------------------+--------------------------------------------+
-   | POST              | ``/contacts/validate/email``               |
+   | GET               | ``/contacts/validate``                     |
    +-------------------+--------------------------------------------+
 
 Data Structure
@@ -15,36 +15,35 @@ Data Structure
 .. table::
     :width: 100%
 
+    One of the following filters must be provided in the request: ``email``, ``phone``. 
+
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
    | Field Name              | Data Type                                                    | Description                                       | Value                                                 |
    +=========================+==============================================================+===================================================+=======================================================+
-   | email                   | string *(required)*                                          | Email Address                                     | example@gmail.com                                     |
+   | email                   | string *(optional)*                                          | Email Address                                     | example@gmail.com                                     |
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
-
-Example Code
-^^^^^^^^^^^^^^^^^
+   | phone                   | string *(optional)*                                          | Phone Number                                      | +1234567890                                           |
+   +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
 
 Example Code
 ^^^^^^^^^^^^^^^^^
 .. code-block:: python
 
     import requests
-
     EVREKA360_API_BASE_URL = ""
     ACCESS_TOKEN = ""
 
-    session = requests.session()
-
-    service_url = "/engagement/contacts/validate/email"
+    service_url = "/contacts/validate"
     headers = {
         "Content-Type": "application/json; charset=utf-8", 
         "Authorization": "Bearer " + ACCESS_TOKEN
     }
-    data = {
-        "email": "example@gmail.com"
-    }
+    # Data Example #1
+    email = "example@gmail.com"
+    phone = "+1234567890"
 
-    response = session.post(EVREKA360_API_BASE_URL + service_url, headers=headers, json=data)
+    service_url+="?email="+email+"&phone="+phone
+    resp = requests.get(EVREKA360_API_BASE_URL + service_url, headers=headers)
     print(resp.status_code, resp.json())
 
 
@@ -56,13 +55,19 @@ Response
 
 .. code-block:: json
 {
-    "detail": "The provided email address is valid."
+    "detail": "The provided information is valid."
 }
 
 *Status Code:* ``400`` - Bad Request
 *Content Type:* ``application/json``
-*Body:*
+*Body (can contain one or multiple errors):*
+
 .. code-block:: json
-{
-    "detail": "Duplicate email error: ({email})"
-}
+
+    {
+        "detail": [
+            "Duplicate phone error: {(phone)}",
+            "Duplicate email error: {(email)}",
+        ]
+    }
+
