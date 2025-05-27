@@ -40,7 +40,7 @@ In addition to the fields listed below, users can include custom fields. Each cu
     | net_weight          | float *(optional)*                                                    | Net weight calculated as first minus second weight|
     +---------------------+-----------------------------------------------------------------------+---------------------------------------------------+
     | is_contaminated     | bool *(optional)*                                                     | Indicates if the asset is contaminated            |
-    +---------------------+-----------------------------------------------------------------------+--------------------------------------------------+
+    +---------------------+-----------------------------------------------------------------------+---------------------------------------------------+
     | first_timestamp     | `ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>`_ *(optional)*     | time when the first weight was recorded           |
     +---------------------+-----------------------------------------------------------------------+---------------------------------------------------+
     | second_timestamp    | `ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>`_ *(optional)*     | time when the second weight was recorded          |   

@@ -6,24 +6,26 @@ Validate Phone Number API
 -----------------------------------
 
 .. table::
- 
-   +-------------------+--------------------------------------------+
-   | POST              | ``/contacts/validate/phone``               |
-   +-------------------+--------------------------------------------+
+
+   +--------+--------------------------------------------+
+   | GET    | ``/contacts/validate/phone``               |
+   +--------+--------------------------------------------+
 
 Data Structure
-^^^^^^^^^^^^^^^^^
-.. table::
-    :width: 100%
+^^^^^^^^^^^^^^
 
-   +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
-   | Field Name              | Data Type                                                    | Description                                       | Value                                                 |
-   +=========================+==============================================================+===================================================+=======================================================+
-   | phone                   | string *(required)*                                          | Phone Number                                      | +1234567890                                           |
-   +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
+.. table::
+   :width: 100%
+
+   +-------------------------+----------------------------+-------------------------------------------+---------------------+
+   | Field Name              | Data Type                  | Description                               | Value               |
+   +=========================+============================+===========================================+=====================+
+   | phone                   | string *(required)*        | Phone number to be validated              | +1234567890         |
+   +-------------------------+----------------------------+-------------------------------------------+---------------------+
 
 Example Code
-^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^
+
 .. code-block:: python
 
     import requests
@@ -31,38 +33,35 @@ Example Code
     EVREKA360_API_BASE_URL = ""
     ACCESS_TOKEN = ""
 
-    session = requests.session()
-
-    service_url = "/engagement/contacts/validate/phone"
+    service_url = "/contacts/validate/phone?phone=+123456789"
     headers = {
-        "Content-Type": "application/json; charset=utf-8", 
+        "Content-Type": "application/json; charset=utf-8",
         "Authorization": "Bearer " + ACCESS_TOKEN
     }
-    data = {
-        "phone": "1234567890"
-    }
 
-    response = session.post(EVREKA360_API_BASE_URL + service_url, headers=headers, json=data)
-    print(resp.status_code, resp.json())
-
-
+    response = requests.get(EVREKA360_API_BASE_URL + service_url, headers=headers)
+    print(response.status_code, response.json())
 
 Response
-^^^^^^^^^^^^^^^^^
-*Status Code:* ``200`` - Retrieved successfully
+^^^^^^^^^
+
+*Status Code:* ``200`` – Retrieved successfully
 *Content Type:* ``application/json``
 *Body:*
 
 .. code-block:: json
-{
-    "is_valid": true,
-}
 
-*Status Code:* ``400`` - Bad Request
+    {
+        "is_valid": true
+    }
+
+*Status Code:* ``400`` – Bad Request
 *Content Type:* ``application/json``
 *Body:*
+
 .. code-block:: json
-{
-    "is_valid": false,
-    "detail": "Phone number already exists"
-}
+
+    {
+        "is_valid": false,
+        "detail": "Phone number already exists"
+    }

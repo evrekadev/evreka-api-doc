@@ -74,7 +74,6 @@ Response
             }
         ],
         "form": [
-            # Asset Forms
             {
                 "label": "Completed/Available Assets",
                 "assets": [{
@@ -82,12 +81,11 @@ Response
                     "name":"string"
                 }]
             },
-            # Content Field Forms
             {
                 "id": "integer",
                 "label": "string",
                 "value": "string",
-                "type": "text" | "email" | "phone",
+                "type": "text | email | phone",
             },
             {
                 "id": "integer",

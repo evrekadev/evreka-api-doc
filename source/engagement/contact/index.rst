@@ -27,7 +27,7 @@ This part provides documentation for available API endpoints of Contact Model fo
    +-----------+-------------------------------------+------------------------------------------------------+
    | GET       | /contacts                           | Retrive contact list of contact model                |
    +-----------+-------------------------------------+------------------------------------------------------+
-   | POST      | /contacts/validate/phone            | Validate the phone number of contact for uniqueness  |
+   | GET       | /contacts/validate/phone            | Validate the phone number of contact for uniqueness  |
    +-----------+-------------------------------------+------------------------------------------------------+
-   | POST      | /contacts/validate/email            | Validate the email of contact for uniqueness         |
+   | GET       | /contacts/validate/email            | Validate the email of contact for uniqueness         |
    +-----------+-------------------------------------+------------------------------------------------------+

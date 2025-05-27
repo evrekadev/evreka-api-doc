@@ -3,25 +3,26 @@ Client Bounds
 
 .. table::
 
-   +-------------------+--------------------------------------------+
-   | GET              | ``/environment/map``                        |
-   +-------------------+--------------------------------------------+
+   +--------+---------------------------------------------+
+   | GET    | ``/environment/map``                        |
+   +--------+---------------------------------------------+
 
 Data Structure
-^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
+
 ``module`` must be provided as a query parameter.
 
 .. table::
     :width: 100%
 
-    +---------------------+--------------------------+-------------------------------------------------+
-    | Field Name          | Data type                | Description                                     |
-    +=====================+==========================+=================================================+
-    | module              | string *(required)*      | Name of the module: engagement/ops/asset/fleet  |
-    +---------------------+--------------------------+-------------------------------------------------+
-   
+    +---------------------+--------------------------+---------------------------------------------------+
+    | Field Name          | Data type                | Description                                       |
+    +=====================+==========================+===================================================+
+    | module              | string *(required)*      | Name of the module: engagement, ops, asset, fleet |
+    +---------------------+--------------------------+---------------------------------------------------+
+
 Example Code
-^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
 .. code-block:: python
 
@@ -37,7 +38,7 @@ Example Code
 
     service_url = "/environment/map?module=" + module
     headers = {
-        "Content-Type": "Content-Type: application/json",
+        "Content-Type": "application/json",
         "Authorization": "Bearer " + ACCESS_TOKEN
     }
 
@@ -45,18 +46,19 @@ Example Code
     print(resp.status_code, resp.json())
 
 Response
-^^^^^^^^^^^^^^^^^
+^^^^^^^^^
+
 *Status Code:* ``200`` - Retrieved successfully
 
 *Content Type:* ``application/json``
 
 *Body:*
 
-.. code-block:: json 
+.. code-block:: json
 
     {
-        "tile_provider": "Esri" | "Google" | "Open Street Map" ,
-        "bounds" : {
+        "tile_provider": "Esri | Google | Open Street Map",
+        "bounds": {
             "north_east": {
                 "lat": "Latitude - Float",
                 "lon": "Longitude - Float"
@@ -65,7 +67,7 @@ Response
                 "lat": "Latitude - Float",
                 "lon": "Longitude - Float"
             }
-        },
+        }
     }
 
 *Status Code:* ``404`` - Not Found

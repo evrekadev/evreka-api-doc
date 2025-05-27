@@ -1,27 +1,27 @@
 Validate Email API
 -----------------------------------
+
 .. table::
- 
-   +-------------------+--------------------------------------------+
-   | POST              | ``/contacts/validate/email``               |
-   +-------------------+--------------------------------------------+
+
+   +--------+--------------------------------------------+
+   | GET    | ``/contacts/validate/email``               |
+   +--------+--------------------------------------------+
 
 Data Structure
-^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
+
 .. table::
-    :width: 100%
+   :width: 100%
 
-   +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
-   | Field Name              | Data Type                                                    | Description                                       | Value                                                 |
-   +=========================+==============================================================+===================================================+=======================================================+
-   | email                   | string *(required)*                                          | Email Address                                     | example@gmail.com                                     |
-   +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
-
-Example Code
-^^^^^^^^^^^^^^^^^
+   +-------------------------+----------------------------+-------------------------------------------+-------------------------+
+   | Field Name              | Data Type                  | Description                               | Value                   |
+   +=========================+============================+===========================================+=========================+
+   | email                   | string *(required)*        | Email address to be validated             | example@gmail.com       |
+   +-------------------------+----------------------------+-------------------------------------------+-------------------------+
 
 Example Code
-^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^
+
 .. code-block:: python
 
     import requests
@@ -29,37 +29,35 @@ Example Code
     EVREKA360_API_BASE_URL = ""
     ACCESS_TOKEN = ""
 
-    session = requests.session()
-
-    service_url = "/engagement/contacts/validate/email"
+    service_url = "/contacts/validate/email?email=example@gmail.com"
     headers = {
-        "Content-Type": "application/json; charset=utf-8", 
+        "Content-Type": "application/json; charset=utf-8",
         "Authorization": "Bearer " + ACCESS_TOKEN
     }
-    data = {
-        "email": "example@gmail.com"
-    }
 
-    response = session.post(EVREKA360_API_BASE_URL + service_url, headers=headers, json=data)
-    print(resp.status_code, resp.json())
-
+    response = requests.get(EVREKA360_API_BASE_URL + service_url, headers=headers)
+    print(response.status_code, response.json())
 
 Response
-^^^^^^^^^^^^^^^^^
-*Status Code:* ``200`` - Retrieved successfully
+^^^^^^^^^
+
+*Status Code:* ``200`` – Retrieved successfully
 *Content Type:* ``application/json``
 *Body:*
 
 .. code-block:: json
-{
-    "is_valid": true,
-}
 
-*Status Code:* ``400`` - Bad Request
+    {
+        "is_valid": true
+    }
+
+*Status Code:* ``400`` – Bad Request
 *Content Type:* ``application/json``
 *Body:*
+
 .. code-block:: json
-{
-    "is_valid": false,
-    "detail": "Email already exists"
-}
+
+    {
+        "is_valid": false,
+        "detail": "Email already exists"
+    }
