@@ -1,9 +1,14 @@
-Validate Email API
+.. raw:: pdf
+
+   PageBreak
+
+Validate Phone Number API
 -----------------------------------
+
 .. table::
  
    +-------------------+--------------------------------------------+
-   | POST              | ``/contacts/validate/email``               |
+   | POST              | ``/contacts/validate/phone``               |
    +-------------------+--------------------------------------------+
 
 Data Structure
@@ -14,11 +19,8 @@ Data Structure
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
    | Field Name              | Data Type                                                    | Description                                       | Value                                                 |
    +=========================+==============================================================+===================================================+=======================================================+
-   | email                   | string *(required)*                                          | Email Address                                     | example@gmail.com                                     |
+   | phone                   | string *(required)*                                          | Phone Number                                      | +1234567890                                           |
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
-
-Example Code
-^^^^^^^^^^^^^^^^^
 
 Example Code
 ^^^^^^^^^^^^^^^^^
@@ -31,17 +33,18 @@ Example Code
 
     session = requests.session()
 
-    service_url = "/engagement/contacts/validate/email"
+    service_url = "/engagement/contacts/validate/phone"
     headers = {
         "Content-Type": "application/json; charset=utf-8", 
         "Authorization": "Bearer " + ACCESS_TOKEN
     }
     data = {
-        "email": "example@gmail.com"
+        "phone": "1234567890"
     }
 
     response = session.post(EVREKA360_API_BASE_URL + service_url, headers=headers, json=data)
     print(resp.status_code, resp.json())
+
 
 
 Response
@@ -61,5 +64,5 @@ Response
 .. code-block:: json
 {
     "is_valid": false,
-    "detail": "Email already exists"
+    "detail": "Phone number already exists"
 }
