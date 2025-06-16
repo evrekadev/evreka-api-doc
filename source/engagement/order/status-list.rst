@@ -46,7 +46,8 @@ Response
         "items": [
             {
                 "id": "Status ID - UUID",
-                "name": "Status Name"
+                "name": "Status Name",
+                "color": "Status Color - String",
             }
         ]
     }

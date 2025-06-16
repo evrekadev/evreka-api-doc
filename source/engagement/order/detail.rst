@@ -83,7 +83,13 @@ Response
         "dynamic": {
             "key": "value",
         },
-        "note": "string"
+        "note": "string",
+        "contacts": [
+            {
+                "id": "UUID",
+                "full_name": "string",
+            }
+        ],
     }
 
 *Status Code:* ``404`` - Not Found

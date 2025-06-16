@@ -25,6 +25,8 @@ Both ``entity_id`` and ``service_point_id`` can be single UUIDs or UUID lists.
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
    | service_point_id        | list[str] *(optional)*                                       | Service Point ID List- UUID                       | d666a904-5739-46c0-b70a-1cd57658a3f6                  |
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
+   | include_points          | bool *(optional)*                                            | Include Points - Boolean                          | true or false                                         |
+   +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
 
 Enum Definitions
 ^^^^^^^^^^^^^^^^^
@@ -63,19 +65,24 @@ Example Code
     
     # filter example #1
     #service_url += "?entity_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
+    #service_url += "&include_points=true"
 
     # filter example #2
     #service_url += "?service_point_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
+    #service_url += "&include_points=true"
 
     # filter example #3 #To use multiple filters, use the & character between the filters.
     #service_url += "?entity_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
     #service_url += "&service_point_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
+    #service_url += "&include_points=true"
 
     # filter example #4 #To send multiple ids, use the , character between the ids.
     #service_url += "?entity_id=d666a904-5739-46c0-b70a-1cd57658a3f6,d666a904-5739-46c0-b70a-1cd57658a3f6"
+    #service_url += "&include_points=true"
 
     # filter example #5 #To send multiple ids, use the , character between the ids.
     #service_url += "?service_point_id=d666a904-5739-46c0-b70a-1cd57658a3f6,d666a904-5739-46c0-b70a-1cd57658a3f6"
+    #service_url += "&include_points=true"
 
     resp = requests.get(EVREKA360_API_BASE_URL + service_url, headers=headers)
     print(resp.status_code, resp.json())
@@ -104,6 +111,7 @@ Response
                 "id": "Order Item ID - UUID",
                 "name": "Order Item name - String",
                 "order_type_id": "Order Type ID -UUID"
+                "points_per_uom": "Points per Unit Primary UOM - Float",
             }
         ]
     }
