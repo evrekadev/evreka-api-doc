@@ -10,6 +10,10 @@ Get Service Availability Point API V2
 Data Structure
 ^^^^^^^^^^^^^^^^^
 
+If the ``end_date`` is not provided, the ``end_date`` will be set as end of the year.
+
+If ``include_routes`` is not provided, it will be set to ``true`` by default, and the response will include routes for each date in the specified range.
+
 .. table::
 
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
@@ -25,8 +29,8 @@ Data Structure
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
    | order_type_id           | string *(optional)*                                          | Order Type ID - UUID                              | d666a904-5739-46c0-b70a-1cd57658a3f6                  |
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
-
-"- If the end_date is not provided, the end_date will be set as end of the year""
+   | include_routes          | boolean *(optional)*                                         | Include routes in the response - Boolean          | true                                                  |
+   +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
 
 Example Code
 ^^^^^^^^^^^^^^^^^
@@ -46,7 +50,8 @@ Example Code
     # Data Example #1
     data = {
         "start_date": "2024-02-03",
-        "end_date": "2024-03-30"
+        "end_date": "2024-03-30",
+        "include_routes": False,
     }
 
     # Data Example #2
@@ -80,7 +85,13 @@ Response
                         "model": "RouteOrder",
                         "op_id": 1
                     }
-                ]
+                ],
+                "order_types": [ 
+                    {
+                        "order_type_id": "Order Type ID - UUID",
+                        "order_type_name": "Order Type Name - String",
+                    }
+                ],
             }
         ]
     }
