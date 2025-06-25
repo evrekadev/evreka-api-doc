@@ -12,7 +12,7 @@ Data Structure
 
 If the ``end_date`` is not provided, the ``end_date`` will be set as end of the year.
 
-If ``include_routes`` is not provided, it will be set to ``true`` by default, and the response will include routes for each date in the specified range.
+If ``include_routes`` is not provided, it will be set to ``false`` by default, and the response will include routes for each date in the specified range.
 
 .. table::
 
