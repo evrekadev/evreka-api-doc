@@ -30,7 +30,13 @@ Data Structure
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
    | contact_id              | string *(optional)*                                          | Order Contact ID - UUID                           | d666a904-5739-46c0-b70a-1cd57658a3f6                  |
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
-  
+   | status_id               | string *(optional)*                                          | Order Status ID - UUID                            | d666a904-5739-46c0-b70a-1cd57658a3f6                  |
+   +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
+   | sort_key                | string *(optional)*                                          | Sort Field Name                                   | created_at                                            |
+   +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
+   | sort_order              | string *(optional)*                                          | Sort Order                                        | desc                                                  |
+   +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
+
 
 Example Code
 ^^^^^^^^^^^^^^^^^
@@ -57,15 +63,24 @@ Example Code
     # filter example #2
     #service_url += "?type_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
 
-    # filter example #3 
+    # filter example #3
+    #service_url += "?status_id=d666a904-5739-46c0-b70a-1cd57658a3f6"
+
+    # filter example #4
     #service_url += "?my_dynamic_field=1234AB"
 
-    # filter example #4 
+    # filter example #5
     # To use multiple filters, use the & character between the filters.
     #service_url += "?name=MyOrder" + "&my_dynamic_field=1234AB"
 
-    # filter example #5 #To use exact or contains filters, use the __exact or __contains modifier. If not specified, the default is contains.
+    # filter example #6 #To use exact or contains filters, use the __exact or __contains modifier. If not specified, the default is contains.
     #service_url += "?my_dynamic_field__contains=1234AB"
+
+    # sort example #1
+    #service_url += "?sort_key=fulfillment_date&sort_order=asc"
+
+    # sort example #2
+    #service_url += "?sort_key=created_at&sort_order=desc"
     
     resp = requests.get(EVREKA360_API_BASE_URL + service_url, headers=headers)
     print(resp.status_code, resp.json())
