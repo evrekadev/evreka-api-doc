@@ -101,6 +101,7 @@ Response
                     "key": "value"
                 },
                 "note": "string"
+                "completion_time": "optional datetime - ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>"
             }
         ]
     }
