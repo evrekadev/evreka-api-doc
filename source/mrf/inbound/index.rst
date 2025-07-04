@@ -6,6 +6,7 @@ Inbound API List
    :caption: Order
 
    status-list
+   detail
 
 This part provides documentation for available API endpoints of Inbound Model for MRF Module.
 
