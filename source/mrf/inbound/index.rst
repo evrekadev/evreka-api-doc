@@ -5,6 +5,7 @@ Inbound API List
    :maxdepth: 2
    :caption: Order
 
+   create
    status-list
 
 This part provides documentation for available API endpoints of Inbound Model for MRF Module.
