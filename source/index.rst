@@ -29,6 +29,7 @@ You can follow the release notes at :doc:`change logs <changelog>`. We also noti
    fleet/index
    device/index
    ops/index
+   mrf/index
 
 
 .. toctree::
