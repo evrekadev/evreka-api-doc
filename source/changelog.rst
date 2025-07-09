@@ -58,3 +58,7 @@ Changelog
 1.10.0
 ----------------
 - Status color added to case list service response.
+
+1.10.1
+----------------
+- Added "order_type_ids" parameter to :doc:`Engagement ServicePoint <engagement/service_availability/post_v2>`.
