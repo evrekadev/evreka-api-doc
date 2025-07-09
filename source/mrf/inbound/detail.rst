@@ -55,8 +55,8 @@ Response
         "id": "Inbound ID - Integer",
         "external_id": "External ID - String",
         "name": "Inbound Name - String",
-        "create": "Creation Date - String",
-        "update": "Update Date - String",
+        "created_at": "Creation Date - String",
+        "updated_at": "Update Date - String",
         "arrive": "Arrival Date - String",
         "status": {
             "id": "Status ID - Integer",
@@ -111,6 +111,11 @@ Response
                 "volume_uom": "Volume UOM - String"
             }
         ],
+        "attachments": {
+            "id": "Attachment ID - Integer",
+            "media_name": "Attachment Media Name - String",
+            "media_url": "Attachment Media URL - String",
+        },
         "dynamic": "Dynamic Field JSON"
     }
 
