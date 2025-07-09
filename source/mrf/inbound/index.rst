@@ -5,6 +5,7 @@ Inbound API List
    :maxdepth: 2
    :caption: Order
 
+   list
    status-list
 
 This part provides documentation for available API endpoints of Inbound Model for MRF Module.
@@ -17,4 +18,6 @@ This part provides documentation for available API endpoints of Inbound Model fo
    | Method    | Endpoint                            | Description                               |
    +===========+=====================================+===========================================+
    | GET       | /inbounds/status                    | Retrive status list of inbound model      |
+   +-----------+-------------------------------------+-------------------------------------------+
+   | GET       | /inbounds                           | Retrieve inbound list                     |
    +-----------+-------------------------------------+-------------------------------------------+
