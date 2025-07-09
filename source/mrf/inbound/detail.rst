@@ -8,12 +8,12 @@ Inbound Detail API
 .. table::
 
    +-------------------+--------------------------------------------+
-   | GET               | ``/inbounds``                              |
+   | GET               | ``/inbounds/{inbound_id}``                 |
    +-------------------+--------------------------------------------+
 
 Data Structure
 ^^^^^^^^^^^^^^^^^
-Either ``inbound_id`` or ``external_id`` must be provided as a query parameter to retrieve the inbound details. If both are provided, ``inbound_id`` will be used.
+``inbound_id`` must be provided to retrieve the inbound details.
 
 Example Code
 ^^^^^^^^^^^^^^^^^
@@ -27,11 +27,7 @@ Example Code
 
     #Data Example 1
     inbound_id = "67890"
-    service_url = "/mrf/inbounds" + f"?inbound_id={inbound_id}"
-
-    #Data Example 2
-    # external_id = "external-12345"
-    # service_url = "/mrf/inbounds" + f"?external_id={external_id}"
+    service_url = "/mrf/inbounds" + f"/{inbound_id}"
 
     headers = {
         "Content-Type": "application/json; charset=utf-8", 
