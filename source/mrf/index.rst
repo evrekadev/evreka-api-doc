@@ -11,3 +11,4 @@ MRF Module
    base_url
    inbound/index
    parcel/index
+   material/index
