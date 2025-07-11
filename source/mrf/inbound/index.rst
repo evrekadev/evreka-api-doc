@@ -9,6 +9,7 @@ Inbound API List
    list
    detail
    status-list
+   edit-inbound-attachments
 
 This part provides documentation for available API endpoints of Inbound Model for MRF Module.
 
@@ -16,15 +17,16 @@ This part provides documentation for available API endpoints of Inbound Model fo
 .. table::
    :width: 100%
 
-   +-----------+-------------------------------------+-----------------------------------------------+
-   | Method    | Endpoint                            | Description                                   |
-   +===========+=====================================+===============================================+
-   | POST      | /inbounds                           | Create an inbound with given parameters       |
-   +-----------+-------------------------------------+-----------------------------------------------+
-   | GET       | /inbounds                           | Retrieve inbound list                         |
-   +-----------+-------------------------------------+-----------------------------------------------+
-   | GET       | /inbounds/{inbound_id}              | Retrieve inbound detail with given inbound id |
-   +-----------+-------------------------------------+-----------------------------------------------+
-   | GET       | /inbounds/status                    | Retrive status list of inbound model          |
-   +-----------+-------------------------------------+-----------------------------------------------+
-   
+   +-----------+-----------------------------------------+-----------------------------------------------+
+   | Method    | Endpoint                                | Description                                   |
+   +===========+=========================================+===============================================+
+   | POST      | /inbounds                               | Create an inbound with given parameters       |
+   +-----------+-----------------------------------------+-----------------------------------------------+
+   | GET       | /inbounds                               | Retrieve inbound list                         |
+   +-----------+-----------------------------------------+-----------------------------------------------+
+   | GET       | /inbounds/{inbound_id}                  | Retrieve inbound detail with given inbound id |
+   +-----------+-----------------------------------------+-----------------------------------------------+
+   | GET       | /inbounds/status                        | Retrive status list of inbound model          |
+   +-----------+-----------------------------------------+-----------------------------------------------+
+   | POST      | /inbounds/{inbound_id}/edit_attachments | Update attachments of the given inbound       |
+   +-----------+-----------------------------------------+-----------------------------------------------+

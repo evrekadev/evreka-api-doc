@@ -45,64 +45,6 @@ Response
 *Content Type:* ``application/json``
 *Body:*
 
-{
-    "id": 69203,
-    "external_id": "feyza test inb2",
-    "name": "feyza test inb2",
-    "created_at": "2025-07-03T12:06:09+00:00",
-    "updated_at": "2025-07-03T12:06:09+00:00",
-    "arrive": "2025-07-10",
-    "status": {
-        "id": 6,
-        "name": "New",
-        "color": "primary"
-    },
-    "assigned_to": null,
-    "entity": null,
-    "branch": {
-        "id": 23,
-        "name": "Yeniköy Fabrikası > Boyahane > Boya Kabinleri"
-    },
-    "linked_order": null,
-    "materials": [
-        {
-            "id": 24207,
-            "actual_quantity": 2,
-            "planned_quantity": 1,
-            "planned_weight": 23.0,
-            "gross_weight": 25.0,
-            "tare_weight": 2.0,
-            "net_weight": 18.0,
-            "weight_uom": 0,
-            "quantity_uom": 7,
-            "outages": [
-                {
-                    "id": 1,
-                    "type": 0,
-                    "amount": 5.0
-                }
-            ],
-            "ewc_code": {
-                "value": "CODE_00_00_00",
-                "label": "00 00 00",
-                "hazardous": false,
-                "description": "The waste is not specified in the EWC list"
-            },
-            "dynamic": {},
-            "weight_source": "manual",
-            "edit_weight_note": null,
-            "planned_volume": null,
-            "net_volume": null,
-            "volume_uom": "m³"
-        }
-    ],
-    "attachments": [],
-    "dynamic": {
-        "dyndyn": 1,
-        "test_key": "---",
-        "text-area": "default text area"
-    }
-}
 
 .. code-block:: json 
 
