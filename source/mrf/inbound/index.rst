@@ -5,6 +5,7 @@ Inbound API List
    :maxdepth: 2
    :caption: Order
 
+   create
    list
    detail
    status-list
@@ -18,6 +19,8 @@ This part provides documentation for available API endpoints of Inbound Model fo
    +-----------+-------------------------------------+-----------------------------------------------+
    | Method    | Endpoint                            | Description                                   |
    +===========+=====================================+===============================================+
+   | POST      | /inbounds                           | Create an inbound with given parameters       |
+   +-----------+-------------------------------------+-----------------------------------------------+
    | GET       | /inbounds                           | Retrieve inbound list                         |
    +-----------+-------------------------------------+-----------------------------------------------+
    | GET       | /inbounds/{inbound_id}              | Retrieve inbound detail with given inbound id |
