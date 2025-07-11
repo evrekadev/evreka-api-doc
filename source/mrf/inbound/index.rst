@@ -6,6 +6,7 @@ Inbound API List
    :caption: Order
 
    list
+   detail
    status-list
 
 This part provides documentation for available API endpoints of Inbound Model for MRF Module.
@@ -14,10 +15,13 @@ This part provides documentation for available API endpoints of Inbound Model fo
 .. table::
    :width: 100%
 
-   +-----------+-------------------------------------+-------------------------------------------+
-   | Method    | Endpoint                            | Description                               |
-   +===========+=====================================+===========================================+
-   | GET       | /inbounds/status                    | Retrive status list of inbound model      |
-   +-----------+-------------------------------------+-------------------------------------------+
-   | GET       | /inbounds                           | Retrieve inbound list                     |
-   +-----------+-------------------------------------+-------------------------------------------+
+   +-----------+-------------------------------------+-----------------------------------------------+
+   | Method    | Endpoint                            | Description                                   |
+   +===========+=====================================+===============================================+
+   | GET       | /inbounds                           | Retrieve inbound list                         |
+   +-----------+-------------------------------------+-----------------------------------------------+
+   | GET       | /inbounds/{inbound_id}              | Retrieve inbound detail with given inbound id |
+   +-----------+-------------------------------------+-----------------------------------------------+
+   | GET       | /inbounds/status                    | Retrive status list of inbound model          |
+   +-----------+-------------------------------------+-----------------------------------------------+
+   
