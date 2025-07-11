@@ -23,6 +23,10 @@ Data Structure
     +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
     | object_id               | integer *(optional)*                                         | Related object ID                                 | 123                                                   |
     +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
+    | materials               | list of dict *(required)*                                    | Material list info                                | [{"id":837,"gross_weight":7,"tare_weight":2}]         |
+    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
+    | attachments             | file *(optional)*                                            | A list of files uploaded via multipart/form-data  | ``my_attachment.png``                                 |
+    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
     | entity_name             | string *(optional)*                                          | Name of the entity                                | "client_xyz"                                          |
     +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
     | order_name              | string *(optional)*                                          | Order name                                        | "Order-ABC-01"                                        |
@@ -41,10 +45,7 @@ Data Structure
     +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
     | dynamic                 | list of dict *(required)*                                    | Dynamic fields                                    | [{"key": "foo", "value": "bar"}]                      |
     +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
-    | materials               | list of dict *(required)*                                    | Material list info                                | [{"id":837,"gross_weight":7,"tare_weight":2}]         |
-    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
-    | attachments             | file *(optional)*                                            | A list of files uploaded via multipart/form-data  | ``my_attachment.png``                                 |
-    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
+
 
 Example Code
 ^^^^^^^^^^^^^^^^^
@@ -67,6 +68,12 @@ Example Code
         "arrive": "2025-07-16T00:00:00Z",
         "content_type": "inbound",
         "object_id": 123,
+        "materials": [{"id": 837, "gross_weight": 7, "tare_weight": 2}],
+        "attachments": [
+            ('attachments', ('sample.jpg', open('<path-to-sample.jpg>', 'rb'), 'image/jpeg')),
+            ('attachments', ('sample2.jpg', open('<path-to-sample2.jpg>', 'rb'), 'image/jpeg'))
+        ]
+        },
         "entity_name": "client_xyz",
         "order_name": "Order-ABC-01",
         "entity_id": "d666a904-5739-46c0-b70a-1cd57658a3f6",
@@ -75,13 +82,8 @@ Example Code
         "name": "Inbound01",
         "net_amount": 1234.56,
         "branch_id": 5,
-        "dynamic": [{"key": "foo", "value": "bar"}],
-        "materials": [{"id": 837, "gross_weight": 7, "tare_weight": 2}],
-        "attachments": [
-            ('attachments', ('sample.jpg', open('<path-to-sample.jpg>', 'rb'), 'image/jpeg')),
-            ('attachments', ('sample2.jpg', open('<path-to-sample2.jpg>', 'rb'), 'image/jpeg'))
-        ]
-        }
+        "dynamic": [{"key": "foo", "value": "bar"}]
+
 
     resp = requests.post(EVREKA360_API_BASE_URL + service_url, headers=headers, json=data)
     print(resp.status_code, resp.json())
