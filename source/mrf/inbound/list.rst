@@ -101,7 +101,7 @@ Response
         ]
     }
 
-*Status Code:* ``400`` - Bad request
+*Status Code:* ``404`` - Not Found
 
 *Content Type:* ``application/json``
 
