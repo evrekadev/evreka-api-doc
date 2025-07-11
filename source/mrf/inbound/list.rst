@@ -24,7 +24,7 @@ Data Structure
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
    | parcel_id               | integer *(optional)*                                         | Parcel ID - Integer                               | 123456                                                |
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
-   | id_list                 | List[string] *(optional)*                                    | Inbound ID List                                   | [12345, 12356]                                        |
+   | id_list                 | List[integer] *(optional)*                                   | Inbound ID List                                   | [12345, 12356]                                        |
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
   
 
@@ -80,13 +80,17 @@ Response
                 "id": "Inbound ID - Integer",
                 "external_id": "External ID - String",
                 "name": "Inbound Name - String",
+                "arrive": "Arrival Date - String",
                 "created_at": "Created At - ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>",
                 "updated_at": "Updated At - ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>",
-                "arrive": "Arrival Date - String",
                 "status": {
                     "id": "Status ID - Integer",
                     "name": "Status Name - String",
                     "color": "Status Color - String"
+                },
+                "branch": {
+                    "id": "Branch ID - Integer",
+                    "name": "Branch Name - String"
                 },
                 "assigned_to": {
                     "id": "Assigned Parcel ID - Integer",
@@ -106,6 +110,6 @@ Response
 .. code-block:: json
 
     {
-        "detail":"Inbound not found"
+        "detail": "Inbound not found"
     }
 
