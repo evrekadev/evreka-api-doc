@@ -10,3 +10,4 @@ MRF Module
 
    base_url
    inbound/index
+   branch/index
