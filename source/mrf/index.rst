@@ -9,6 +9,7 @@ MRF Module
    :maxdepth: 2
 
    base_url
+   generic/index
    inbound/index
    branch/index
    parcel/index

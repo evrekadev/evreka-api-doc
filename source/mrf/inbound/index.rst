@@ -1,3 +1,7 @@
+.. raw:: pdf
+
+   PageBreak
+
 Inbound API List
 ======================
 
@@ -10,6 +14,7 @@ Inbound API List
    detail
    status-list
    edit-inbound-attachments
+   outages
 
 This part provides documentation for available API endpoints of Inbound Model for MRF Module.
 
@@ -29,4 +34,6 @@ This part provides documentation for available API endpoints of Inbound Model fo
    | GET       | /inbounds/status                        | Retrive status list of inbound model          |
    +-----------+-----------------------------------------+-----------------------------------------------+
    | POST      | /inbounds/{inbound_id}/edit_attachments | Update attachments of the given inbound       |
+   +-----------+-----------------------------------------+-----------------------------------------------+
+   | GET       | /inbounds/outages                       | Retrieve outage items and types of inbounds   |
    +-----------+-----------------------------------------+-----------------------------------------------+
