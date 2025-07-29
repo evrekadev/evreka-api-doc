@@ -517,3 +517,70 @@ Example Code
 
    resp = requests.get(EVREKA360_API_BASE_URL + service_url, headers=headers)
    print(resp.status_code, resp.json())
+
+
+Asset Service Point List
+--------------------------
+
+.. table::
+
+   +-------------------+--------------------------------------------+
+   | GET               | ``/asset/service_points``                  |
+   +-------------------+--------------------------------------------+
+
+Data Structure
+^^^^^^^^^^^^^^^^^
+``asset_tag`` must be provided as a query parameter.
+
+.. table::
+    :width: 100%
+
+    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
+    | Field Name              | Data Type                                                    | Description                                       | Value                                                 |
+    +=========================+==============================================================+===================================================+=======================================================+
+    | asset_tag               | string *(required)*                                          | Tag Identifier - String                           | d666a904-5739-46c0-b70a-1cd57658a3f6                  |
+    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
+
+Example Code
+^^^^^^^^^^^^^^^^^
+
+.. code-block:: python
+
+    import requests
+
+    EVREKA360_API_BASE_URL = ""
+    ACCESS_TOKEN = ""
+
+    asset_tag = "example_tag"
+
+    service_url = f"/asset/service_points?&asset_tag={(asset_tag)}"
+
+    headers = {
+        "Content-Type": "application/json; charset=utf-8", 
+        "Authorization": "Bearer " + ACCESS_TOKEN
+    }
+
+    resp = requests.get(EVREKA360_API_BASE_URL + service_url, headers=headers)
+    print(resp.status_code, resp.json())
+
+Response
+^^^^^^^^^^^^^^^^^
+
+*Status Code:* ``200`` - Retrieved successfully
+*Content Type:* ``application/json``
+*Body:*
+
+.. code-block:: json
+
+    {
+      "ops_sp": {
+         "id": "OPS Service Point ID - Integer",
+         "name": "OPS Service Point Name - String",
+      },
+      "eng_sp": [
+         {
+               "id": "Engagement Service Point ID - UUID",
+               "name": "Engagement Service Point Name - String"
+         }
+      ]
+    }
