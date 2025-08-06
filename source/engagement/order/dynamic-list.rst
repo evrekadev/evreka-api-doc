@@ -14,7 +14,7 @@ Order Dynamic Field List
 
 Data Structure
 ^^^^^^^^^^^^^^^^^
-'template_id' and 'order_type_id' are used to filter the dynamic fields. If both are not provided, all dynamic fields will be returned. If both are provided, order_type_id will be used to filter the dynamic fields.
+'template_id' and 'type_id' are used to filter the dynamic fields. If both are not provided, all dynamic fields will be returned. If both are provided, type_id will be used to filter the dynamic fields.
 
 .. table::
     :width: 100%
@@ -24,7 +24,7 @@ Data Structure
     +=========================+==============================================================+===================================================+=======================================================+
     | template_id             | string *(optional)*                                          | Order Template ID - UUID                          | d666a904-5739-46c0-b70a-1cd57658a3f6                  |
     +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
-    | order_type_id           | string *(optional)*                                          | Order Type ID - UUID                              | d666a904-5739-46c0-b70a-1cd57658a3f6                  |
+    | type_id                 | string *(optional)*                                          | Order Type ID - UUID                              | d666a904-5739-46c0-b70a-1cd57658a3f6                  |
     +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
 
 
