@@ -21,9 +21,9 @@ Data Structure
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
    | entity_id               | string *(optional)*                                          | Service Point Related Entity ID - UUID            | d666a904-5739-46c0-b70a-1cd57658a3f6                  |
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
-   | order_types             | list[str] *(optional)*                                       | Order By Type IDs                                 | ``["d666a904-5739-46c0-b70a-1cd57658a3f6"]``          |
+   | order_types             | list[str] *(optional)*                                       | Order Type IDs - UUID                             | ``?order_types=<UUID-1>&order_types=<UUID-2>``        |
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
-   | order_items             | list[str] *(optional)*                                       | Order By Item IDs                                 | ``["d666a904-5739-46c0-b70a-1cd57658a3f6"]``          |
+   | order_items             | list[str] *(optional)*                                       | Order Item IDs - UUID                             | ``?order_items=<UUID-1>&order_items=<UUID-2>``        |
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
 
 Example Code
@@ -62,6 +62,12 @@ Example Code
 
     # filter example: to use exact or contains filters, use the __exact or __contains modifier. If not specified, the default is contains.
     #service_url += "?postcode__contains=1234AB"
+
+    # filter example: order_types
+    #service_url += "?order_types=d666a904-5739-46c0-b70a-1cd57658a3f6&order_types=d666a904-5739-46c0-b70a-1cd57658a3f6"
+
+    # filter example: order_items
+    #service_url += "?order_items=d666a904-5739-46c0-b70a-1cd57658a3f6&order_items=d666a904-5739-46c0-b70a-1cd57658a3f6"
 
     resp = requests.get(EVREKA360_API_BASE_URL + service_url, headers=headers)
     print(resp.status_code, resp.json())
