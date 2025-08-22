@@ -1,0 +1,11 @@
+name: AI PR Review
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  call-pr-agent:
+    uses: evrekadev/evreka-pr-agent-workflows/.github/workflows/reusable-pr-agent.yml@main
+    secrets:
+      OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
