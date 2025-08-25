@@ -92,8 +92,8 @@ Response
                 ],
                 "order_types": [ 
                     {
-                        "order_type_id": "Order Type ID - UUID",
-                        "order_type_name": "Order Type Name - String",
+                        "id": "Order Type ID - UUID",
+                        "name": "Order Type Name - String",
                     }
                 ],
             }

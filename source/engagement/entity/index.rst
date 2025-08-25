@@ -9,6 +9,8 @@ Entity API List
    list
    dynamic_fields
    types
+   detail
+   status-list
 
 This section provides documentation for available API endpoints of the Entity Model for the Engagement Module.
 
@@ -25,4 +27,8 @@ This section provides documentation for available API endpoints of the Entity Mo
    | GET       | /entities/dynamic_fields            | Retrive dynamic fields of entity model    |
    +-----------+-------------------------------------+-------------------------------------------+
    | GET       | /entities/types                     | Retrieve list of entities types           |
+   +-----------+-------------------------------------+-------------------------------------------+
+   | GET       | /entities/{entity_id}               | Retrieve details of an entity by its UUID |
+   +-----------+-------------------------------------+-------------------------------------------+
+   | GET       | /entities/status                    | Retrieve list of entity statuses          |
    +-----------+-------------------------------------+-------------------------------------------+
