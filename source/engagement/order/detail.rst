@@ -13,7 +13,7 @@ Order Detail API
 
 Data Structure
 ^^^^^^^^^^^^^^^^^
-Order ID is required UUID for the order to retrieve details.
+A valid UUID is required as the Order ID to retrieve order details.
 
 Example Code
 ^^^^^^^^^^^^^^^^^

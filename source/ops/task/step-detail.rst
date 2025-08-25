@@ -13,9 +13,9 @@ Step Detail API
 
 Data Structure
 ^^^^^^^^^^^^^^^^^
-Task ID is integer ID for the step to retrieve details.
-Transition ID is integer ID for the step to retrieve details.
-Step ID is integer ID for the step to retrieve details.
+A valid integer is required as the Task ID to retrieve step details.
+A valid integer is required as the Transition ID to retrieve step details.
+A valid integer is required as the Step ID to retrieve step details.
 
 Example Code
 ^^^^^^^^^^^^^^^^^
