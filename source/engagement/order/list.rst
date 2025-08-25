@@ -32,6 +32,12 @@ Data Structure
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
    | status_id               | string *(optional)*                                          | Order Status ID - UUID                            | d666a904-5739-46c0-b70a-1cd57658a3f6                  |
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
+   | completion_time_start   | datetime ISO-8601 *(optional)*                               | Include orders with ``completion_time``           | 2025-07-01T00:00:00Z                                  |
+   |                         |                                                              | **greater than or equal to** this timestamp       |                                                       |
+   +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
+   | completion_time_end     | datetime ISO-8601 *(optional)*                               | Include orders with ``completion_time``           | 2025-07-31T23:59:59Z                                  |
+   |                         |                                                              | **less than or equal to** this timestamp          |                                                       |
+   +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
    | sort_key                | string *(optional)*                                          | Sort Field Name                                   | created_at (Default)                                  |
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
    | sort_order              | string *(optional)*                                          | Sort Order                                        | desc (Default)                                        |
@@ -75,6 +81,9 @@ Example Code
 
     # filter example #6 #To use exact or contains filters, use the __exact or __contains modifier. If not specified, the default is contains.
     #service_url += "?my_dynamic_field__contains=1234AB"
+
+    # filter example #7
+    #service_url += ?completion_time_start=2025-07-01T00:00:00Z&completion_time_end=2025-07-31T23:59:59Z
 
     # sort example #1
     #service_url += "?sort_key=fulfillment_date&sort_order=asc"
