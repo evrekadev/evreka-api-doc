@@ -7,7 +7,9 @@ Service Point API List
 
    create
    list
+   detail
    types
+   status-list
    dynamic_field_list
    asset_types
    asset_list
@@ -22,12 +24,15 @@ This section provides documentation for available API endpoints of the Service P
    +-----------+---------------------------------------------+-----------------------------------------------------------------------------+
    | Method    | Endpoint                                    | Description                                                                 |
    +===========+=============================================+=============================================================================+
-   | POST      | /service_points                             |  Create a service point with given parameters                               |
+   | POST      | /service_points                             | Create a service point with given parameters                                |
    +-----------+---------------------------------------------+-----------------------------------------------------------------------------+
-   | GET       | /service_points                             | Retrieve list of service points with                                        |
-   |           |                                             | optional parameters                                                         |
+   | GET       | /service_points                             | Retrieve list of service points with optional parameters                    |
+   +-----------+---------------------------------------------+-----------------------------------------------------------------------------+
+   | GET       | /service_points/{service_point_id}          | Retrieve details of a service point by its UUID                             |
    +-----------+---------------------------------------------+-----------------------------------------------------------------------------+
    | GET       | /service_points/types                       | Retrieve list of service point types with                                   |
+   +-----------+---------------------------------------------+-----------------------------------------------------------------------------+
+   | GET       | /service_points/status                      | Retrieve list of service point statuses                                     |
    +-----------+---------------------------------------------+-----------------------------------------------------------------------------+
    | GET       | /service_points/dynamic_fields              | Retrieve dynamic fields of service points with                              |
    |           |                                             | optional parameters                                                         |

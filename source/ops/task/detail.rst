@@ -13,7 +13,7 @@ Task Detail API
 
 Data Structure
 ^^^^^^^^^^^^^^^^^
-Task ID is integer ID for the task to retrieve details.
+A valid integer is required as the Task ID to retrieve task details.
 
 Example Code
 ^^^^^^^^^^^^^^^^^

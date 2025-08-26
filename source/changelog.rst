@@ -62,3 +62,43 @@ Changelog
 1.10.1
 ----------------
 - Added "order_type_ids" parameter to :doc:`Engagement ServicePoint <engagement/service_availability/post_v2>`.
+
+1.11.0
+----------------
+- Enabled searching with multiple service_point_id and multiple entity_id. Users can now send comma separated ids to get the union of the results of those ids.
+- Corresponding services for editing attachments are added to Engagement and API modules. Users can now add or delete attachments by providing files or attachment ids respectively.
+
+1.12.0
+----------------
+- Refactored slow methods within the endpoint to eliminate timeouts and significantly improve response times.
+- Service points, along with their related orders and cases, can now be deleted through the API.
+- Added options for filtering service point types using the extra field with custom parameters, enabling more flexible queries.
+- Dynamic fields support has been implemented for MRF activities. As part of this update, headers and keys have been renamed for improved clarity. Dynamic fields can now be retrieved through a dedicated endpoint, and any newly added fields are not displayed by default.
+
+1.13.0
+----------------
+- Entity type can be filtered by custom fields on the extra field. 
+- Uniqueness validation is added for phone numbers and emails. If the given phone number/email is used by another user, there will be an error stating that.
+
+1.14.0
+----------------
+- Contacts of the selected order will be shown in the detail.
+- Contacts can be given as a UUID list parameter in create order API endpoint.
+- Points per UOM can be shown based on the 'include_points' parameter as part of the request.
+
+1.15.0
+----------------
+- Notes can be added now as part of the request while creating order via OpenAPI.
+- Service availability endpoint is revised to include order type in the response.
+
+1.16.0
+----------------
+- status_id, sort_key and sort_order params added to order list document
+- completion_time added to Order model. It is saved when the order status changes to completed. Returned in order list api service
+- Parcel API Created, Task API optional parameter "inbound_id" added to get linked objects
+- Branch list API service has been developed. 
+
+1.17.0
+----------------
+- Corresponding Operations Management service point and its linked Engagement service points will be returned when asset_tag is provided.
+- Inbound outages endpoint now returns a dictionary with two arrays: items and types. MRF dynamic fields can now be retrieved by specifying a content_type in the URL path.
