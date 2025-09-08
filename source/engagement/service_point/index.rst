@@ -15,34 +15,36 @@ Service Point API List
    asset_list
    locations_list
    delete
-
+   update
 
 This section provides documentation for available API endpoints of the Service Point Model for the Engagement Module.
 
 .. table::
 
-   +-----------+---------------------------------------------+-----------------------------------------------------------------------------+
-   | Method    | Endpoint                                    | Description                                                                 |
-   +===========+=============================================+=============================================================================+
-   | POST      | /service_points                             | Create a service point with given parameters                                |
-   +-----------+---------------------------------------------+-----------------------------------------------------------------------------+
-   | GET       | /service_points                             | Retrieve list of service points with optional parameters                    |
-   +-----------+---------------------------------------------+-----------------------------------------------------------------------------+
-   | GET       | /service_points/{service_point_id}          | Retrieve details of a service point by its UUID                             |
-   +-----------+---------------------------------------------+-----------------------------------------------------------------------------+
-   | GET       | /service_points/types                       | Retrieve list of service point types with                                   |
-   +-----------+---------------------------------------------+-----------------------------------------------------------------------------+
-   | GET       | /service_points/status                      | Retrieve list of service point statuses                                     |
-   +-----------+---------------------------------------------+-----------------------------------------------------------------------------+
-   | GET       | /service_points/dynamic_fields              | Retrieve dynamic fields of service points with                              |
-   |           |                                             | optional parameters                                                         |
-   +-----------+---------------------------------------------+-----------------------------------------------------------------------------+
-   | GET       | /service_points/{service_point}/asset_types | Retrieve list of asset types of assets currently linked to a service point  |
-   +-----------+---------------------------------------------+-----------------------------------------------------------------------------+
-   | GET       | /service_points/{service_point}/assets      | Retrieve list of assets currently linked to a service point                 |
-   +-----------+---------------------------------------------+-----------------------------------------------------------------------------+
-   | GET       | /service_points_locations/                  | Retrieve list of locations of service points with optional parameters and   |
-   |           |                                             | no pagination                                                               |
-   +-----------+---------------------------------------------+-----------------------------------------------------------------------------+
-   | DELETE    | /service_points/{service_point}             | Delete the given service point                                              |
-   +-----------+---------------------------------------------+-----------------------------------------------------------------------------+
+   +-----------+------------------------------------------------+-----------------------------------------------------------------------------+
+   | Method    | Endpoint                                       | Description                                                                 |
+   +===========+================================================+=============================================================================+
+   | POST      | /service_points                                | Create a service point with given parameters                                |
+   +-----------+------------------------------------------------+-----------------------------------------------------------------------------+
+   | GET       | /service_points                                | Retrieve list of service points with optional parameters                    |
+   +-----------+------------------------------------------------+-----------------------------------------------------------------------------+
+   | GET       | /service_points/{service_point_id}             | Retrieve details of a service point by its UUID                             |
+   +-----------+------------------------------------------------+-----------------------------------------------------------------------------+
+   | GET       | /service_points/types                          | Retrieve list of service point types with                                   |
+   +-----------+------------------------------------------------+-----------------------------------------------------------------------------+
+   | GET       | /service_points/status                         | Retrieve list of service point statuses                                     |
+   +-----------+------------------------------------------------+-----------------------------------------------------------------------------+
+   | GET       | /service_points/dynamic_fields                 | Retrieve dynamic fields of service points with                              |
+   |           |                                                | optional parameters                                                         |
+   +-----------+------------------------------------------------+-----------------------------------------------------------------------------+
+   | GET       | /service_points/{service_point_id}/asset_types | Retrieve list of asset types of assets currently linked to a service point  |
+   +-----------+------------------------------------------------+-----------------------------------------------------------------------------+
+   | GET       | /service_points/{service_point_id}/assets      | Retrieve list of assets currently linked to a service point                 |
+   +-----------+------------------------------------------------+-----------------------------------------------------------------------------+
+   | GET       | /service_points_locations/                     | Retrieve list of locations of service points with optional parameters and   |
+   |           |                                                | no pagination                                                               |
+   +-----------+------------------------------------------------+-----------------------------------------------------------------------------+
+   | DELETE    | /service_points/{service_point_id}             | Delete the given service point                                              |
+   +-----------+------------------------------------------------+-----------------------------------------------------------------------------+
+   | POST      | /service_points/{service_point_id}             | Update the given service point with new parameters                          |
+   +-----------+------------------------------------------------+-----------------------------------------------------------------------------+
