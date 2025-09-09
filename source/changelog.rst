@@ -102,3 +102,9 @@ Changelog
 ----------------
 - Corresponding Operations Management service point and its linked Engagement service points will be returned when asset_tag is provided.
 - Inbound outages endpoint now returns a dictionary with two arrays: items and types. MRF dynamic fields can now be retrieved by specifying a content_type in the URL path.
+
+1.19.0
+----------------
+- Service Point Edit endpoint is added into OpenAPI services, enabling users to edit service points by external requests from the API.
+- Language field added into contact model and related Engagement and OpenAPI services.
+- Completion_time_start and completion_time_end parameters added to filter completed orders in this range.
