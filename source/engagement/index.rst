@@ -20,3 +20,4 @@ Engagement Module
    order_item_records/index
    order_asset_records/index
    announcement/index
+   environment/index
