@@ -108,3 +108,7 @@ Changelog
 - Service Point Edit endpoint is added into OpenAPI services, enabling users to edit service points by external requests from the API.
 - Language field added into contact model and related Engagement and OpenAPI services.
 - Completion_time_start and completion_time_end parameters added to filter completed orders in this range.
+
+1.19.1
+----------------
+- engagement/environment/ endpoint is added.
