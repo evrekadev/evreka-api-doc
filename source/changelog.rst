@@ -112,3 +112,7 @@ Changelog
 1.19.1
 ----------------
 - engagement/environment/ endpoint is added.
+
+1.20.0
+----------------
+- Consignment List endpoint is added into OpenAPI services, enabling users to list consignments by external requests from the API.
