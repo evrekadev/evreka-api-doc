@@ -49,7 +49,7 @@ Example Code
         "status": ""
     }
 
-    resp = session.put(EVREKA360_API_BASE_URL + service_url, json=data, headers=headers)
+    resp = session.patch(EVREKA360_API_BASE_URL + service_url, json=data, headers=headers)
     print(resp.status_code, resp.json())
 
 Response
