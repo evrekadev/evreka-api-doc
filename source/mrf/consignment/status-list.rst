@@ -46,8 +46,9 @@ Response
         "items": [
             {
                 "id": "Status ID - Integer",
-                "name": "Status Name",
+                "name": "Status Name - String",
                 "color": "Status Color - String",
+                "step": "Status Step - Integer",
             }
         ]
     }
