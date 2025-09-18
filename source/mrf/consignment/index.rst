@@ -22,3 +22,5 @@ This part provides documentation for available API endpoints of Consignment Mode
    +===========+=========================================+===============================================+
    | GET       | /consignments                           | Retrieve consignment list                     |
    +-----------+-----------------------------------------+-----------------------------------------------+
+   | GET       | /consignments/status                    | Retrieve consignment status list              |
+   +-----------+-----------------------------------------+-----------------------------------------------+
