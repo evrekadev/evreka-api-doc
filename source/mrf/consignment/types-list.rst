@@ -2,13 +2,13 @@
 
    PageBreak
 
-Consignment Status List
------------------------
+Consignment Type List
+---------------------
 
 .. table::
 
    +-------------------+--------------------------------------------+
-   | GET               | ``/consignments/status``                   |
+   | GET               | ``/consignments/types``                    |
    +-------------------+--------------------------------------------+
 
 Data Structure
@@ -25,7 +25,7 @@ Example Code
     EVREKA360_API_BASE_URL = ""
     ACCESS_TOKEN = ""
 
-    service_url = "/mrf/consignments/status"
+    service_url = "/mrf/consignments/types"
     headers = {
         "Content-Type": "application/json; charset=utf-8", 
         "Authorization": "Bearer " + ACCESS_TOKEN
@@ -45,9 +45,8 @@ Response
     {
         "items": [
             {
-                "id": "Status ID - Integer",
-                "name": "Status Name",
-                "color": "Status Color - String",
+                "id": "Type ID - Integer",
+                "name": "Type Name",
             }
         ]
     }

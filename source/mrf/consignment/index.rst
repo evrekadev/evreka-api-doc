@@ -10,6 +10,8 @@ Consignment API List
    :caption: Order
 
    list
+   status-list
+   types-list
 
 This part provides documentation for available API endpoints of Consignment Model for MRF Module.
 
@@ -23,4 +25,6 @@ This part provides documentation for available API endpoints of Consignment Mode
    | GET       | /consignments                           | Retrieve consignment list                     |
    +-----------+-----------------------------------------+-----------------------------------------------+
    | GET       | /consignments/status                    | Retrieve consignment status list              |
+   +-----------+-----------------------------------------+-----------------------------------------------+
+   | GET       | /consignments/types                     | Retrieve consignment types list               |
    +-----------+-----------------------------------------+-----------------------------------------------+
