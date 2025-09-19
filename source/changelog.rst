@@ -120,4 +120,3 @@ Changelog
 - Consignment Types List endpoint is added into OpenAPI services, enabling users to list consignments types by external requests from the API.
 - Consignment Change Status endpoint is added into OpenAPI services, enabling users to change consignments status by external requests from the API.
 - Consignment Create endpoint is added into OpenAPI services, enabling users to create consignments by external requests from the API.
-- Consignment Detail endpoint is added into OpenAPI services, enabling users to get consignments detail by external requests from the API.
