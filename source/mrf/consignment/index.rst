@@ -9,11 +9,11 @@ Consignment API List
    :maxdepth: 2
    :caption: Order
 
+   create
    list
    status-list
    types-list
    change-status
-   create
 
 This part provides documentation for available API endpoints of Consignment Model for MRF Module.
 
@@ -24,6 +24,8 @@ This part provides documentation for available API endpoints of Consignment Mode
    +-----------+-----------------------------------------+-------------------------------------------------------+
    | Method    | Endpoint                                | Description                                           |
    +===========+=========================================+=======================================================+
+   | POST      | /consignments                           | Create consignment                                    |
+   +-----------+-----------------------------------------+-------------------------------------------------------+
    | GET       | /consignments                           | Retrieve consignment list                             |
    +-----------+-----------------------------------------+-------------------------------------------------------+
    | GET       | /consignments/status                    | Retrieve consignment status list                      |
@@ -31,6 +33,4 @@ This part provides documentation for available API endpoints of Consignment Mode
    | GET       | /consignments/types                     | Retrieve consignment types list                       |
    +-----------+-----------------------------------------+-------------------------------------------------------+
    | POST      | /consignments/{consignment_id}/status   | Update consignment status                             |
-   +-----------+-----------------------------------------+-------------------------------------------------------+
-   | POST      | /consignments                           | Create consignment                                    |
    +-----------+-----------------------------------------+-------------------------------------------------------+
