@@ -14,3 +14,4 @@ MRF Module
    branch/index
    parcel/index
    material/index
+   consignment/index
