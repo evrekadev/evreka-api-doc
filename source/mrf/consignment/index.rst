@@ -29,3 +29,5 @@ This part provides documentation for available API endpoints of Consignment Mode
    +-----------+-----------------------------------------+-----------------------------------------------+
    | PATCH     | /consignments/{consignment_id}status    | Update consignment status                     |
    +-----------+-----------------------------------------+-----------------------------------------------+
+   | POST      | /consignments                           | Create consignment                            |
+   +-----------+-----------------------------------------+-----------------------------------------------+
