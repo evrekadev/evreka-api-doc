@@ -12,6 +12,7 @@ Consignment API List
    list
    status-list
    change-status
+   create
 
 This part provides documentation for available API endpoints of Consignment Model for MRF Module.
 
