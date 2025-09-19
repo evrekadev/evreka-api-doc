@@ -14,6 +14,7 @@ Consignment API List
    types-list
    change-status
    create
+   detail
 
 This part provides documentation for available API endpoints of Consignment Model for MRF Module.
 
@@ -33,4 +34,6 @@ This part provides documentation for available API endpoints of Consignment Mode
    | POST      | /consignments/{consignment_id}/status   | Update consignment status                             |
    +-----------+-----------------------------------------+-------------------------------------------------------+
    | POST      | /consignments                           | Create consignment                                    |
+   +-----------+-----------------------------------------+-------------------------------------------------------+
+   | GET       | /consignments/{consignment_id}          | Retrieve consignment detail                           |
    +-----------+-----------------------------------------+-------------------------------------------------------+
