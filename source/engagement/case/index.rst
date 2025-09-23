@@ -9,6 +9,7 @@ Case API List
    case-type-list
    case-list
    edit-case-attachments
+   case-detail
    
 
 This part provides documentation for available API endpoints of Case Model for Engagement Module.
@@ -22,9 +23,11 @@ This part provides documentation for available API endpoints of Case Model for E
    +===========+=====================================+===========================================+
    | POST      | /cases                              | Create a case with given parameters       |
    +-----------+-------------------------------------+-------------------------------------------+
-   | GET       | /cases                              | Retrive cases with optional filters       |
+   | GET       | /cases                              | Retrieve cases with optional filters      |
    +-----------+-------------------------------------+-------------------------------------------+
-   | GET       | /cases/case_types                   | Retrive case type list of contact model   |
+   | GET       | /cases/case_types                   | Retrieve case type list of contact model  |
    +-----------+-------------------------------------+-------------------------------------------+
    | POST      | /cases/{case_id}/edit_attachments   | Update attachments of the given case      |
+   +-----------+-------------------------------------+-------------------------------------------+
+   | GET       | /cases/{case_id}                    | Retrieve case                             |
    +-----------+-------------------------------------+-------------------------------------------+

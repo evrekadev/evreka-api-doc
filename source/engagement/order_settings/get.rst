@@ -112,6 +112,12 @@ Response
                 "name": "Order Item name - String",
                 "order_type_id": "Order Type ID -UUID"
                 "points_per_uom": "Points per Unit Primary UOM - Float",
+                "primary_uom": "Primary UOM - String",
+                "secondary_uom": "Secondary UOM - String or null",
+                "uom_type": {
+                    "value": "UOM Type value - Integer",
+                    "label": "UOM Type label - String"
+                }
             }
         ]
     }

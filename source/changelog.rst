@@ -112,3 +112,13 @@ Changelog
 1.19.1
 ----------------
 - engagement/environment/ endpoint is added.
+
+1.20.0
+----------------
+- Consignment List endpoint is added into OpenAPI services, enabling users to list consignments by external requests from the API.
+- Consignment Status List endpoint is added into OpenAPI services, enabling users to list consignments status by external requests from the API.
+- Consignment Types List endpoint is added into OpenAPI services, enabling users to list consignments types by external requests from the API.
+- Consignment Change Status endpoint is added into OpenAPI services, enabling users to change consignments status by external requests from the API.
+- Consignment Create endpoint is added into OpenAPI services, enabling users to create consignments by external requests from the API.
+- Order Item UOM fields are added to the list order settings endpoint response.
+- Case Detail API created.
