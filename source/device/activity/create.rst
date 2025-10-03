@@ -29,7 +29,7 @@ In addition to the fields listed below, users can include custom fields. Each cu
     +---------------------+-----------------------------------------------------------------------+---------------------------------------------------+
     | trace_id            | int *(optional)*                                                      | Identifier for tracing the transaction            |
     +---------------------+-----------------------------------------------------------------------+---------------------------------------------------+
-    | vehicle_identifier  | string *(optional)*                                                   | Unique identifier for the vehicle                 |
+    | vehicle_identifier  | string *(optional)*                                                   | Fleet Vehicle ID (UUID) or Plate                  |
     +---------------------+-----------------------------------------------------------------------+---------------------------------------------------+
     | asset_identifier    | string *(optional)*                                                   | Unique identifier for the asset                   |
     +---------------------+-----------------------------------------------------------------------+---------------------------------------------------+
@@ -69,14 +69,14 @@ Example Code
     data = {
         "transaction_id": 12345,
         "trace_id": 67890,
-        "vehicle_identifier": "ABC123XYZ",
+        "vehicle_identifier": "06EVR06", # or "620f7679-7b4c-4781-adec-2fa92c2b6671"
         "asset_identifier": "ASSET456",
         "first_weight": 1000.45,
         "second_weight": 300.5,
         "net_weight": 699.95,
         "is_contaminated": False,
-        "first_timestamp": "2023-10-01T12:00:00Z",
-        "second_timestamp": "2023-10-01T12:30:00Z",
+        "first_timestamp": "2025-10-03T12:00:00Z",
+        "second_timestamp": "2025-10-03T12:30:00Z",
         "waste_type_id": 1,
         # "custom_temparature": 15.5
     }
