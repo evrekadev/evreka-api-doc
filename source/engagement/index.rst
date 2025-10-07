@@ -21,3 +21,4 @@ Engagement Module
    order_asset_records/index
    announcement/index
    environment/index
+   comment/index

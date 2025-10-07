@@ -122,3 +122,9 @@ Changelog
 - Consignment Create endpoint is added into OpenAPI services, enabling users to create consignments by external requests from the API.
 - Order Item UOM fields are added to the list order settings endpoint response.
 - Case Detail API created.
+
+1.21.0
+----------------
+- Consignment Detail endpoint is added to OpenAPI services, enabling users to get consignments detail by external requests from the API.
+- Create comment endpoint added.
+- Delete comment endpoint added.
