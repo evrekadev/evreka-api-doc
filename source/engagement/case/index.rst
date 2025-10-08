@@ -10,6 +10,7 @@ Case API List
    case-list
    edit-case-attachments
    case-detail
+   case-rate
    
 
 This part provides documentation for available API endpoints of Case Model for Engagement Module.
@@ -30,4 +31,6 @@ This part provides documentation for available API endpoints of Case Model for E
    | POST      | /cases/{case_id}/edit_attachments   | Update attachments of the given case      |
    +-----------+-------------------------------------+-------------------------------------------+
    | GET       | /cases/{case_id}                    | Retrieve case                             |
+   +-----------+-------------------------------------+-------------------------------------------+
+   | POST      | /cases/{case_id}/rate               | Rate the given case                       |
    +-----------+-------------------------------------+-------------------------------------------+
