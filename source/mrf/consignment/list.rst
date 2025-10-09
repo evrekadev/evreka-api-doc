@@ -30,10 +30,6 @@ Data Structure
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
    | updated_to              | string *(optional)*                                          | End Date of Updated Date Range                    | 2025-01-01                                            |
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
-   | dynamic_field_key       | string *(optional)*                                          | Dynamic Field Key                                 | offload_id                                            |
-   +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
-   | dynamic_field_value     | string *(optional)*                                          | Dynamic Field Value                               | OffloadID                                             |
-   +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
   
 
 Example Code
@@ -73,9 +69,6 @@ Example Code
     # filter example #6
     #service_url += "?updated_to=2025-01-01"
 
-    # filter example #7
-    #service_url += "?dynamic_field_key=offload_id&dynamic_field_value=OffloadID"
-
     resp = requests.get(EVREKA360_API_BASE_URL + service_url, headers=headers)
     print(resp.status_code, resp.json())
 
@@ -101,9 +94,6 @@ Response
                 "due_date": "Due Date - String",
                 "created_at": "Created At - ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>",
                 "updated_at": "Updated At - ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>",
-                "dynamic": {
-                    "offload_id": "Offload ID - String"
-                }
             }
         ]
     }
