@@ -132,3 +132,4 @@ Changelog
 1.22.0
 ----------------
 - Case rate endpoint added.
+- Case status list endpoint added.
