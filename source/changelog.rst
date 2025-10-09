@@ -128,3 +128,7 @@ Changelog
 - Consignment Detail endpoint is added to OpenAPI services, enabling users to get consignments detail by external requests from the API.
 - Create comment endpoint added.
 - Delete comment endpoint added.
+
+1.22.0
+----------------
+- Case rate endpoint added.
