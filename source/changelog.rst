@@ -133,3 +133,5 @@ Changelog
 ----------------
 - Improved consignment detail endpoint response.
 - Example for create consignment endpoint fixed.
+- Added material name to consignment detail endpoint response.
+- Added dynamic field filtering to consignment list endpoint and updated example response of consignment list and detail endpoints.
