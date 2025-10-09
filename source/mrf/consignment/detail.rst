@@ -94,9 +94,7 @@ Response
                     "hazardous": "Is Hazardous - Boolean",
                     "description": "EWC Code Description - String"
                 },
-                "dynamic": {
-                    "dynamic_field_key": "Dynamic Field Value"
-                },
+                "dynamic": "Dynamic Field JSON",
                 "weight_source": "Weight Source - String",
                 "edit_weight_note": "Edit Weight Note - String",
                 "planned_volume": "Planned Volume - Float", // If client has calculate_density_enabled
@@ -111,9 +109,7 @@ Response
                 "media_url": "Media URL - String"
             }
         ],
-        "dynamic": {
-            "dynamic_field_key": "Dynamic Field Value"
-        }
+        "dynamic": "Dynamic Field JSON"
     }
 
 

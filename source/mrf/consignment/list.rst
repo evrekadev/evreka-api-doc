@@ -101,9 +101,7 @@ Response
                 "due_date": "Due Date - String",
                 "created_at": "Created At - ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>",
                 "updated_at": "Updated At - ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>",
-                "dynamic": {
-                    "example_dynamic_field": "Dynamic Field Value - String"
-                }
+                "dynamic": "Dynamic Field JSON"
             }
         ]
     }
