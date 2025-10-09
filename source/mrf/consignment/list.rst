@@ -30,7 +30,9 @@ Data Structure
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
    | updated_to              | string *(optional)*                                          | End Date of Updated Date Range                    | 2025-01-01                                            |
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
-   | offload_id              | string *(optional)*                                          | Offload ID                                        | OffloadID                                             |
+   | dynamic_field_key       | string *(optional)*                                          | Dynamic Field Key                                 | offload_id                                            |
+   +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
+   | dynamic_field_value     | string *(optional)*                                          | Dynamic Field Value                               | OffloadID                                             |
    +-------------------------+--------------------------------------------------------------+---------------------------------------------------+-------------------------------------------------------+
   
 
@@ -72,7 +74,7 @@ Example Code
     #service_url += "?updated_to=2025-01-01"
 
     # filter example #7
-    #service_url += "?offload_id=OffloadID"
+    #service_url += "?dynamic_field_key=offload_id&dynamic_field_value=OffloadID"
 
     resp = requests.get(EVREKA360_API_BASE_URL + service_url, headers=headers)
     print(resp.status_code, resp.json())
