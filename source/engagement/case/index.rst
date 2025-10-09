@@ -7,6 +7,7 @@ Case API List
 
    create
    case-type-list
+   case-status-list
    case-list
    edit-case-attachments
    case-detail
@@ -26,7 +27,9 @@ This part provides documentation for available API endpoints of Case Model for E
    +-----------+-------------------------------------+-------------------------------------------+
    | GET       | /cases                              | Retrieve cases with optional filters      |
    +-----------+-------------------------------------+-------------------------------------------+
-   | GET       | /cases/case_types                   | Retrieve case type list of contact model  |
+   | GET       | /cases/case_types                   | Retrieve case type list of case model     |
+   +-----------+-------------------------------------+-------------------------------------------+
+   | GET       | /cases/status                       | Retrieve case status list of case model   |
    +-----------+-------------------------------------+-------------------------------------------+
    | POST      | /cases/{case_id}/edit_attachments   | Update attachments of the given case      |
    +-----------+-------------------------------------+-------------------------------------------+
