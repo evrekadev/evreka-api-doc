@@ -111,7 +111,10 @@ Response
                 "updated_at": "Updated At - UTC",
                 "completed_time": "Completed Time - UTC",
                 "latitude": "Latitude - Float",
-                "longitude": "Longitude - Float"
+                "longitude": "Longitude - Float",
+                "rate": "Rate - Int",
+                "rate_note": "Rate Note - String",
+                "rate_viewed_time": "Rate Viewed Time - ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>"
             }
         ]
     }

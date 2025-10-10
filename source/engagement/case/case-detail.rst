@@ -110,5 +110,8 @@ Response
                 "media_name": "MEDIA NAME - STR",
                 "media_url": "MEDIA URL - STR"
             }
-        ]
+        ],
+        "rate": "RATE - INT",
+        "rate_note": "RATE NOTE - STR",
+        "rate_viewed_time": "RATE VIEWED TIME - ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>"
     }
