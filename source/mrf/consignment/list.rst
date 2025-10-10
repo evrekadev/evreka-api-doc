@@ -68,6 +68,12 @@ Example Code
 
     # filter example #6
     #service_url += "?updated_to=2025-01-01"
+    
+    # filter example #7: Dynamic Field Filtering - To use exact or contains filters, use the __exact or __contains modifier. If not specified, the default is contains.
+    #service_url += "?offload_id__contains=1234AB"
+    
+    # filter example #8: Multiple filters - Use the & character between the filters.
+    #service_url += "?offload_id=1234AB" + "&status_id=1234AB"
 
     resp = requests.get(EVREKA360_API_BASE_URL + service_url, headers=headers)
     print(resp.status_code, resp.json())
@@ -94,6 +100,7 @@ Response
                 "due_date": "Due Date - String",
                 "created_at": "Created At - ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>",
                 "updated_at": "Updated At - ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>",
+                "dynamic": "Dynamic Field JSON"
             }
         ]
     }
