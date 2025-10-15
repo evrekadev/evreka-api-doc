@@ -78,8 +78,8 @@ Example Code
         "entity_name":"Entity-1",
         "transfer_client_id":7,
         "materials":[
-            {"id":837,"gross_weight":100,"tare_weight":20,"planned_weight":80},
-            {"id":836,"gross_weight":75,"tare_weight":5,"planned_weight":70}
+            {"id":837,"gross_weight":100,"tare_weight":20,"planned_weight":80, "volume": 1.3},
+            {"id":836,"gross_weight":75,"tare_weight":5,"planned_weight":70, "volume": 2.6}
         ],
         "branch_id":24
     }
