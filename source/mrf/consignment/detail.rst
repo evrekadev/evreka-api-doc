@@ -1,5 +1,7 @@
 .. raw:: pdf
+
    PageBreak
+
 Consignment Detail API
 -----------------------------------
 
@@ -17,6 +19,7 @@ Example Code
 ^^^^^^^^^^^^^^^^^
 
 .. code-block:: python
+
     import requests
     EVREKA360_API_BASE_URL = ""
     ACCESS_TOKEN = ""
@@ -30,6 +33,7 @@ Example Code
     
     resp = requests.get(EVREKA360_API_BASE_URL + service_url, headers=headers)
     print(resp.status_code, resp.json())
+
 Response
 ^^^^^^^^^^^^^^^^^
 
@@ -39,6 +43,7 @@ Response
 
 
 .. code-block:: json 
+
     {
         "id": "Consignment ID - Integer",
         "external_id": "External ID - String",
@@ -75,6 +80,7 @@ Response
         "materials": [
             {
                 "id": "Material ID - Integer",
+                "name": "Material Name - String",
                 "planned_amount": "Planned Amount - Float",
                 "actual_amount": "Actual Amount - Float",
                 "planned_weight": "Planned Weight - Float",
@@ -91,7 +97,10 @@ Response
                 },
                 "dynamic": "Dynamic Field JSON",
                 "weight_source": "Weight Source - String",
-                "edit_weight_note": "Edit Weight Note - String"
+                "edit_weight_note": "Edit Weight Note - String",
+                "planned_volume": "Planned Volume - Float", // If client has calculate_density_enabled
+                "net_volume": "Net Volume - Float", // If client has calculate_density_enabled feature
+                "volume_uom": "Volume UOM - String" // If client has calculate_density_enabled feature
             }
         ],
         "media": [
@@ -103,11 +112,14 @@ Response
         ],
         "dynamic": "Dynamic Field JSON"
     }
+
+
 *Status Code:* ``404`` - Not Found
 *Content Type:* ``application/json``
 *Body:*
 
 .. code-block:: json 
+
     {
         "detail": "Consignment not found"
     }

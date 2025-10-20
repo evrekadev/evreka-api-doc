@@ -129,6 +129,13 @@ Changelog
 - Create comment endpoint added.
 - Delete comment endpoint added.
 
+1.21.1
+----------------
+- Improved consignment detail endpoint response.
+- Example for create consignment endpoint fixed.
+- Added material name to consignment detail endpoint response.
+- Added dynamic field filtering to consignment list endpoint and updated example response of consignment list and detail endpoints.
+
 1.22.0
 ----------------
 - Case rate endpoint added.
