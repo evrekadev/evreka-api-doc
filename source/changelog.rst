@@ -135,3 +135,11 @@ Changelog
 - Example for create consignment endpoint fixed.
 - Added material name to consignment detail endpoint response.
 - Added dynamic field filtering to consignment list endpoint and updated example response of consignment list and detail endpoints.
+
+1.22.0
+----------------
+- Case rate endpoint added.
+- Case status list endpoint added.
+- Case rate added to case list endpoint response.
+- Case rate added to case detail endpoint response.
+- Volume field added to consignment add, edit, import services and api doc inside "materials" parameter.
