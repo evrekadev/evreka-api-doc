@@ -6,12 +6,12 @@ Case API List
    :caption: Case
 
    create
-   case-list
-   case-type-list
-   case-status-list
-   edit-case-attachments
-   case-detail
-   case-rate
+   list
+   type-list
+   status-list
+   edit-attachments
+   detail
+   rate
 
 
 This part provides documentation for available API endpoints of Case Model for Engagement Module.

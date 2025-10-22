@@ -6,6 +6,7 @@ Comment API List
    :caption: Comment
 
    create
+   list
    delete
 
 
@@ -19,6 +20,8 @@ This part provides documentation for available API endpoints of Comment Model fo
    | Method    | Endpoint                            | Description                                          |
    +===========+=====================================+======================================================+
    | POST      | /comments                           | Create a comment with given parameters               |
+   +-----------+-------------------------------------+------------------------------------------------------+
+   | GET       | /comments                           | Retrieve list of comments with given parameters      |
    +-----------+-------------------------------------+------------------------------------------------------+
    | DELETE    | /comments/{comment_id}              | Delete the comment with given comment id             |
    +-----------+-------------------------------------+------------------------------------------------------+
