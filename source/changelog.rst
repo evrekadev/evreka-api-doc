@@ -143,3 +143,7 @@ Changelog
 - Case rate added to case list endpoint response.
 - Case rate added to case detail endpoint response.
 - Volume field added to consignment add, edit, import services and api doc inside "materials" parameter.
+
+1.23.0
+----------------
+- Comment list endpoint added.
