@@ -11,6 +11,7 @@ Service Point API List
    types
    status-list
    dynamic_field_list
+   nearest
    asset_types
    asset_list
    locations_list
@@ -36,6 +37,8 @@ This section provides documentation for available API endpoints of the Service P
    +-----------+------------------------------------------------+-----------------------------------------------------------------------------+
    | GET       | /service_points/dynamic_fields                 | Retrieve dynamic fields of service points with                              |
    |           |                                                | optional parameters                                                         |
+   +-----------+------------------------------------------------+-----------------------------------------------------------------------------+
+   | GET       | /service_points/nearest                        | Retrieve list of service points that ordered by distance to given location  |
    +-----------+------------------------------------------------+-----------------------------------------------------------------------------+
    | GET       | /service_points/{service_point_id}/asset_types | Retrieve list of asset types of assets currently linked to a service point  |
    +-----------+------------------------------------------------+-----------------------------------------------------------------------------+
