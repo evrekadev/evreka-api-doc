@@ -147,3 +147,7 @@ Changelog
 1.23.0
 ----------------
 - Comment list endpoint added.
+
+1.24.0
+----------------
+- Engagement nearest service point list endpoint added.
