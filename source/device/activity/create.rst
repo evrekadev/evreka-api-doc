@@ -33,9 +33,9 @@ In addition to the fields listed below, users can include custom fields. Each cu
     +---------------------+-----------------------------------------------------------------------+---------------------------------------------------+
     | asset_identifier    | string *(optional)*                                                   | Unique identifier for the asset                   |
     +---------------------+-----------------------------------------------------------------------+---------------------------------------------------+
-    | first_weight        | float *(optional)*                                                    | First weight of the asset or vehicle              |
+    | first_weight        | float *(optional)*                                                    | Tare weight of the asset or vehicle               |
     +---------------------+-----------------------------------------------------------------------+---------------------------------------------------+
-    | second_weight       | float *(optional)*                                                    | Second weight of the asset or vehicle             |
+    | second_weight       | float *(optional)*                                                    | Gross weight of the asset or vehicle              |
     +---------------------+-----------------------------------------------------------------------+---------------------------------------------------+
     | net_weight          | float *(optional)*                                                    | Net weight calculated as first minus second weight|
     +---------------------+-----------------------------------------------------------------------+---------------------------------------------------+
@@ -71,8 +71,8 @@ Example Code
         "trace_id": 67890,
         "vehicle_identifier": "06EVR06", # or "620f7679-7b4c-4781-adec-2fa92c2b6671"
         "asset_identifier": "ASSET456",
-        "first_weight": 1000.45,
-        "second_weight": 300.5,
+        "first_weight": 30.5,
+        "second_weight": 1000.5,
         "net_weight": 699.95,
         "is_contaminated": False,
         "first_timestamp": "2025-10-03T12:00:00Z",
