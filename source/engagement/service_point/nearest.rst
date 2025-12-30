@@ -4,7 +4,7 @@ Service Points Nearest API List
 .. table::
 
    +-------------------+--------------------------------------------+
-   | GET               | ``/service_points/nearest``              |
+   | GET               | ``/service_points/nearest``                |
    +-------------------+--------------------------------------------+
 
 Data Structure

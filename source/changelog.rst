@@ -151,3 +151,7 @@ Changelog
 1.24.0
 ----------------
 - Engagement nearest service point list endpoint added.
+
+1.25.0
+----------------
+- Device activity create endpoint first and second weight fields are updated as tare and gross.
