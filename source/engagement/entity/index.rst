@@ -6,6 +6,7 @@ Entity API List
    :caption: Entity
 
    create
+   update
    list
    dynamic_fields
    types
@@ -19,8 +20,10 @@ This section provides documentation for available API endpoints of the Entity Mo
    +-----------+-------------------------------------+-------------------------------------------+
    | Method    | Endpoint                            | Description                               |
    +===========+=====================================+===========================================+
-   | POST      | /entity                             |  Create an entity with given parameters   |
-   +-----------+---------------------------------------------+-----------------------------------+
+   | POST      | /entities                           |  Create an entity with given parameters   |
+   +-----------+-------------------------------------+-------------------------------------------+
+   | PUT       | /entities/{entity_id}               |  Update an entity with given parameters   |
+   +-----------+-------------------------------------+-------------------------------------------+
    | GET       | /entities                           | Retrieve list of entities with optional   |
    |           |                                     | parameters                                |
    +-----------+-------------------------------------+-------------------------------------------+
