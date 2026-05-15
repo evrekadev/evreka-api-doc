@@ -12,5 +12,6 @@ OPS Module
    base_url
    task/index
    task_item/index
+   service_point/index
 
 
