@@ -44,4 +44,10 @@ Response
         "client_id": "Client ID - UUID",
         "client_name": "Client Name - String",
         "availability_start_offset_days": "Availability Start Offset Days - Integer",
+        "order_types": [
+            {
+                "id": "Order Type ID - UUID",
+                "name": "Order Type name - String, nullable"
+            }
+        ]
    }

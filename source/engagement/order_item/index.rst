@@ -6,6 +6,7 @@ Order Item API List
    :caption: Order Item
 
    create
+   list
 
 This part provides documentation for available API endpoints of the Order Item Model for the Engagement Module.
 
@@ -16,4 +17,6 @@ This part provides documentation for available API endpoints of the Order Item M
    | Method    | Endpoint                            | Description                                        |
    +===========+=====================================+====================================================+
    | POST      | /order_items                        | Create an order item with given parameters         |
+   +-----------+-------------------------------------+----------------------------------------------------+
+   | GET       | /order_items                        | List the order items of the authenticated client   |
    +-----------+-------------------------------------+----------------------------------------------------+

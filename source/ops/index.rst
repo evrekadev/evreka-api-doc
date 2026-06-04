@@ -13,5 +13,6 @@ OPS Module
    task/index
    task_item/index
    service_point/index
+   operation/index
 
 
