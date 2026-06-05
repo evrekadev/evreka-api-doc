@@ -102,10 +102,7 @@ Response
        "success": true,
        "detail": {
            "message": "Successfully updated Entity"
-       },
-       "entity_type": "ENTITY TYPE ID UUID",
-       "entity_name": "ENTITY NAME",
-       "entity_external_id": "ENTITY EXTERNAL ID"
+       }
    }
 
 *Status Code:* ``400`` - Bad request

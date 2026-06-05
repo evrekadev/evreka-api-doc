@@ -118,11 +118,7 @@ Response
         "success": true,
         "detail": {
             "message": "Successfully updated Service Point ({service_point.name})"
-        },
-        "name": "SERVICE POINT NAME",
-        "type_id": "SERVICE POINT TYPE ID UUID",
-        "status_id": "SERVICE POINT STATUS ID UUID",
-        "external_id": "OPS SERVICE POINT EXTERNAL ID"
+        }
     }
 
 *Status Code:* ``400`` - Bad request
