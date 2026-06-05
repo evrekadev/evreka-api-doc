@@ -13,8 +13,7 @@ Data Structure
 Request content type should be ``application/json``.
 
 This is a partial update — send only the fields you want to change. Any field
-left out of the request keeps its current value. Attachments are **not**
-handled by this endpoint.
+left out of the request keeps its current value.
 
 List fields (``order_settings``, ``dynamic_field_list``, ``entities``,
 ``contact_list``) replace the existing collection wholesale — to add a new item,
