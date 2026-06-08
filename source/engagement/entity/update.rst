@@ -4,7 +4,7 @@ Update Entity API
 .. table::
 
    +-------------------+-----------------------------------------------+
-   | PUT               | ``/entities/{entity_id}``                     |
+   | PATCH             | ``/entities/{entity_id}``                     |
    +-------------------+-----------------------------------------------+
 
 Data Structure
@@ -76,7 +76,7 @@ Example Code
         ]
     }
 
-    resp = requests.put(
+    resp = requests.patch(
         EVREKA360_API_BASE_URL + service_url,
         headers=headers,
         json=data,
@@ -97,11 +97,7 @@ Response
 .. code-block:: json
 
    {
-       "id": "ENTITY ID STR",
-       "success": true,
-       "detail": {
-           "message": "Successfully updated Entity"
-       }
+       "id": "ENTITY ID STR"
    }
 
 *Status Code:* ``400`` - Bad request

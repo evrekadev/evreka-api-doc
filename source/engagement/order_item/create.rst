@@ -43,6 +43,8 @@ Request content type should be ``application/json``.
     | ops_operation_id            | integer *(optional)*                                         | Ops Operation ID — must be sent with ``ops_task_item_id`` | 678                                                                                |
     |                             |                                                              | to create an ``OrderItemMapping``                         |                                                                                    |
     +-----------------------------+--------------------------------------------------------------+-----------------------------------------------------------+------------------------------------------------------------------------------------+
+    | material_id                 | integer *(optional)*                                         | MRF Material ID to link this Order Item to                | 42                                                                                 |
+    +-----------------------------+--------------------------------------------------------------+-----------------------------------------------------------+------------------------------------------------------------------------------------+
 
 
 Example Code
@@ -79,6 +81,7 @@ Example Code
         "point_per_unit_primary_uom": 0.5,
         "ops_task_item_id": 12345,
         "ops_operation_id": 678,
+        "material_id": 42,
     }
 
     resp = requests.post(EVREKA360_API_BASE_URL + service_url, headers=headers, json=data)

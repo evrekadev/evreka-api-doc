@@ -4,7 +4,7 @@ Update Service Point API
 .. table::
 
    +-------------------+-----------------------------------------------+
-   | PUT               | ``/service_points/{service_point_id}``        |
+   | PATCH             | ``/service_points/{service_point_id}``        |
    +-------------------+-----------------------------------------------+
 
 Data Structure
@@ -98,7 +98,7 @@ Example Code
         "ops_service_point_name": "my_ops_service_point_updated"
     }
 
-    resp = requests.put(EVREKA360_API_BASE_URL + service_url, headers=headers, json=data)
+    resp = requests.patch(EVREKA360_API_BASE_URL + service_url, headers=headers, json=data)
     print(resp.status_code, resp.json())
 
 
@@ -113,11 +113,7 @@ Response
 .. code-block:: json
 
     {
-        "id": "SERVICE POINT ID UUID",
-        "success": true,
-        "detail": {
-            "message": "Successfully updated Service Point ({service_point.name})"
-        }
+        "id": "SERVICE POINT ID UUID"
     }
 
 *Status Code:* ``400`` - Bad request

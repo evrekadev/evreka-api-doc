@@ -47,7 +47,7 @@ Response
         "order_types": [
             {
                 "id": "Order Type ID - UUID",
-                "name": "Order Type name - String, nullable"
+                "name": "Order Type name - String"
             }
         ]
    }

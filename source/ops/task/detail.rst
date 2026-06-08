@@ -50,7 +50,8 @@ Response
         "create_time": "ISO datetime string or null",
         "operation": {
             "id": "integer",
-            "name": "string"
+            "name": "string",
+            "assignee_type": "\"vehicle\" or \"employee\""
         },
         "task_template": {
             "id": "integer",
@@ -67,7 +68,6 @@ Response
         "route": {
             "id": "integer",
             "name": "string or null",
-            "assignee_type": "\"vehicle\" or \"employee\", nullable",
             "vehicle": {
                 "id": "integer",
                 "name": "Vehicle plate - string, nullable"
@@ -93,11 +93,10 @@ Response
         "source": "object or null"
     }
 
-The ``route`` object is populated only when the task is linked to a route.
-``assignee_type`` is ``"vehicle"`` when the route's assignee is a vehicle (the
-``vehicle`` object is filled and ``employee`` is ``null``), or ``"employee"``
-when the assignee is an employee (the ``employee`` object is filled and
-``vehicle`` is ``null``).
+The ``route`` object is populated only when the task is linked to a route. Its
+``vehicle`` and ``employee`` objects are each filled independently when the
+route's assignee has a vehicle and/or an employee; either one is ``null`` when
+the corresponding assignee is not set.
 
 *Status Code:* ``404`` - Not Found
 *Content Type:* ``application/json``

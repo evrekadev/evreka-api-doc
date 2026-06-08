@@ -18,6 +18,6 @@ This part provides documentation for available API endpoints of the Service Poin
    +===========+========================================================+==========================================================+
    | GET       | /service_points                                        | List the service points of the authenticated client      |
    +-----------+--------------------------------------------------------+----------------------------------------------------------+
-   | POST      | /service_points/{service_point_id}/default_items       | Add / remove / overwrite default Task Items on a single  |
-   |           |                                                        | Service Point                                            |
+   | POST      | /service_points/{service_point_id}/default_items       | Overwrite the default Task Items on a single Service     |
+   |           |                                                        | Point with the list sent in the request                  |
    +-----------+--------------------------------------------------------+----------------------------------------------------------+
