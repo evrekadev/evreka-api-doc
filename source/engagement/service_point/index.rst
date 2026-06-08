@@ -49,5 +49,5 @@ This section provides documentation for available API endpoints of the Service P
    +-----------+------------------------------------------------+-----------------------------------------------------------------------------+
    | DELETE    | /service_points/{service_point_id}             | Delete the given service point                                              |
    +-----------+------------------------------------------------+-----------------------------------------------------------------------------+
-   | POST      | /service_points/{service_point_id}             | Update the given service point with new parameters                          |
+   | PUT       | /service_points/{service_point_id}             | Update the given service point with new parameters                          |
    +-----------+------------------------------------------------+-----------------------------------------------------------------------------+

@@ -47,38 +47,56 @@ Response
 
     {
         "id": "integer",
-        "name": "string",
-        "description": "string or null",
-        "order": "integer",
-        "service_type": "string",
-        "is_required": "boolean",
-        "assets": [
-            {
-                "name": "string",
-                "items": [
-                    {
-                        "item_id": "integer",
-                        "item_name": "string",
-                        "quantity": "float or null",
-                        "amount": "float or null",
-                        "actual_quantity": "float or null",
-                        "actual_amount": "float or null",
-                        "uom": "string or null"
-                    }
-                ],
-                "tare_weight": "float or null"
+        "create_time": "ISO datetime string or null",
+        "operation": {
+            "id": "integer",
+            "name": "string",
+            "assignee_type": "\"vehicle\" or \"employee\""
+        },
+        "task_template": {
+            "id": "integer",
+            "name": "string"
+        },
+        "operation_date": "YYYY-MM-DD or null",
+        "due_date": "YYYY-MM-DD or null",
+        "shift": {
+            "id": "integer",
+            "name": "string"
+        },
+        "time_window": "object or null",
+        "note": "string or null",
+        "route": {
+            "id": "integer",
+            "name": "string or null",
+            "vehicle": {
+                "id": "integer",
+                "name": "Vehicle plate - string, nullable"
+            },
+            "employee": {
+                "id": "integer",
+                "name": "Driver name - string, nullable"
             }
-        ],
-        "form": [
-            {
-                "label": "string",
-                "value": "string",
-                "type": "string",
-                "json_value": "form_value_json",
-                "options": "form_options"
-            }
-        ]
+        },
+        "status": {
+            "id": "integer",
+            "name": "string",
+            "state": "string"
+        },
+        "service_point": {
+            "id": "integer",
+            "name": "string"
+        },
+        "location": {
+            "latitude": "float",
+            "longitude": "float"
+        },
+        "source": "object or null"
     }
+
+The ``route`` object is populated only when the task is linked to a route. Its
+``vehicle`` and ``employee`` objects are each filled independently when the
+route's assignee has a vehicle and/or an employee; either one is ``null`` when
+the corresponding assignee is not set.
 
 *Status Code:* ``404`` - Not Found
 *Content Type:* ``application/json``
