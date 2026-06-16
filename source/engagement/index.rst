@@ -15,6 +15,7 @@ Engagement Module
    service_availability/index
    financial_detail/index
    order/index
+   order_item/index
    contact/index
    case/index
    order_item_records/index

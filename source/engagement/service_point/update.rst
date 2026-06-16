@@ -34,7 +34,7 @@ All existing fields on the service point must be provided to maintain existing d
     | dynamic_field_list      | list object *(required)*                                     | Object contains dynamic field key and value       | ``[{"key":"numberField","value": 456}]``                                           |
     +-------------------------+--------------------------------------------------------------+---------------------------------------------------+------------------------------------------------------------------------------------+
     | order_settings          | list object *(required)*                                     | Object contains order type id and order items.    | ``[{"order_type":"07b31501-70f9-4d4c-8eb7-3b013ebe8d62",                           |
-    |                         |                                                              |                                                   | "order_items":["573806b5-f054-48a2-8043-c75a83be871e"]}]``                         | 
+    |                         |                                                              |                                                   | "order_items":["573806b5-f054-48a2-8043-c75a83be871e"]}]``                         |
     +-------------------------+--------------------------------------------------------------+---------------------------------------------------+------------------------------------------------------------------------------------+
     | entities                | list object *(optional)*                                     | List of Entity ID - UUID                          | ``["009f40a6-1dd5-4380-97b5-8b0d406ee45a"]``                                       |
     +-------------------------+--------------------------------------------------------------+---------------------------------------------------+------------------------------------------------------------------------------------+
@@ -110,7 +110,7 @@ Response
 
 *Body:*
 
-.. code-block:: json 
+.. code-block:: json
 
     {
         "detail": "Successfully updated Service Point ({service_point.name})"
@@ -126,4 +126,3 @@ Response
     {
         "detail": "Service Point ({service_point_id}) not found"
     }
-
