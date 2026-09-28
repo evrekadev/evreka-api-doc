@@ -6,6 +6,7 @@ Device Module
 
    base_url
    activity/index
+   recognition/index
 
 .. raw:: pdf
 
