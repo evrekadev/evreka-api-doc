@@ -23,3 +23,4 @@ Engagement Module
    announcement/index
    environment/index
    comment/index
+   qr_code/index
